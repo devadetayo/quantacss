@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+:root {
+    --quanta-secondary: #aa4efe;
+    --quanta-bg-default: #fff;
+    --quanta-pre-bg: var(--quanta-grey-100);         /* near slate-900 */
+    --quanta-pre-text: inherit;       /* slate-200 */
+    --quanta-pre-border: #1e293b;     /* slate-800 */
+    --quanta-pre-dot-red: #f87171;    /* rose-400 */
+    --quanta-pre-dot-yellow: #facc15; /* amber-400 */
+    --quanta-pre-dot-green: #34d399;  /* emerald-400 */
+
+}
+
+[data-theme="dark"] {
+    --quanta-pre-bg: var(--quanta-slate-900);         /* near slate-900 */
+}
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.font-mono{
+  font-family: monospace, system-ui, -apple-system, consolas, 'Courier New', Courier;
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.hidden-row { display: none; }
+.fade-in { animation: fadeIn 0.2s ease-in forwards; }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+*{
+  outline: none;
+}
+
+html, body {
+  font-family: "Geist", "Inter", "segoe UI", sans-serif;
+  color: inherit;
+}
+  
+  /* very subtle “flash” every so often */
+@keyframes drift {
+    0%   { background-position:   0%   0%; }
+    50%  { background-position: 100% 100%; }
+    100% { background-position:   0%   0%; }
+}
+  
+  /* optional pulse for occasional lightning flash */
+.hero-lightning-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.1);
+    opacity: 0;
+    animation: flash 5s ease-in-out infinite;
+}
+  
+@keyframes flash {
+    0%, 90%, 100% { opacity: 0; }
+    91%, 95%     { opacity: 0.1; }
+}
+
+.code-wrapper{
+  box-sizing: border-box;
+  background: var(--quanta-pre-border);
+  overflow-y: hidden;
+  border-radius: 6px;
+  min-width: 100%;
+}
+
+.code-wrapper::-webkit-scrollbar{
+  width: 100%;
+  height: 6px;
+}
+
+/* Each grid card needs to maintain its own width */
+.d-grid > div {
+  min-width: 0; /* Critical fix for grid items */
+  width: 100%;
+}
+
+/* Container & panels already styled via Litezen utilities */
+
+/* Ensure the inner wrapper is positioned relative */
+#theme-support .slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* only panels get clipped now */
+.slider-panels {
+  inset: 0;
+  overflow: hidden;
+  border-radius: 0.375rem; /* match your rounded-lg */
+}
+
+/* wrapper now visible so handle never gets cut */
+#theme-support > .d-flex {
+  overflow: visible !important;
+}
+
+
+/* Panels full bleed inside slider-wrapper */
+#theme-support .slider-wrapper > .light-panel,
+#theme-support .slider-wrapper > .dark-panel {
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  transition: clip-path 0.2s ease-out;
+}
+
+/* Dark panel clipped to left half by default */
+#theme-support .dark-panel {
+  clip-path: inset(0 0 0 50%);
+}
+
+/* make the handle a thick always-visible divider */
+#theme-support #theme-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;                   /* thicker divider */
+  background-color: var(--quanta-primary);   /* your primary color */
+  cursor: ew-resize;
+  z-index: 5;
+  transition: background-color 0.2s;
+}
+
+/* hover state for better affordance */
+#theme-support #theme-handle:hover {
+  background-color: var(--quanta-primary);
+}
+
+/* expand the hit area slightly so it's easier to grab */
+#theme-support .slider-wrapper {
+  padding-left: 4px;
+  padding-right: 4px;
+  box-sizing: content-box;
+}
+
+/* fixed-size 32×32 icons */
+.icon-32 {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* for dark-mode SVGs that need white fills */
+.invert-filter {
+  filter: invert(1);
+}
+
+[data-theme="dark"] .dark-invert-filter{
+  filter: invert(1);
+}
+
+/* Mobile menu slide-in/out */
+#mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: left 0.3s ease-in-out;
+}
+
+/* When open, slide into view */
+#mobile-menu.open {
+  left: 0;
+}
+
+/* Animate the hamburger ↔️ X rotation (optional) */
+button.menu-toggle .ham-icon {
+  transition: transform 0.2s ease;
+}
+button.menu-toggle.open .ham-icon {
+  transform: rotate(90deg);
+}
+
+/* Slide the sidebar in/out and reset main width/padding at <768px */
+@media (max-width: 767px) {
+  #docs-sidebar {
+    /* off-canvas by default */
+    transform: translateX(-100%);
+  }
+  #docs-sidebar.open {
+    /* when we add .open via JS */
+    transform: translateX(0);
+  }
+  #docs-main {
+    /* reset left padding */
+    padding-left: var(--quanta-space-4)!important; /* same as p-4 */
+    padding-right: var(--quanta-space-4)!important;
+  }
+}
+
+/* Always visible on desktop */
+@media (min-width: 768px) {
+  #docs-sidebar {
+    transform: translateX(0) !important;
+    width: 30% !important;
+  }
+
+  /* make sure main content pushes over accordingly */
+  #docs-main {
+    padding-left: 34% !important;
+  }
+}
+
+/* Tablets & small desktops: bump sidebar width */
+@media (min-width: 1024px) {
+  #docs-sidebar {
+    width: 22% !important;
+    /* or a fixed width:
+    width: 20rem !important;
+    */
+  }
+  /* make sure main content pushes over accordingly */
+  #docs-main {
+    padding-left: 26% !important;
+  }
+
+  #mobile-menu{
+    width: 40%;
+  }
+}
+
+.editor-pane, .preview-pane {
+  flex: 1;
+}
+
+/* Editor wrapper: parent scrollbars */
+.editor-pane {
+  position: relative;
+  overflow: auto;
+}
+.editor-pane::-webkit-scrollbar { width: 8px; }
+.editor-pane::-webkit-scrollbar-thumb {
+  background: var(--quanta-primary);
+  border-radius: 4px;
+}
+.editor-pane {
+  scrollbar-width: thin;
+  scrollbar-color: var(--quanta-primary) transparent;
+}
+
+/* Ace Editor area */
+#ace-editor {
+  position: absolute;
+  top: 2.5rem;    /* height of toolbar */
+  bottom: 3rem;   /* room for buttons */
+  left: 0; right: 0;
+}
+/* make its background transparent */
+.ace_editor.ace-dracula {
+  background: transparent !important;
+}
+
+/* Reset/Copy button bar */
+.control-bar {
+  margin: .5rem;
+  display:flex; gap: .5rem;
+}
+
+/* active/inactive tabs */
+.tab-btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.tab-btn.active{
+  border-bottom: 2px solid var(--quanta-primary);
+}
+
+#layout-menu { min-width: 8rem; }
+
+/* Container */
+/* Make sure your playground-inner/editor-container flex is “honest” */
+.playground .editor-container,
+.playground .editor-pane,
+.playground .preview-pane {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;  /* allow children to shrink below content width */
+  min-height: 0; /* allow vertical shrinking */
+}
+
+/* Stack‐mode: three‐column top row */
+.playground.stack .editor-container {
+  flex-direction: row;             /* top half */
+  overflow: hidden;
+}
+.playground.stack .ace-editor-pane {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Bottom preview in stack mode */
+.playground.stack .preview-pane {
+  height: 50%;               /* bottom half */
+}
+
+/* Always prevent overflow on your panes */
+.editor-pane,
+.preview-pane {
+  overflow: auto;
+}
+
+.editor-pane .code-wrapper{
+  border-radius: 0;
+}
+
+/* Editor and preview panes always flex children of .playground-inner */
+.editor-pane,
+.preview-pane {
+  position: relative;
+  /* will get width via Split.js or utility classes */
+}
+
+/* Hide layout menu by default */
+#layout-menu {
+  position: absolute;
+  right: 0;
+  margin-top: 4px;
+  z-index: 100;
+}
+
+/* Basic styling for menu items */
+#layout-menu button {
+  width: 100%;
+  padding: 4px 8px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+pre{
+  margin: 0!important;
+  background: var(--quanta-pre-bg)!important;
+  font-family: var(--font-mono)!important;
+  border: none!important;
+  border-radius: none!important;
+  font-size: 0.825rem!important;
+  color: var(--quanta-pre-text)!important;
+}
+
+pre code {
+  font-size: inherit;
+  line-height: 1rem!important;
+  overflow-x: auto;
+  white-space: pre-wrap; /* allow wrapping */
+}
+
+pre code .line-wrap{
+  white-space: nowrap;
+  line-height: 1rem!important;
+  margin: 0;
+}
+
+/* ensure the two split children actually flex-fill */
+.playground {
+  display: flex;
+  height: 100%;
+}
+.editor-pane,
+.preview-pane {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  flex: 1;              /* allow Split.js to adjust height/width */
+}
+.ace-editor-pane {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  padding: .4rem;
+}
+.preview-pane > iframe {
+  flex: 1;
+  border: none;
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  overflow: auto;
+}
+
+/* vertical gutter (lr/rl) – full height */
+.gutter {
+  background: rgba(0,0,0,0.1) !important;
+  cursor: ew-resize    !important;
+  width: 6px          !important;
+  flex-shrink: 0       !important;
+}
+
+/* horizontal gutter (stack) – full width */
+.gutter-vertical {
+  background: rgba(0,0,0,0.1) !important;
+  cursor: ns-resize    !important;
+  height: 6px         !important;
+  flex-shrink: 0       !important;
+  width: 100%          !important;
+}
+
+.gutter:hover,
+.gutter-vertical:hover {
+  background: rgba(0,0,0,0.2) !important;
+}
+
+/* Preview iframe styling */
+.preview-iframe { background: white; }
+
+.toc-container {
+  position: sticky;
+  top: 6rem;
+  max-height: calc(100vh - 6rem);
+  padding-left: 1rem;
+  align-self: start;
+}
+
+/* Default TOC link */
+.toc-link {
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+/* Active TOC link */
+.toc-link.active {
+  color: var(--quanta-primary);     /* your primary accent */
+  position: relative;
+}
+
+.toc-link.active::before{
+  content: "";
+  border-right: 1px solid var(--quanta-primary);
+  position: absolute;
+  left: -1rem;
+  height: 100%;
+}
+
+#table-section.collapsed tbody tr:nth-child(n+9) {
+    display: none;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out both;
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

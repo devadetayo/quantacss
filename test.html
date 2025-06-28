@@ -1,0 +1,54 @@
+<!-- Hero Section -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Litezen CSS – Utility Meets Zen</title>
+  <link href="https://cdn.jsdelivr.net/npm/litezen-css@1.1.6/dist/litezen.css" rel="stylesheet">
+  <link href="https://unpkg.com/litezen-css@1.1.6/dist/utilities.css" rel="stylesheet">
+  <link rel="icon" href="assets/favico/favico.png" type="image/png">
+  <link href="assets/css/index.css" rel="stylesheet">
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/jquery.lazyload.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/toast.js" defer></script>
+  <script src="assets/js/theme-slider.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- Prism.js for syntax highlighting -->
+  <link href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-dracula.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js" defer></script>
+  <!-- Copy helper -->
+  <script>
+  function copyCode(btn) {
+    const code = btn.nextElementSibling.querySelector('code').innerText;
+    navigator.clipboard.writeText(code).then(() => {
+      btn.innerText = 'Copied!';
+      setTimeout(() => btn.innerText = 'Copy', 1500);
+    });
+  }
+  </script>
+
+</head>
+<body class="hero-bg text-slate-500 dark-text-slate-300 font-size-4 bg-white dark-bg-slate-900 min-h-100vh h-auto"> 
+    <section id="hero" class="relative w-full h-80 md-h-96 bg-black d-flex items-center justify-center overflow-hidden min-h-100vh" style="background-image: url('https://via.placeholder.com/1600x900'); background-size: cover; background-position: center;">
+        <!-- Overlay for darkening -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <!-- Content -->
+        <div class="relative text-center px-4">
+            <h1 class="text-4xl md-text-6xl font-bold text-white mb-4">
+            Build Pixel-Perfect UIs with Litezen
+            </h1>
+            <p class="text-base md-text-lg text-slate-200 mb-6 max-w-2xl mx-auto">
+            Utility-first CSS meets ready-made accessible components. No runtime, zero fuss.
+            </p>
+            <a href="#playground" class="lz-button bg-primary text-white px-6 py-3 rounded-lg font-semibold">
+            Launch Playground
+            </a>
+        </div>
+    </section>
+</body>
+</html>
