@@ -35,3 +35,26 @@ document.querySelectorAll('.toggle-more').forEach((btn) => {
     btn.textContent = isCollapsed ? 'Show more' : 'Show less';
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tocLinks = Array.from(document.querySelectorAll(".toc-link"));
+  const sections = tocLinks.map(link =>
+    document.getElementById(link.getAttribute("href").slice(1))
+  );
+
+  const onScroll = () => {
+    const scrollPos = window.scrollY + 120; // 120px offset for header/padding
+    sections.forEach((sec, idx) => {
+      if (!sec) return;
+      const top    = sec.offsetTop;
+      const bottom = top + sec.offsetHeight;
+      if (scrollPos >= top && scrollPos < bottom) {
+        tocLinks.forEach(l => l.classList.remove("active"));
+        tocLinks[idx].classList.add("active");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", onScroll);
+  onScroll(); // initialize on load
+});

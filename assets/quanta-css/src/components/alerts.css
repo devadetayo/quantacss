@@ -1,0 +1,92 @@
+/* Base Alert */
+.quanta-alert {
+  display: flex;
+  align-items: center;
+  gap: var(--quanta-space-2);
+  padding: var(--quanta-space-2);
+  border-radius: var(--quanta-rounded-md);
+  font-size: var(--quanta-text-base);
+  font-family: var(--quanta-font-secondary);
+  font-weight: 500;
+  line-height: var(--quanta-leading-normal);
+  border: var(--quanta-border-width) solid transparent;
+  background-color: var(--quanta-bg-default);
+  color: var(--quanta-text-default);
+  box-shadow: var(--quanta-shadow-sm);
+  transition:
+    background-color var(--quanta-duration-fast),
+    box-shadow var(--quanta-duration-fast);
+  width: 100%;
+}
+
+.quanta-alert:hover {
+  box-shadow: var(--quanta-shadow);
+}
+
+.quanta-alert svg {
+  flex-shrink: 0;
+}
+
+/* ── Alert Variants ───────────────────────────── */
+.quanta-alert-primary {
+  background-color: var(--quanta-primary);
+  color: var(--quanta-text-primary);
+  border: 1px solid var(--quanta-border-primary);
+}
+
+.quanta-alert-info {
+  background-color: var(--quanta-bg-info);
+  color: var(--quanta-text-info);
+  border: 1px solid var(--quanta-border-info);
+}
+
+.quanta-alert-success {
+  background-color: var(--quanta-bg-success);
+  color: var(--quanta-text-success);
+  border: 1px solid var(--quanta-border-success);
+}
+
+.quanta-alert-warning {
+  background-color: var(--quanta-bg-warning);
+  color: var(--quanta-text-warning);
+  border: 1px solid var(--quanta-border-warning);
+}
+
+.quanta-alert-error {
+  background-color: var(--quanta-bg-danger);
+  color: var(--quanta-text-danger);
+  border: 1px solid var(--quanta-border-danger);
+}
+
+.quanta-alert-neutral {
+  background-color: var(--quanta-bg-neutral);
+  color: var(--quanta-text-neutral);
+  border: 1px solid var(--quanta-border-neutral);
+}
+
+.quanta-alert-accent {
+  background-color: var(--quanta-bg-accent);
+  color: var(--quanta-text-accent);
+  border: 1px solid var(--quanta-border-accent);
+}
+
+/* ── Responsive Padding & Widths ──────────────── */
+@media (min-width: var(--quanta-screen-md)) {
+  .quanta-alert {
+    padding: var(--quanta-space-3);
+    width: 90%;
+  }
+}
+
+@media (min-width: var(--quanta-screen-lg)) {
+  .quanta-alert {
+    padding: var(--quanta-space-4);
+    width: 80%;
+  }
+}
+
+@media (min-width: var(--quanta-screen-xl)) {
+  .quanta-alert {
+    width: 70%;
+  }
+}
