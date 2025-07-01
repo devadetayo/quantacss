@@ -18,11 +18,21 @@
   <link href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-dracula.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js" defer></script>
   <script src="../assets/quanta-css/src/quanta.js" defer></script>
+  <!-- Copy helper -->
+  <script>
+    function copyCode(btn) {
+        const code = btn.nextElementSibling.querySelector('code').innerText;
+        navigator.clipboard.writeText(code).then(() => {
+        btn.innerText = 'Copied!';
+        setTimeout(() => btn.innerText = 'Copy', 1500);
+        });
+    }
+  </script>
 
 </head>
-<body class="hero-bg text-slate-500 dark-text-slate-300 font-size-4 bg-white dark-bg-slate-900 min-h-100vh h-auto overflow-visible line-height-6">
+<body class="hero-bg text-slate-500 dark-text-slate-300 bg-white dark-bg-slate-900 min-h-100vh h-auto overflow-visible line-height-6">
 
-    <nav class="bg-grey-50 dark-bg-slate-900 d-flex w-full px-4 py-2 md-px-8 lg-px-16 justify-between items-center fixed z-100 font-sans">
+    <nav class="bg-grey-50 dark-bg-slate-900 d-flex w-full px-4 py-2 md-px-8 justify-between items-center fixed z-100 font-sans border-b-2 border-0 border-slate-200 dark-border-slate-800 border-solid">
         <!-- Brand -->
         <div class="d-flex items-center justify-center gap-2">
         <a href="index.html" class="font-weight-bold m-0" style="color: var(--color-primary)">
@@ -95,7 +105,7 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <ul id="mobile-menu" class="d-flex flex-col bg-grey-50 dark-bg-slate-900 shadow-md min-h-100vh w-80p fixed p-4 pt-16 z-10">
+    <ul id="mobile-menu" class="d-flex flex-col bg-grey-50 dark-bg-slate-900 shadow-md min-h-100vh w-80p fixed p-4 md-8 pt-16 z-10">
         <div class="quanta-form-group quanta-form-search">
         <input type="text" class="quanta-form-input" placeholder="Search something..." />
         </div>
@@ -114,29 +124,169 @@
     </ul>
 
     <!-- MAIN LAYOUT -->
-    <div class="d-flex">
+    <div class="d-flex w-full h-full">
         <!-- SIDEBAR -->
-        <aside id="docs-sidebar" class="bg-white dark-bg-slate-900 border-r-2 border-0 border-solid border-slate-200 dark-border-slate-800 p-4 md-pl-8 pt-20 lg-px-16 fixed min-h-100vh w-80p md-w-20p" style="top: 0; overflow:auto;"
+        <aside id="docs-sidebar" class="d-flex bg-white dark-bg-slate-900 border-r-2 border-0 border-solid border-slate-200 dark-border-slate-800 fixed min-h-100vh h-full w-80p md-w-1/4 lg-w-20p pt-16 top-0 overflow-visible"
         >
-            <nav class="">
-                <a href="#getting-started" class="d-block px-2 py-1 rounded-sm hover-bg-slate-100 dark-hover-bg-slate-800 mb-1 hover-text-primary">
-                    Getting Started
-                </a>
-                <a href="#installation" class="d-block px-2 py-1 rounded-sm hover-bg-slate-100 dark-hover-bg-slate-800 mb-1 hover-text-primary">
-                    Installation
-                </a>
-                <a href="#utilities" class="d-block px-2 py-1 rounded-sm hover-bg-slate-100 dark-hover-bg-slate-800 mb-1 hover-text-primary">
-                    Utilities
-                </a>
-                <a href="#components" class="d-block px-2 py-1 rounded-sm hover-bg-slate-100 dark-hover-bg-slate-800 mb-1 hover-text-primary">
-                    Components
-                </a>
-                <a href="#forms" class="d-block px-2 py-1 rounded-sm hover-bg-slate-100 dark-hover-bg-slate-800 mb-1 hover-text-primary">
-                    Forms
-                </a>
-                <a href="#customize" class="d-block px-2 py-1 rounded-sm hover-bg-slate-100 dark-hover-bg-slate-800 mb-1 hover-text-primary">
-                    Customization
-                </a>
+            <nav class="w-full h-full d-flex flex-col gap-4 flex-1 overflow-y-scroll p-4 md-pl-8">
+                <div class="d-flex flex-col w-full gap-2 relative">
+                    <h2 class="font-weight-medium text-black dark-text-white">Getting Started</h2>
+                    <ul class="d-flex flex-col w-full border-0 border-l-2 border-solid border-slate-300 dark-border-slate-800">
+                        <li><a href="docs.html" class="px-4 py-1 hover-text-primary side-link active hover-no-underline d-flex w-full">Getting Started</a></li>
+                        <li><a href="docs/editor-setup.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Editors Setup</a></li>
+                        <li><a href="docs/compatibility-guide.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">compatibility-guide</a></li>
+                    </ul>
+                </div>
+                <div class="d-flex flex-col w-full gap-2 relative">
+                    <h2 class="font-weight-medium text-black dark-text-white">Components</h2>
+                    <ul class="d-flex flex-col w-full border-0 border-l-2 border-solid border-slate-300 dark-border-slate-800">
+                        <li><a href="docs/components/core-concept.html" class="px-4 py-1 hover-text-primary side-link active hover-no-underline d-flex w-full">Core Concept</a></li>
+                        <li><a href="docs/components/core-concept.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Responsiveness</a></li>
+                        <li><a href="docs/components/utilities" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Utilities</a></li>
+                        <li><a href="docs/components/accordions.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Accordions</a></li>
+                        <li><a href="docs/components/alerts.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Alerts</a></li>
+                        <li><a href="docs/components/avatars.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Avatars</a></li>
+                        <li><a href="docs/components/badges.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Badges</a></li>
+                        <li><a href="docs/components/breadcrumbs.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Breadcrumbs</a></li>
+                        <li><a href="docs/components/buttons.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Buttons</a></li>
+                        <li><a href="docs/components/card.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Cards</a></li>
+                        <li><a href="docs/components/carousel.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Carousel</a></li>
+                        <li><a href="docs/components/chips.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Chips</a></li>
+                        <li><a href="docs/components/columns.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Columns</a></li>
+                        <li><a href="docs/components/datepicker.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Date pIcker</a></li>
+                        <li><a href="docs/components/divider.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Divider</a></li>
+                        <li><a href="docs/components/drawer.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Drawer</a></li>
+                        <li><a href="docs/components/dropdowns.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Dropdowns</a></li>
+                        <li><a href="docs/components/file-uploads.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">File Uploads</a></li>
+                        <li><a href="docs/components/footer.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Footer</a></li>
+                        <li><a href="docs/components/form.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Forms</a></li>
+                        <li><a href="docs/components/form-elements.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Form Elements</a></li>
+                        <li><a href="docs/components/gallery.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Gallery</a></li>
+                        <li><a href="docs/components/grids.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Grid</a></li>
+                        <li><a href="docs/components/hero.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Hero</a></li>
+                        <li><a href="docs/components/input-group.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Input Group</a></li>
+                        <li><a href="docs/components/lazy-load.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Lazy Load</a></li>
+                        <li><a href="docs/components/lists.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Lists</a></li>
+                        <li><a href="docs/components/megamenu.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Megamenu</a></li>
+                        <li><a href="docs/components/modal.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Modal</a></li>
+                        <li><a href="docs/components/navbar.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Navbar</a></li>
+                        <li><a href="docs/components/notifications.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Toasts</a></li>
+                        <li><a href="docs/components/pagination.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Pagination</a></li>
+                        <li><a href="docs/components/popovers.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Popovers</a></li>
+                        <li><a href="docs/components/pricing.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Pricing</a></li>
+                        <li><a href="docs/components/progress-bars.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Progress Bars</a></li>
+                        <li><a href="docs/components/range-slider.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Range Slider</a></li>
+                        <li><a href="docs/components/rating.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Rating</a></li>
+                        <li><a href="docs/components/rating.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Scrollspy</a></li>
+                        <li><a href="docs/components/sidebar.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Sidebar</a></li>
+                        <li><a href="docs/components/skeleton.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Skeleton</a></li>
+                        <li><a href="docs/components/spinners.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Spinners</a></li>
+                        <li><a href="docs/components/stepper.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Steppers</a></li>
+                        <li><a href="docs/components/sticky.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Sticky</a></li>
+                        <li><a href="docs/components/tables.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Tables</a></li>
+                        <li><a href="docs/components/tabs.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Tabs</a></li>
+                        <li><a href="docs/components/textarea.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Textarea</a></li>
+                        <li><a href="docs/components/theme-switcher.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Theme Switcher</a></li>
+                        <li><a href="docs/components/timeline.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Timeline</a></li>
+                        <li><a href="docs/components/tooltips.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">tooltips</a></li>
+                        <li><a href="docs/components/visibility.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Visibility</a></li>
+                    </ul>
+                </div>
+
+                <div class="d-flex flex-col w-full gap-2 relative">
+                    <h2 class="font-weight-medium text-black dark-text-white">Utilities</h2>
+                    <ul class="d-flex flex-col w-full border-0 border-l-2 border-solid border-slate-300 dark-border-slate-800">
+                        <li><a href="docs/utils_styles" class="px-4 py-1 hover-text-primary side-link active hover-no-underline d-flex w-full">Styling with Utilities</a></li>
+                        <li><a href="docs/pseudo.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Hover, Focus and other Pseudo styles</a></li>
+                        <li><a href="docs/dark-mode.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Dark Mode</a></li>
+                        <li><a href="docs/theme-variables.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Theme Variables</a></li>
+                        <li><a href="docs/colors.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Colors</a></li>
+                        <li><a href="docspresets.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Preset</a></li>
+                        <li><a href="docs/responsive.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Responsive Design</a></li>
+                        <li><a href="docs/aspect-ratio.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Accent Color</a></li>
+                        <li><a href="docs/animations.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Animations</a></li>
+                        <li><a href="docs/appearance.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Apperance</a></li>
+                        <li><a href="docs/aspect-ratio.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Aspect Ratio</a></li>
+                        <li><a href="docs/backface.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Backface</a></li>
+                        <li><a href="docs/bg-color.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Background</a></li>
+                        <li><a href="docs/blend.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Blend</a></li>
+                        <li><a href="docs/border-color.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Border Color</a></li>
+                        <li><a href="docs/border-radius.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Border Radius</a></li>
+                        <li><a href="docs/border-width.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Border Width</a></li>
+                        <li><a href="docs/boxdecoration.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Box Decoration</a></li>
+                        <li><a href="docs/caret.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Caret</a></li>
+                        <li><a href="docs/clip.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Clip</a></li>
+                        <li><a href="docs/clip-path.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Clip Path</a></li>
+                        <li><a href="docs/color-scheme.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Color Scheme</a></li>
+                        <li><a href="docs/colors.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Colors</a></li>
+                        <li><a href="docs/contain.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Contain</a></li>
+                        <li><a href="docs/cursor.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Cursor</a></li>
+                        <li><a href="docs/decoration.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Decoration</a></li>
+                        <li><a href="docs/display.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Display</a></li>
+                        <li><a href="docs/divideColor.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Divide Color</a></li>
+                        <li><a href="docs/effects.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">effects</a></li>
+                        <li><a href="docs/field-sizing.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Field Sizing</a></li>
+                        <li><a href="docs/filters.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Filters</a></li>
+                        <li><a href="docs/flexbox.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Flexbox</a></li>
+                        <li><a href="docs/flex-container.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Flex Container</a></li>
+                        <li><a href="docs/flex-items.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Flex Items</a></li>
+                        <li><a href="docs/float.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full"></a></li>
+                        <li><a href="docs/font-family.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Font Family</a></li>
+                        <li><a href="docs/font-size.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Font Size</a></li>
+                        <li><a href="docs/font-weight.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Font Weight</a></li>
+                        <li><a href="docs/gaps.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Gap</a></li>
+                        <li><a href="docs/gradients.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Gradients</a></li>
+                        <li><a href="docs/grid.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Grid</a></li>
+                        <li><a href="docs/grid-container.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Grid Container</a></li>
+                        <li><a href="docs/height.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Height</a></li>
+                        <li><a href="docs/interactivity.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Interactivity</a></li>
+                        <li><a href="docs/isolate.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Isolate</a></li>
+                        <li><a href="docs/isolation.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Isolation</a></li>
+                        <li><a href="docs/layout.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Layout</a></li>
+                        <li><a href="docs/letter-spacing.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Letter Spacing</a></li>
+                        <li><a href="docs/line-height.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Line Height</a></li>
+                        <li><a href="docs/list.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">List</a></li>
+                        <li><a href="docs/list-style.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Line Height</a></li>
+                        <li><a href="docs/margin-block.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Margin Block</a></li>
+                        <li><a href="docs/margin.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Margin</a></li>
+                        <li><a href="docs/mixblend.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Mix Blend</a></li>
+                        <li><a href="docs/object-fit.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Object Fit</a></li>
+                        <li><a href="docs/opacity.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Opacity</a></li>
+                        <li><a href="docs/overflow.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Overflow</a></li>
+                        <li><a href="docs/padding-block.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Padding Block</a></li>
+                        <li><a href="docs/padding.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Padding</a></li>
+                        <li><a href="docs/perspective.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Perspective</a></li>
+                        <li><a href="docs/placeholderColor.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Placeholder Color</a></li>
+                        <li><a href="docs/pointerEvents.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Pointer Events</a></li>
+                        <li><a href="docs/position.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Position</a></li>
+                        <li><a href="docs/resize.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Resize</a></li>
+                        <li><a href="docs/ring.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Ring</a></li>
+                        <li><a href="docs/ring-color.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Ring Color</a></li>
+                        <li><a href="docs/scroll.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Scroll</a></li>
+                        <li><a href="docs/scrollBehavior.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Scroll Behavior</a></li>
+                        <li><a href="docs/scrollMargin.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Scroll Margin</a></li>
+                        <li><a href="docs/scrollPadding.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Scroll Padding</a></li>
+                        <li><a href="docs/shadows.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Shadows</a></li>
+                        <li><a href="docs/size.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Sizes</a></li>
+                        <li><a href="docs/snap.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Snap</a></li>
+                        <li><a href="docs/spacing.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Spacing</a></li>
+                        <li><a href="docs/sr.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Screen Readers</a></li>
+                        <li><a href="docs/tables.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Tables</a></li>
+                        <li><a href="docs/textAlign.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Text Align</a></li>
+                        <li><a href="docs/textColor.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Text Color</a></li>
+                        <li><a href="docs/textDecoration.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Text Decoration</a></li>
+                        <li><a href="docs/touchAction.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Touch Action</a></li>
+                        <li><a href="docs/transform.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Transform</a></li>
+                        <li><a href="docs/transitions.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Transitions</a></li>
+                        <li><a href="docs/typography.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Typography</a></li>
+                        <li><a href="docs/userSelect.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">User Select</a></li>
+                        <li><a href="docs/visibility.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Visibility</a></li>
+                        <li><a href="docs/whitespace.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Whitespace</a></li>
+                        <li><a href="docs/width.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Width</a></li>
+                        <li><a href="docs/willChange.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Will Change</a></li>
+                        <li><a href="docs/z-index.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">z Index</a></li>
+                    </ul>
+                </div>
             </nav>
         </aside>
 
