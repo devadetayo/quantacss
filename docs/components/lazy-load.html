@@ -287,96 +287,73 @@
     <aside id="toc" class="toc-container d-none md-d-block md-w-30p self-start sticky inset-t-4">
       <h2 class="font-weight-medium text-black dark-text-white">On this page</h2>
       <ul class="d-flex flex-col pl-4 border-0 border-l-1 border-solid border-slate-300 dark-border-slate-800 gap-2">
-        <li><a href="#gallery" class="font-size-3 hover-text-primary toc-link active">Gallery Grid</a></li>
-        <li><a href="#items" class="font-size-3 hover-text-primary toc-link">Items & Hover</a></li>
-        <li><a href="#lightbox" class="font-size-3 hover-text-primary toc-link">Lightbox</a></li>
+        <li><a href="#overview" class="font-size-3 hover-text-primary toc-link active">Overview</a></li>
+        <li><a href="#basic-usage" class="font-size-3 hover-text-primary toc-link">Basic Usage</a></li>
+        <li><a href="#direction-variants" class="font-size-3 hover-text-primary toc-link">Direction Variants</a></li>
       </ul>
     </aside>
 
     <!-- MAIN CONTENT -->
     <div class="w-full md-w-70p pr-0 md-pr-12 d-flex flex-col">
 
-      <!-- Gallery Grid -->
-      <div id="gallery" class="mb-10">
-        <p class="font-mono mb-2">Media</p>
-        <h1 class="font-size-7 font-weight-semibold text-black dark-text-white mb-2">Gallery</h1>
+      <!-- Overview -->
+      <div id="overview" class="mb-10">
+        <p class="font-mono mb-2">Utilities</p>
+        <h1 class="font-size-7 font-weight-semibold text-black dark-text-white mb-2">Lazy‑Load Animations</h1>
         <p class="mb-4 font-size-4">
-          Use <code>.quanta-gallery</code> to lay out images in a responsive grid. It auto‑fills the width with items of at least 180px.
+          Defer reveal animations with <code>.lazy-load</code>. When you add the <code>.show</code> class (via your preset JS), elements fade and slide into view.
         </p>
+      </div>
 
+      <!-- Basic Usage -->
+      <div id="basic-usage" class="mb-10">
+        <h3 class="font-weight-medium text-black dark-text-white">Basic Usage</h3>
+        <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">
+          Simply add <code>.lazy-load</code> to any element. Your JS will detect when it scrolls into view and add <code>.show</code>.
+        </p>
         <div class="mb-4">
-          <pre><code class="language-html">&lt;div class="quanta-gallery"&gt;
-  &lt;div class="quanta-gallery-item"&gt;
-    &lt;img src="https://picsum.photos/300?random=1" alt="Random image" /&gt;
-  &lt;/div&gt;
-  &lt;!-- repeat for each image --&gt;
+          <pre><code class="language-html">&lt;div class="lazy-load"&gt;
+  &lt;h2&gt;Hello, world!&lt;/h2&gt;
 &lt;/div&gt;</code></pre>
         </div>
-        <div class="quanta-gallery mb-8">
-          <div class="quanta-gallery-item"><img src="https://picsum.photos/300?random=1" alt="Random image 1"></div>
-          <div class="quanta-gallery-item"><img src="https://picsum.photos/300?random=2" alt="Random image 2"></div>
-          <div class="quanta-gallery-item"><img src="https://picsum.photos/300?random=3" alt="Random image 3"></div>
-          <div class="quanta-gallery-item"><img src="https://picsum.photos/300?random=4" alt="Random image 4"></div>
-          <div class="quanta-gallery-item"><img src="https://picsum.photos/300?random=5" alt="Random image 5"></div>
-          <div class="quanta-gallery-item"><img src="https://picsum.photos/300?random=6" alt="Random image 6"></div>
+        <div class="space-y-8">
+          <div class="lazy-load p-6 bg-slate-100 dark-bg-slate-800 rounded-md">
+            <p class="text-black dark-text-white">This block fades in when visible.</p>
+          </div>
+          <div class="lazy-load p-6 bg-slate-100 dark-bg-slate-800 rounded-md">
+            <p class="text-black dark-text-white">Each element animates once.</p>
+          </div>
         </div>
       </div>
 
-      <!-- Items & Hover -->
-      <div id="items" class="mb-10">
-        <h3 class="font-weight-medium text-black dark-text-white">Items & Hover</h3>
+      <!-- Direction Variants -->
+      <div id="direction-variants" class="mb-10">
+        <h3 class="font-weight-medium text-black dark-text-white">Direction Variants</h3>
         <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">
-          Each <code>.quanta-gallery-item</code> maintains a square aspect ratio, rounded corners via <code>var(--quanta-rounded-md)</code>, and zooms the image slightly on hover/focus.
+          Combine with:
+          <code>.lazy-from-left</code>,
+          <code>.lazy-from-right</code>,
+          <code>.lazy-from-top</code>, or
+          <code>.lazy-from-bottom</code>
+          for slide‑in directions.
         </p>
-
         <div class="mb-4">
-          <pre><code class="language-css">.quanta-gallery-item {
-  aspect-ratio: 1/1;
-  border-radius: var(--quanta-rounded-md);
-  overflow: hidden;
-}
-.quanta-gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-.quanta-gallery-item:hover img,
-.quanta-gallery-item:focus-visible img {
-  transform: scale(1.05);
-}</code></pre>
+          <pre><code class="language-html">&lt;div class="lazy-load lazy-from-left"&gt;…&lt;/div&gt;
+&lt;div class="lazy-load lazy-from-top show"&gt;…&lt;/div&gt;</code></pre>
         </div>
-        <div class="quanta-gallery mb-8">
-          <div class="quanta-gallery-item"><img src="https://picsum.photos/300?random=5" alt="Zoom effect 1"></div>
-          <div class="quanta-gallery-item"><img src="https://picsum.photos/300?random=6" alt="Zoom effect 2"></div>
-          <div class="quanta-gallery-item"><img src="https://picsum.photos/300?random=7" alt="Zoom effect 3"></div>
-        </div>
-      </div>
-
-      <!-- Lightbox -->
-      <div id="lightbox" class="mb-10">
-        <h3 class="font-weight-medium text-black dark-text-white">Lightbox</h3>
-        <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">
-          Wrap a full‑screen overlay in <code>.quanta-lightbox</code>. Toggle the <code>.active</code> class to show or hide the enlarged image.
-        </p>
-
-        <div class="mb-4">
-          <pre><code class="language-html">&lt;div class="quanta-lightbox"&gt;
-  &lt;span class="quanta-lightbox-close"&gt;×&lt;/span&gt;
-  &lt;img src="https://picsum.photos/800/600?random=8" alt="Enlarged view" /&gt;
-&lt;/div&gt;</code></pre>
-        </div>
-        <div class="relative">
-          Click on the image to open Lightbox
-        </div>
-          <div class="quanta-gallery mb-8">
-          <div class="quanta-gallery-item"><img src="https://picsum.photos/300?random=1" alt="Random image 1"></div>
-          <div class="quanta-gallery-item"><img src="https://picsum.photos/300?random=2" alt="Random image 2"></div>
-          <div class="quanta-gallery-item"><img src="https://picsum.photos/300?random=3" alt="Random image 3"></div>
-          <div class="quanta-gallery-item"><img src="https://picsum.photos/300?random=4" alt="Random image 4"></div>
-          <div class="quanta-gallery-item"><img src="https://picsum.photos/300?random=5" alt="Random image 5"></div>
-          <div class="quanta-gallery-item"><img src="https://picsum.photos/300?random=6" alt="Random image 6"></div>
-        </div>
+        <div class="d-grid grid-cols-2 gap-6">
+          <div class="lazy-load lazy-from-left p-6 bg-indigo-100 dark-bg-indigo-900 rounded-md">
+            <p>Slide in from left</p>
+          </div>
+          <div class="lazy-load lazy-from-right p-6 bg-green-100 dark-bg-green-900 rounded-md">
+            <p>Slide in from right</p>
+          </div>
+          <div class="lazy-load lazy-from-top p-6 bg-yellow-100 dark-bg-yellow-900 rounded-md">
+            <p>Slide in from top</p>
+          </div>
+          <div class="lazy-load lazy-from-bottom p-6 bg-pink-100 dark-bg-pink-900 rounded-md">
+            <p>Slide in from bottom</p>
+          </div>
         </div>
       </div>
 

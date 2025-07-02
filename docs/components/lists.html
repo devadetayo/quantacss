@@ -4,93 +4,86 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quanta CSS – Utility Meets Zen</title>
-  <link href="https://cdn.jsdelivr.net/npm/quanta-css@1.0.3/dist/quanta.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/quanta-css@1.0.3/dist/utilities.css" rel="stylesheet">
-  <link rel="icon" href="../assets/favico/favico.png" type="image/png">
-  <link href="../assets/css/index.css" rel="stylesheet">
-  <script src="../assets/js/jquery-3.7.1.min.js"></script>
-  <script src="../assets/js/jquery.lazyload.min.js"></script>
-  <script src="../assets/js/theme.js"></script>
-  <script src="../assets/js/navbar.js"></script>
+  <link href="../../assets/quanta-css/dist/quanta.css" rel="stylesheet">
+  <link href="../../assets/quanta-css/dist/utilities.css" rel="stylesheet">
+  <link rel="icon" href="../../assets/favico/favico.png" type="image/png">
+  <link href="../../assets/css/index.css" rel="stylesheet">
+  <script src="../../assets/js/jquery-3.7.1.min.js"></script>
+  <script src="../../assets/js/jquery.lazyload.min.js"></script>
+  <script src="../../assets/js/theme.js"></script>
+  <script src="../../assets/js/navbar.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <!-- Prism.js for syntax highlighting -->
   <link href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-dracula.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js" defer></script>
-  <script src="https://unpkg.com/quanta-css@1.0.3/src/quanta.js" defer></script>
-  <!-- Copy helper -->
-  <script>
-    function copyCode(btn) {
-        const code = btn.nextElementSibling.querySelector('code').innerText;
-        navigator.clipboard.writeText(code).then(() => {
-        btn.innerText = 'Copied!';
-        setTimeout(() => btn.innerText = 'Copy', 1500);
-        });
-    }
-  </script>
+  <script src="../../assets/quanta-css/src/quanta.js" defer></script>
 
 </head>
-<body class="hero-bg text-slate-500 dark-text-slate-300 font-size-4 bg-white dark-bg-slate-900 min-h-100vh h-auto">
+<body class="hero-bg text-slate-500 dark-text-slate-300 bg-white dark-bg-slate-900 min-h-100vh h-auto overflow-visible">
 
-    <nav class="bg-transparent d-flex w-full px-4 py-4 md-px-8 lg-px-16 justify-between items-center fixed z-100 backdrop-blur">
+    <nav class="bg-grey-50 dark-bg-slate-900 d-flex w-full px-4 py-2 md-px-8 justify-between items-center fixed z-100 font-sans border-b-2 border-0 border-slate-200 dark-border-slate-800 border-solid">
         <!-- Brand -->
-        <a href="index.html" class="text-2xl font-bold" style="color: var(--color-primary)">
-            <img src="../assets/images/litezen.png" class="d-block dark-d-none" style="height: 24px;">
-            <img src="../assets/images/litezen.dark.png" class="d-none dark-d-block" style="height: 24px;">
+        <div class="d-flex items-center justify-center gap-2">
+        <a href="index.html" class="font-weight-bold m-0" style="color: var(--color-primary)">
+            <img src="../../assets/images/quantacss.png" class="d-block dark-d-none" style="height: 28px;">
+            <img src="../../assets/images/quantacss.dark.png" class="d-none dark-d-block" style="height: 28px;">
         </a>
+        </div>
 
         <!-- Desktop Menu -->
         <ul class="d-none lg-d-flex gap-2">
-            <li><a href="documentation.html" class="d-flex py-1 px-4 text-inherit hover-bg-orange-50 hover-text-orange-800 rounded-sm">Docs</a></li>
-            <li><a href="#code" class="d-flex py-1 px-4 text-inherit hover-bg-orange-50 hover-text-orange-800 rounded-sm">Playground</a></li>
-            <li><a href="#showcase" class="d-flex py-1 px-4 text-inherit hover-bg-orange-50 hover-text-orange-800 rounded-sm">Litezen UI</a></li>
-            <li><a href="#showcase" class="d-flex py-1 px-4 text-inherit hover-bg-orange-50 hover-text-orange-800 rounded-sm">Examples</a></li>
+            <li><a href="docs.html" class="d-flex py-1 px-4 text-inherit hover-text-primary rounded-sm hover-no-underline">Docs</a></li>
+            <li><a href="playground.html" class="d-flex py-1 px-4 text-inherit hover-text-primary rounded-sm hover-no-underline">Playground</a></li>
+            <li><a href="shop.html" class="d-flex py-1 px-4 text-inherit hover-text-primary rounded-sm hover-no-underline">Shop</a></li>
+            <li><a href="examples.html" class="d-flex py-1 px-4 text-inherit hover-text-primary rounded-sm hover-no-underline">Examples</a></li>
         </ul>
 
-        <ul class="d-none md-d-flex gap-2 items-center justify-center">
-            <div class="theme-options d-flex max-w-fit gap-2 rounded-pill p-1 bg-slate-50 dark-bg-slate-800" style="backdrop-filter: blur(12px);">
-            <label class="theme-option p-1 rounded-full" data-theme="light">
-                <input type="radio" name="theme" value="light" hidden>
-                <div class="theme-button d-flex align-items-center">
-                    <span class="d-flex h-fit w-fit">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="18" height="18"><path d="M120,40V32a8,8,0,0,1,16,0v8a8,8,0,0,1-16,0Zm8,24a64,64,0,1,0,64,64A64.07,64.07,0,0,0,128,64ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-8-8A8,8,0,0,0,50.34,61.66Zm0,116.68-8,8a8,8,0,0,0,11.32,11.32l8-8a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l8-8a8,8,0,0,0-11.32-11.32l-8,8A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l8,8a8,8,0,0,0,11.32-11.32ZM40,120H32a8,8,0,0,0,0,16h8a8,8,0,0,0,0-16Zm88,88a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-8A8,8,0,0,0,128,208Zm96-88h-8a8,8,0,0,0,0,16h8a8,8,0,0,0,0-16Z"/></svg>
-                    </span>
-                </div>
-            </label>
-            <label class="theme-option p-1 rounded-full" data-theme="dark">
-                <input type="radio" name="theme" value="dark" hidden>
-                <div class="theme-button d-flex gap-6 align-items-center">
-                    <span class="d-flex h-fit w-fit">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="18" height="18"><path d="M240,96a8,8,0,0,1-8,8H216v16a8,8,0,0,1-16,0V104H184a8,8,0,0,1,0-16h16V72a8,8,0,0,1,16,0V88h16A8,8,0,0,1,240,96ZM144,56h8v8a8,8,0,0,0,16,0V56h8a8,8,0,0,0,0-16h-8V32a8,8,0,0,0-16,0v8h-8a8,8,0,0,0,0,16Zm65.14,94.33A88.07,88.07,0,0,1,105.67,46.86a8,8,0,0,0-10.6-9.06A96,96,0,1,0,218.2,160.93a8,8,0,0,0-9.06-10.6Z"/></svg>
-                    </span>
-                </div>
-            </label>
-            <label class="theme-option p-1 rounded-full" data-theme="system">
-                <input type="radio" name="theme" value="system" hidden>
-                <div class="theme-button d-flex gap-6 align-items-center">
-                    <span class="d-flex h-fit w-fit">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="18" height="18"><path d="M208,40H48A24,24,0,0,0,24,64V176a24,24,0,0,0,24,24h72v16H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V200h72a24,24,0,0,0,24-24V64A24,24,0,0,0,208,40Zm0,144H48a8,8,0,0,1-8-8V160H216v16A8,8,0,0,1,208,184Z"/></svg>
-                    </span>
-                </div>
-            </label>
+        <ul class="d-none lg-d-flex gap-2 items-center justify-center">
+            <div class="quanta-form-group quanta-form-search">
+                <input type="text" class="quanta-form-input" placeholder="Search something..." />
             </div>
 
-            <li><a href="https://github.com/devadetayo/litezen-css" class="d-flex p-2 text-inherit hover-text-primary rounded-md">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width="20" height="20" fill="currentColor"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+            <li><a href="https://github.com/devadetayo/quanta-css" class="d-flex p-2 text-inherit hover-text-primary rounded-md">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="size-5" fill="currentColor"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
             </a></li>
 
             <li><a href="https://discord.gg/ZKxD4A8J" class="d-flex p-2 text-inherit hover-text-primary rounded-md">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="currentColor" height="24px" width="24px"><path d="M524.5 69.8a1.5 1.5 0 0 0 -.8-.7A485.1 485.1 0 0 0 404.1 32a1.8 1.8 0 0 0 -1.9 .9 337.5 337.5 0 0 0 -14.9 30.6 447.8 447.8 0 0 0 -134.4 0 309.5 309.5 0 0 0 -15.1-30.6 1.9 1.9 0 0 0 -1.9-.9A483.7 483.7 0 0 0 116.1 69.1a1.7 1.7 0 0 0 -.8 .7C39.1 183.7 18.2 294.7 28.4 404.4a2 2 0 0 0 .8 1.4A487.7 487.7 0 0 0 176 479.9a1.9 1.9 0 0 0 2.1-.7A348.2 348.2 0 0 0 208.1 430.4a1.9 1.9 0 0 0 -1-2.6 321.2 321.2 0 0 1 -45.9-21.9 1.9 1.9 0 0 1 -.2-3.1c3.1-2.3 6.2-4.7 9.1-7.1a1.8 1.8 0 0 1 1.9-.3c96.2 43.9 200.4 43.9 295.5 0a1.8 1.8 0 0 1 1.9 .2c2.9 2.4 6 4.9 9.1 7.2a1.9 1.9 0 0 1 -.2 3.1 301.4 301.4 0 0 1 -45.9 21.8 1.9 1.9 0 0 0 -1 2.6 391.1 391.1 0 0 0 30 48.8 1.9 1.9 0 0 0 2.1 .7A486 486 0 0 0 610.7 405.7a1.9 1.9 0 0 0 .8-1.4C623.7 277.6 590.9 167.5 524.5 69.8zM222.5 337.6c-29 0-52.8-26.6-52.8-59.2S193.1 219.1 222.5 219.1c29.7 0 53.3 26.8 52.8 59.2C275.3 311 251.9 337.6 222.5 337.6zm195.4 0c-29 0-52.8-26.6-52.8-59.2S388.4 219.1 417.9 219.1c29.7 0 53.3 26.8 52.8 59.2C470.7 311 447.5 337.6 417.9 337.6z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="currentColor" class="size-5"><path d="M524.5 69.8a1.5 1.5 0 0 0 -.8-.7A485.1 485.1 0 0 0 404.1 32a1.8 1.8 0 0 0 -1.9 .9 337.5 337.5 0 0 0 -14.9 30.6 447.8 447.8 0 0 0 -134.4 0 309.5 309.5 0 0 0 -15.1-30.6 1.9 1.9 0 0 0 -1.9-.9A483.7 483.7 0 0 0 116.1 69.1a1.7 1.7 0 0 0 -.8 .7C39.1 183.7 18.2 294.7 28.4 404.4a2 2 0 0 0 .8 1.4A487.7 487.7 0 0 0 176 479.9a1.9 1.9 0 0 0 2.1-.7A348.2 348.2 0 0 0 208.1 430.4a1.9 1.9 0 0 0 -1-2.6 321.2 321.2 0 0 1 -45.9-21.9 1.9 1.9 0 0 1 -.2-3.1c3.1-2.3 6.2-4.7 9.1-7.1a1.8 1.8 0 0 1 1.9-.3c96.2 43.9 200.4 43.9 295.5 0a1.8 1.8 0 0 1 1.9 .2c2.9 2.4 6 4.9 9.1 7.2a1.9 1.9 0 0 1 -.2 3.1 301.4 301.4 0 0 1 -45.9 21.8 1.9 1.9 0 0 0 -1 2.6 391.1 391.1 0 0 0 30 48.8 1.9 1.9 0 0 0 2.1 .7A486 486 0 0 0 610.7 405.7a1.9 1.9 0 0 0 .8-1.4C623.7 277.6 590.9 167.5 524.5 69.8zM222.5 337.6c-29 0-52.8-26.6-52.8-59.2S193.1 219.1 222.5 219.1c29.7 0 53.3 26.8 52.8 59.2C275.3 311 251.9 337.6 222.5 337.6zm195.4 0c-29 0-52.8-26.6-52.8-59.2S388.4 219.1 417.9 219.1c29.7 0 53.3 26.8 52.8 59.2C470.7 311 447.5 337.6 417.9 337.6z"/></svg>
             </a></li>
+
+            <button class="quanta-theme-toggle" id="themeToggle">
+                <span class="icon-sun">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+                    </svg>
+                </span>
+                <span class="icon-moon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clip-rule="evenodd" />
+                    </svg>
+                </span>
+            </button>
         </ul>
 
         <div class="d-flex lg-d-none gap-2">
+            <button class="quanta-theme-toggle" id="themeToggle">
+                <span class="icon-sun">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+                    </svg>
+                </span>
+                <span class="icon-moon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clip-rule="evenodd" />
+                    </svg>
+                </span>
+            </button>
             <!-- Mobile Hamburger -->
             <button data-toggle data-target="#mobile-menu" class="menu-toggle d-flex lg-d-none p-2 border-0" aria-label="Toggle menu">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="18" height="18" fill="currentColor"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
             </button>
-
             <!-- …inside your <nav>… -->
             <button
             id="sidebar-toggle"
@@ -103,154 +96,332 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <ul id="mobile-menu" class="d-flex flex-col bg-white dark-bg-slate-900 shadow-md min-h-100vh w-80p fixed p-4 pt-20 z-10">
-        <li><a href="#features" class="d-flex py-2 px-2 text-inherit hover-bg-orange-50 hover-text-orange-800 rounded-sm">Docs</a></li>
-        <li><a href="#code" class="d-flex py-2 px-2 text-inherit hover-bg-orange-50 hover-text-orange-800 rounded-sm">Playground</a></li>
-        <li><a href="#showcase" class="d-flex py-2 px-2 text-inherit hover-bg-orange-50 hover-text-orange-800 rounded-sm">Litezen UI</a></li>
-        <li><a href="#showcase" class="d-flex py-2 px-2 text-inherit hover-bg-orange-50 hover-text-orange-800 rounded-sm">Examples</a></li>
+    <ul id="mobile-menu" class="d-flex flex-col bg-grey-50 dark-bg-slate-900 shadow-md min-h-100vh w-80p fixed p-4 md-8 pt-16 z-10">
+        <div class="quanta-form-group quanta-form-search">
+        <input type="text" class="quanta-form-input" placeholder="Search something..." />
+        </div>
+        <li><a href="docs.html" class="d-flex py-2 px-2 text-inherit hover-text-primary hover-no-underline">Docs</a></li>
+        <li><a href="playground.html" class="d-flex py-2 px-2 text-inherit hover-text-primary hover-no-underline">Playground</a></li>
+        <li><a href="shop.html" class="d-flex py-2 px-2 text-inherit hover-text-primary hover-no-underline">Shop</a></li>
+        <li><a href="examples.html" class="d-flex py-2 px-2 text-inherit hover-text-primary hover-no-underline">Examples</a></li>
 
-        <li><a href="https://github.com/devadetayo/litezen-css" class="d-flex items-center py-2 px-2 text-inherit hover-text-primary rounded-md gap-2">
+        <li><a href="https://github.com/devadetayo/quanta-css" class="d-flex items-center py-2 px-2 text-inherit hover-text-primary hover-no-underline rounded-md gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width="20" height="20" fill="currentColor"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> Github
         </a></li>
 
-        <li><a href="https://discord.gg/ZKxD4A8J" class="d-flex items-center py-2 px-2 text-inherit hover-text-primary rounded-md gap-2">
+        <li><a href="https://discord.gg/ZKxD4A8J" class="d-flex items-center py-2 px-2 text-inherit hover-text-primary hover-no-underline rounded-md gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="currentColor" height="24px" width="24px"><path d="M524.5 69.8a1.5 1.5 0 0 0 -.8-.7A485.1 485.1 0 0 0 404.1 32a1.8 1.8 0 0 0 -1.9 .9 337.5 337.5 0 0 0 -14.9 30.6 447.8 447.8 0 0 0 -134.4 0 309.5 309.5 0 0 0 -15.1-30.6 1.9 1.9 0 0 0 -1.9-.9A483.7 483.7 0 0 0 116.1 69.1a1.7 1.7 0 0 0 -.8 .7C39.1 183.7 18.2 294.7 28.4 404.4a2 2 0 0 0 .8 1.4A487.7 487.7 0 0 0 176 479.9a1.9 1.9 0 0 0 2.1-.7A348.2 348.2 0 0 0 208.1 430.4a1.9 1.9 0 0 0 -1-2.6 321.2 321.2 0 0 1 -45.9-21.9 1.9 1.9 0 0 1 -.2-3.1c3.1-2.3 6.2-4.7 9.1-7.1a1.8 1.8 0 0 1 1.9-.3c96.2 43.9 200.4 43.9 295.5 0a1.8 1.8 0 0 1 1.9 .2c2.9 2.4 6 4.9 9.1 7.2a1.9 1.9 0 0 1 -.2 3.1 301.4 301.4 0 0 1 -45.9 21.8 1.9 1.9 0 0 0 -1 2.6 391.1 391.1 0 0 0 30 48.8 1.9 1.9 0 0 0 2.1 .7A486 486 0 0 0 610.7 405.7a1.9 1.9 0 0 0 .8-1.4C623.7 277.6 590.9 167.5 524.5 69.8zM222.5 337.6c-29 0-52.8-26.6-52.8-59.2S193.1 219.1 222.5 219.1c29.7 0 53.3 26.8 52.8 59.2C275.3 311 251.9 337.6 222.5 337.6zm195.4 0c-29 0-52.8-26.6-52.8-59.2S388.4 219.1 417.9 219.1c29.7 0 53.3 26.8 52.8 59.2C470.7 311 447.5 337.6 417.9 337.6z"/></svg> Discord
-        </a></li>
-
-        <li><a href="https://discord.gg/ZKxD4A8J" class="d-flex py-2 px-2 text-inherit hover-text-primary rounded-md items-center w-full justify-between">
-        Theme 
-        <div class="theme-options d-flex max-w-fit gap-2 rounded-pill p-1 bg-slate-50 dark-bg-slate-800 my-2" style="backdrop-filter: blur(12px);">
-            <label class="theme-option p-1 rounded-full" data-theme="light">
-                <input type="radio" name="theme" value="light" hidden>
-                <div class="theme-button d-flex align-items-center">
-                    <span class="d-flex h-fit w-fit">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="18" height="18"><path d="M120,40V32a8,8,0,0,1,16,0v8a8,8,0,0,1-16,0Zm8,24a64,64,0,1,0,64,64A64.07,64.07,0,0,0,128,64ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-8-8A8,8,0,0,0,50.34,61.66Zm0,116.68-8,8a8,8,0,0,0,11.32,11.32l8-8a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l8-8a8,8,0,0,0-11.32-11.32l-8,8A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l8,8a8,8,0,0,0,11.32-11.32ZM40,120H32a8,8,0,0,0,0,16h8a8,8,0,0,0,0-16Zm88,88a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-8A8,8,0,0,0,128,208Zm96-88h-8a8,8,0,0,0,0,16h8a8,8,0,0,0,0-16Z"/></svg>
-                    </span>
-                </div>
-            </label>
-            <label class="theme-option p-1 rounded-full" data-theme="dark">
-                <input type="radio" name="theme" value="dark" hidden>
-                <div class="theme-button d-flex gap-6 align-items-center">
-                    <span class="d-flex h-fit w-fit">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="18" height="18"><path d="M240,96a8,8,0,0,1-8,8H216v16a8,8,0,0,1-16,0V104H184a8,8,0,0,1,0-16h16V72a8,8,0,0,1,16,0V88h16A8,8,0,0,1,240,96ZM144,56h8v8a8,8,0,0,0,16,0V56h8a8,8,0,0,0,0-16h-8V32a8,8,0,0,0-16,0v8h-8a8,8,0,0,0,0,16Zm65.14,94.33A88.07,88.07,0,0,1,105.67,46.86a8,8,0,0,0-10.6-9.06A96,96,0,1,0,218.2,160.93a8,8,0,0,0-9.06-10.6Z"/></svg>
-                    </span>
-                </div>
-            </label>
-            <label class="theme-option p-1 rounded-full" data-theme="system">
-                <input type="radio" name="theme" value="system" hidden>
-                <div class="theme-button d-flex gap-6 align-items-center">
-                    <span class="d-flex h-fit w-fit">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="18" height="18"><path d="M208,40H48A24,24,0,0,0,24,64V176a24,24,0,0,0,24,24h72v16H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V200h72a24,24,0,0,0,24-24V64A24,24,0,0,0,208,40Zm0,144H48a8,8,0,0,1-8-8V160H216v16A8,8,0,0,1,208,184Z"/></svg>
-                    </span>
-                </div>
-            </label>
-        </div>
         </a></li>
     </ul>
 
     <!-- MAIN LAYOUT -->
-    <div class="d-flex">
+    <div class="d-flex w-full h-full">
         <!-- SIDEBAR -->
-        <aside id="docs-sidebar" class="bg-white dark-bg-slate-900 border-r-2 border-0 border-solid border-slate-200 dark-border-slate-800 p-4 md-pl-8 md-pr-4 pt-20 lg-pl-16 lg-pr-2 fixed min-h-100vh w-80p md-w-20p" style="top: 0; overflow:auto;"
+        <aside id="docs-sidebar" class="d-flex bg-white dark-bg-slate-900 border-r-2 border-0 border-solid border-slate-200 dark-border-slate-800 fixed min-h-100vh h-full w-80p md-w-1/4 lg-w-20p pt-16 top-0 overflow-visible"
         >
-            <nav class="">
-                <a href="#getting-started" class="d-block px-2 py-1 rounded-sm hover-bg-slate-100 dark-hover-bg-slate-800 mb-1 hover-text-primary">
-                    Getting Started
-                </a>
-                <a href="#installation" class="d-block px-2 py-1 rounded-sm hover-bg-slate-100 dark-hover-bg-slate-800 mb-1 hover-text-primary">
-                    Installation
-                </a>
-                <a href="#utilities" class="d-block px-2 py-1 rounded-sm hover-bg-slate-100 dark-hover-bg-slate-800 mb-1 hover-text-primary">
-                    Utilities
-                </a>
-                <a href="#components" class="d-block px-2 py-1 rounded-sm hover-bg-slate-100 dark-hover-bg-slate-800 mb-1 hover-text-primary">
-                    Components
-                </a>
-                <a href="#forms" class="d-block px-2 py-1 rounded-sm hover-bg-slate-100 dark-hover-bg-slate-800 mb-1 hover-text-primary">
-                    Forms
-                </a>
-                <a href="#customize" class="d-block px-2 py-1 rounded-sm hover-bg-slate-100 dark-hover-bg-slate-800 mb-1 hover-text-primary">
-                    Customization
-                </a>
+            <nav class="w-full h-full d-flex flex-col gap-4 flex-1 overflow-y-scroll p-4 md-pl-8">
+                <div class="d-flex flex-col w-full gap-2 relative">
+                    <h2 class="font-weight-medium text-black dark-text-white">Getting Started</h2>
+                    <ul class="d-flex flex-col w-full border-0 border-l-2 border-solid border-slate-300 dark-border-slate-800">
+                        <li><a href="../../docs.html" class="px-4 py-1 hover-text-primary side-link active hover-no-underline d-flex w-full">Getting Started</a></li>
+                        <li><a href="../editor-setup.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Editors Setup</a></li>
+                        <li><a href="../compatibility-guide.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">compatibility-guide</a></li>
+                    </ul>
+                </div>
+                <div class="d-flex flex-col w-full gap-2 relative">
+                    <h2 class="font-weight-medium text-black dark-text-white">Components</h2>
+                    <ul class="d-flex flex-col w-full border-0 border-l-2 border-solid border-slate-300 dark-border-slate-800">
+                        <li><a href="core-concept.html" class="px-4 py-1 hover-text-primary side-link active hover-no-underline d-flex w-full">Core Concept</a></li>
+                        <li><a href="core-concept.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Responsiveness</a></li>
+                        <li><a href="utilities" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Utilities</a></li>
+                        <li><a href="accordions.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Accordions</a></li>
+                        <li><a href="alerts.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Alerts</a></li>
+                        <li><a href="avatars.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Avatars</a></li>
+                        <li><a href="badges.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Badges</a></li>
+                        <li><a href="breadcrumbs.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Breadcrumbs</a></li>
+                        <li><a href="buttons.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Buttons</a></li>
+                        <li><a href="card.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Cards</a></li>
+                        <li><a href="carousel.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Carousel</a></li>
+                        <li><a href="chips.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Chips</a></li>
+                        <li><a href="columns.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Columns</a></li>
+                        <li><a href="datepicker.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Date pIcker</a></li>
+                        <li><a href="divider.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Divider</a></li>
+                        <li><a href="drawer.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Drawer</a></li>
+                        <li><a href="dropdowns.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Dropdowns</a></li>
+                        <li><a href="file-uploads.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">File Uploads</a></li>
+                        <li><a href="footer.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Footer</a></li>
+                        <li><a href="form.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Forms</a></li>
+                        <li><a href="form-elements.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Form Elements</a></li>
+                        <li><a href="gallery.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Gallery</a></li>
+                        <li><a href="grids.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Grid</a></li>
+                        <li><a href="hero.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Hero</a></li>
+                        <li><a href="input-group.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Input Group</a></li>
+                        <li><a href="lazy-load.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Lazy Load</a></li>
+                        <li><a href="lists.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Lists</a></li>
+                        <li><a href="megamenu.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Megamenu</a></li>
+                        <li><a href="modal.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Modal</a></li>
+                        <li><a href="navbar.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Navbar</a></li>
+                        <li><a href="notifications.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Toasts</a></li>
+                        <li><a href="pagination.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Pagination</a></li>
+                        <li><a href="popovers.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Popovers</a></li>
+                        <li><a href="pricing.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Pricing</a></li>
+                        <li><a href="progress-bars.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Progress Bars</a></li>
+                        <li><a href="range-slider.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Range Slider</a></li>
+                        <li><a href="rating.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Rating</a></li>
+                        <li><a href="rating.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Scrollspy</a></li>
+                        <li><a href="sidebar.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Sidebar</a></li>
+                        <li><a href="skeleton.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Skeleton</a></li>
+                        <li><a href="spinners.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Spinners</a></li>
+                        <li><a href="stepper.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Steppers</a></li>
+                        <li><a href="sticky.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Sticky</a></li>
+                        <li><a href="tables.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Tables</a></li>
+                        <li><a href="tabs.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Tabs</a></li>
+                        <li><a href="textarea.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Textarea</a></li>
+                        <li><a href="theme-switcher.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Theme Switcher</a></li>
+                        <li><a href="timeline.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Timeline</a></li>
+                        <li><a href="tooltips.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">tooltips</a></li>
+                        <li><a href="visibility.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Visibility</a></li>
+                    </ul>
+                </div>
+
+                <div class="d-flex flex-col w-full gap-2 relative">
+                    <h2 class="font-weight-medium text-black dark-text-white">Utilities</h2>
+                    <ul class="d-flex flex-col w-full border-0 border-l-2 border-solid border-slate-300 dark-border-slate-800">
+                        <li><a href="../utils_styles" class="px-4 py-1 hover-text-primary side-link active hover-no-underline d-flex w-full">Styling with Utilities</a></li>
+                        <li><a href="../pseudo.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Hover, Focus and other Pseudo styles</a></li>
+                        <li><a href="../dark-mode.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Dark Mode</a></li>
+                        <li><a href="../theme-variables.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Theme Variables</a></li>
+                        <li><a href="../colors.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Colors</a></li>
+                        <li><a href="docspresets.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Preset</a></li>
+                        <li><a href="../responsive.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Responsive Design</a></li>
+                        <li><a href="../aspect-ratio.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Accent Color</a></li>
+                        <li><a href="../animations.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Animations</a></li>
+                        <li><a href="../appearance.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Apperance</a></li>
+                        <li><a href="../aspect-ratio.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Aspect Ratio</a></li>
+                        <li><a href="../backface.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Backface</a></li>
+                        <li><a href="../bg-color.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Background</a></li>
+                        <li><a href="../blend.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Blend</a></li>
+                        <li><a href="../border-color.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Border Color</a></li>
+                        <li><a href="../border-radius.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Border Radius</a></li>
+                        <li><a href="../border-width.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Border Width</a></li>
+                        <li><a href="../boxdecoration.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Box Decoration</a></li>
+                        <li><a href="../caret.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Caret</a></li>
+                        <li><a href="../clip.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Clip</a></li>
+                        <li><a href="../clip-path.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Clip Path</a></li>
+                        <li><a href="../color-scheme.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Color Scheme</a></li>
+                        <li><a href="../colors.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Colors</a></li>
+                        <li><a href="../contain.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Contain</a></li>
+                        <li><a href="../cursor.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Cursor</a></li>
+                        <li><a href="../decoration.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Decoration</a></li>
+                        <li><a href="../display.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Display</a></li>
+                        <li><a href="../divideColor.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Divide Color</a></li>
+                        <li><a href="../effects.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">effects</a></li>
+                        <li><a href="../field-sizing.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Field Sizing</a></li>
+                        <li><a href="../filters.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Filters</a></li>
+                        <li><a href="../flexbox.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Flexbox</a></li>
+                        <li><a href="../flex-container.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Flex Container</a></li>
+                        <li><a href="../flex-items.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Flex Items</a></li>
+                        <li><a href="../float.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full"></a></li>
+                        <li><a href="../font-family.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Font Family</a></li>
+                        <li><a href="../font-size.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Font Size</a></li>
+                        <li><a href="../font-weight.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Font Weight</a></li>
+                        <li><a href="../gaps.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Gap</a></li>
+                        <li><a href="../gradients.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Gradients</a></li>
+                        <li><a href="../grid.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Grid</a></li>
+                        <li><a href="../grid-container.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Grid Container</a></li>
+                        <li><a href="../height.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Height</a></li>
+                        <li><a href="../interactivity.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Interactivity</a></li>
+                        <li><a href="../isolate.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Isolate</a></li>
+                        <li><a href="../isolation.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Isolation</a></li>
+                        <li><a href="../layout.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Layout</a></li>
+                        <li><a href="../letter-spacing.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Letter Spacing</a></li>
+                        <li><a href="../line-height.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Line Height</a></li>
+                        <li><a href="../list.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">List</a></li>
+                        <li><a href="../list-style.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Line Height</a></li>
+                        <li><a href="../margin-block.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Margin Block</a></li>
+                        <li><a href="../margin.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Margin</a></li>
+                        <li><a href="../mixblend.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Mix Blend</a></li>
+                        <li><a href="../object-fit.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Object Fit</a></li>
+                        <li><a href="../opacity.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Opacity</a></li>
+                        <li><a href="../overflow.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Overflow</a></li>
+                        <li><a href="../padding-block.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Padding Block</a></li>
+                        <li><a href="../padding.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Padding</a></li>
+                        <li><a href="../perspective.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Perspective</a></li>
+                        <li><a href="../placeholderColor.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Placeholder Color</a></li>
+                        <li><a href="../pointerEvents.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Pointer Events</a></li>
+                        <li><a href="../position.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Position</a></li>
+                        <li><a href="../resize.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Resize</a></li>
+                        <li><a href="../ring.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Ring</a></li>
+                        <li><a href="../ring-color.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Ring Color</a></li>
+                        <li><a href="../scroll.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Scroll</a></li>
+                        <li><a href="../scrollBehavior.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Scroll Behavior</a></li>
+                        <li><a href="../scrollMargin.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Scroll Margin</a></li>
+                        <li><a href="../scrollPadding.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Scroll Padding</a></li>
+                        <li><a href="../shadows.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Shadows</a></li>
+                        <li><a href="../size.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Sizes</a></li>
+                        <li><a href="../snap.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Snap</a></li>
+                        <li><a href="../spacing.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Spacing</a></li>
+                        <li><a href="../sr.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Screen Readers</a></li>
+                        <li><a href="../tables.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Tables</a></li>
+                        <li><a href="../textAlign.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Text Align</a></li>
+                        <li><a href="../textColor.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Text Color</a></li>
+                        <li><a href="../textDecoration.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Text Decoration</a></li>
+                        <li><a href="../touchAction.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Touch Action</a></li>
+                        <li><a href="../transform.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Transform</a></li>
+                        <li><a href="../transitions.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Transitions</a></li>
+                        <li><a href="../typography.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Typography</a></li>
+                        <li><a href="../userSelect.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">User Select</a></li>
+                        <li><a href="../visibility.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Visibility</a></li>
+                        <li><a href="../whitespace.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Whitespace</a></li>
+                        <li><a href="../width.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Width</a></li>
+                        <li><a href="../willChange.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Will Change</a></li>
+                        <li><a href="../z-index.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">z Index</a></li>
+                    </ul>
+                </div>
             </nav>
         </aside>
 
-        <main id="docs-main" class="flex-1 w-full md-w-80p pr-16 pt-24">
+<main id="docs-main" class="flex-1 w-full md-w-80p pr-16 pt-24 overflow-visible">
+  <section class="mb-12 d-flex flex-col md-flex-row-reverse overflow-visible">
+    <!-- TOC -->
+    <aside id="toc" class="toc-container d-none md-d-block md-w-30p self-start sticky inset-t-4">
+      <h2 class="font-weight-medium text-black dark-text-white">On this page</h2>
+      <ul class="d-flex flex-col pl-4 border-0 border-l-1 border-solid border-slate-300 dark-border-slate-800 gap-2">
+        <li><a href="#bulleted-lists" class="font-size-3 hover-text-primary toc-link active">Bulleted Lists</a></li>
+        <li><a href="#numbered-lists" class="font-size-3 hover-text-primary toc-link">Numbered Lists</a></li>
+        <li><a href="#list-group" class="font-size-3 hover-text-primary toc-link">List Group</a></li>
+        <li><a href="#item-icons" class="font-size-3 hover-text-primary toc-link">Item Icons</a></li>
+        <li><a href="#tags-badges" class="font-size-3 hover-text-primary toc-link">Tags &amp; Badges</a></li>
+        <li><a href="#utility-mods" class="font-size-3 hover-text-primary toc-link">Utility Mods</a></li>
+      </ul>
+    </aside>
 
-    <section class="mb-12">
-      <h1 class="font-size-6 font-weight-bold text-black dark-text-slate-100 mb-3">Lists</h1>
-      <p class="font-size-4 text-gray-700 dark-text-gray-300 mb-6">
-        Below are three examples of how to use this component. Copy the code under each preview to try it out.
-      </p>
-  
-      <!-- Example 1 -->
-      <div class="mt-6 mb-2 font-weight-medium">Example: <code>.quanta-list</code></div>
-      <div id="lists-example-0" class="preview-pane border-solid border-slate-100 dark-border-slate-800 p-12 flex justify-center items-center rounded-lg mb-4">
-        <div class="quanta-list bg-slate-100 p-2 border inline-block">
-          .quanta-list
+    <!-- MAIN CONTENT -->
+    <div class="w-full md-w-70p pr-0 md-pr-12 d-flex flex-col">
+
+      <!-- Bulleted Lists -->
+      <div id="bulleted-lists" class="mb-10">
+        <p class="font-mono mb-2">Lists</p>
+        <h1 class="font-size-7 font-weight-semibold text-black dark-text-white mb-2">Bulleted Lists</h1>
+        <p class="mb-4 font-size-4">
+          Use <code>.quanta-list-bullets</code> to render a custom bullet list.  
+          Add modifiers like <code>.check</code> or <code>.dash</code> for ✔ or – bullets.
+        </p>
+        <div class="mb-4">
+          <pre><code class="language-html">&lt;ul class="quanta-list quanta-list-bullets check"&gt;
+  &lt;li&gt;Success step&lt;/li&gt;
+  &lt;li&gt;Another success&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
         </div>
+        <ul class="quanta-list quanta-list-bullets check mb-8">
+          <li>Success step</li>
+          <li>Another success</li>
+          <li>Final ✔ item</li>
+        </ul>
       </div>
-      <div class="code-wrapper w-full mb-6">
-        <div class="code-topbar d-flex justify-between items-center px-2 py-1 bg-slate-100 dark-bg-slate-800 rounded-t-sm">
-          <div class="win-dots d-flex gap-2">
-            <span class="bg-red-500"></span>
-            <span class="bg-yellow-500"></span>
-            <span class="bg-green-500"></span>
-          </div>
-          <button onclick="copyCode(this)" class="copy-btn">Copy</button>
+
+      <!-- Numbered Lists -->
+      <div id="numbered-lists" class="mb-10">
+        <h3 class="font-weight-medium text-black dark-text-white">Numbered Lists</h3>
+        <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">
+          Use <code>.quanta-list-numbers</code> for numbered lists.  
+          Use <code>.roman</code> or <code>.alpha</code> for uppercase Roman or Alpha.
+        </p>
+        <div class="mb-4">
+          <pre><code class="language-html">&lt;ol class="quanta-list quanta-list-numbers roman"&gt;
+  &lt;li&gt;First step&lt;/li&gt;
+  &lt;li&gt;Second step&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
         </div>
-        <pre class="language-html"><code>&lt;!-- .quanta-list demo --&gt;
-&lt;div class="quanta-list bg-slate-100 p-2 border inline-block"&gt;
-  .quanta-list
+        <ol class="quanta-list quanta-list-numbers roman mb-8">
+          <li>First step</li>
+          <li>Second step</li>
+          <li>Third step</li>
+        </ol>
+      </div>
+
+      <!-- List Group -->
+      <div id="list-group" class="mb-10">
+        <h3 class="font-weight-medium text-black dark-text-white">List Group</h3>
+        <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">
+          Use <code>.quanta-list-group</code> with <code>.quanta-list-group-item</code> for boxed list items.
+        </p>
+        <div class="mb-4">
+          <pre><code class="language-html">&lt;div class="quanta-list-group"&gt;
+  &lt;div class="quanta-list-group-item"&gt;Item One&lt;/div&gt;
+  &lt;div class="quanta-list-group-item"&gt;Item Two&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-      </div>
-      
-      <!-- Example 2 -->
-      <div class="mt-6 mb-2 font-weight-medium">Example: <code>.quanta-list-bullets</code></div>
-      <div id="lists-example-1" class="preview-pane border-solid border-slate-100 dark-border-slate-800 p-12 flex justify-center items-center rounded-lg mb-4">
-        <div class="quanta-list-bullets bg-slate-100 p-2 border inline-block">
-          .quanta-list-bullets
+        </div>
+        <div class="quanta-list-group mb-8">
+          <div class="quanta-list-group-item">Item One</div>
+          <div class="quanta-list-group-item">Item Two</div>
+          <div class="quanta-list-group-item">Item Three</div>
         </div>
       </div>
-      <div class="code-wrapper w-full mb-6">
-        <div class="code-topbar d-flex justify-between items-center px-2 py-1 bg-slate-100 dark-bg-slate-800 rounded-t-sm">
-          <div class="win-dots d-flex gap-2">
-            <span class="bg-red-500"></span>
-            <span class="bg-yellow-500"></span>
-            <span class="bg-green-500"></span>
-          </div>
-          <button onclick="copyCode(this)" class="copy-btn">Copy</button>
+
+      <!-- Item Icons -->
+      <div id="item-icons" class="mb-10">
+        <h3 class="font-weight-medium text-black dark-text-white">List Item Icons</h3>
+        <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">
+          Prepend icons using <code>.quanta-list-item-icon</code> within an inline list.
+        </p>
+        <div class="mb-4">
+          <pre><code class="language-html">&lt;ul class="quanta-list quanta-list-bullets"&gt;
+  &lt;li&gt;&lt span class="quanta-list-item-icon"&gt;📁&lt;/span&gt;Files&lt;/li&gt;
+  &lt;li&gt;&lt span class="quanta-list-item-icon"&gt;🔒&lt;/span&gt;Secure&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
         </div>
-        <pre class="language-html"><code>&lt;!-- .quanta-list-bullets demo --&gt;
-&lt;div class="quanta-list-bullets bg-slate-100 p-2 border inline-block"&gt;
-  .quanta-list-bullets
-&lt;/div&gt;</code></pre>
+        <ul class="quanta-list quanta-list-bullets mb-8">
+          <li><span class="quanta-list-item-icon">📁</span>Files</li>
+          <li><span class="quanta-list-item-icon">🔒</span>Secure</li>
+          <li><span class="quanta-list-item-icon">⚙️</span>Settings</li>
+        </ul>
       </div>
-      
-      <!-- Example 3 -->
-      <div class="mt-6 mb-2 font-weight-medium">Example: <code>.quanta-list-bullets li</code></div>
-      <div id="lists-example-2" class="preview-pane border-solid border-slate-100 dark-border-slate-800 p-12 flex justify-center items-center rounded-lg mb-4">
-        <div class="quanta-list-bullets li bg-slate-100 p-2 border inline-block">
-          .quanta-list-bullets li
+
+      <!-- Tags & Badges -->
+      <div id="tags-badges" class="mb-10">
+        <h3 class="font-weight-medium text-black dark-text-white">Tags &amp; Badges</h3>
+        <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">
+          Attach badges to items with <code>.quanta-list-tag</code>.
+        </p>
+        <div class="mb-4">
+          <pre><code class="language-html">&lt;ul class="quanta-list quanta-list-bullets"&gt;
+  &lt;li&gt;New Feature &lt;span class="quanta-list-tag"&gt;Beta&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
         </div>
+        <ul class="quanta-list quanta-list-bullets mb-8">
+          <li>
+            New Feature
+            <span class="quanta-list-tag">Beta</span>
+          </li>
+          <li>
+            Updated Docs
+            <span class="quanta-list-tag">v2.0</span>
+          </li>
+        </ul>
       </div>
-      <div class="code-wrapper w-full mb-6">
-        <div class="code-topbar d-flex justify-between items-center px-2 py-1 bg-slate-100 dark-bg-slate-800 rounded-t-sm">
-          <div class="win-dots d-flex gap-2">
-            <span class="bg-red-500"></span>
-            <span class="bg-yellow-500"></span>
-            <span class="bg-green-500"></span>
-          </div>
-          <button onclick="copyCode(this)" class="copy-btn">Copy</button>
+
+      <!-- Utility Mods -->
+      <div id="utility-mods" class="mb-10">
+        <h3 class="font-weight-medium text-black dark-text-white">Utility Mods</h3>
+        <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">
+          Control spacing or indentation with:
+          <code>.quanta-list-spaced</code>, <code>.quanta-list-no-indent</code>.
+        </p>
+        <div class="mb-4">
+          <pre><code class="language-html">&lt;ul class="quanta-list quanta-list-bullets quanta-list-spaced no-indent"&gt;
+  &lt;li&gt;Spaced &amp; No indent&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
         </div>
-        <pre class="language-html"><code>&lt;!-- .quanta-list-bullets li demo --&gt;
-&lt;div class="quanta-list-bullets li bg-slate-100 p-2 border inline-block"&gt;
-  .quanta-list-bullets li
-&lt;/div&gt;</code></pre>
+        <ul class="quanta-list quanta-list-bullets quanta-list-spaced quanta-list-no-indent">
+          <li>Spaced &amp; no indent item</li>
+          <li>Another spaced item</li>
+        </ul>
       </div>
-      </section>
+
+    </div>
+  </section>
 </main>
-
 
     </div>
 

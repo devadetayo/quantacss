@@ -287,152 +287,247 @@
     <aside id="toc" class="toc-container d-none md-d-block md-w-30p self-start sticky inset-t-4">
       <h2 class="font-weight-medium text-black dark-text-white">On this page</h2>
       <ul class="d-flex flex-col pl-4 border-0 border-l-1 border-solid border-slate-300 dark-border-slate-800 gap-2">
-        <li><a href="#basic-switch" class="font-size-3 hover-text-primary toc-link active">Basic Switch</a></li>
-        <li><a href="#switch-colors" class="font-size-3 hover-text-primary toc-link">Semantic Colors</a></li>
-        <li><a href="#switch-sizes" class="font-size-3 hover-text-primary toc-link">Size Variants</a></li>
+        <li><a href="#form-search" class="font-size-3 hover-text-primary toc-link active">Search Field</a></li>
+        <li><a href="#checkbox" class="font-size-3 hover-text-primary toc-link">Checkbox</a></li>
+        <li><a href="#radio" class="font-size-3 hover-text-primary toc-link">Radio</a></li>
+        <li><a href="#switch" class="font-size-3 hover-text-primary toc-link">Switch</a></li>
       </ul>
     </aside>
 
     <!-- MAIN CONTENT -->
     <div class="w-full md-w-70p pr-0 md-pr-12 d-flex flex-col">
-      <div id="basic-switch" class="mb-10">
+
+      <!-- Search Field -->
+      <div id="form-search" class="mb-10">
         <p class="font-mono mb-2">Forms</p>
-        <h1 class="font-size-7 font-weight-semibold text-black dark-text-white mb-2">Switch</h1>
+        <h1 class="font-size-7 font-weight-semibold text-black dark-text-white mb-2">Search Field</h1>
         <p class="mb-4 font-size-4">
-          Use <code>.quanta-switch</code> to create toggle switches with custom appearance, full theme support, and semantic variants.
+          Wrap an input in <code>.quanta-custom-form-search</code> to get an embedded search icon.
         </p>
 
         <div class="mb-4">
-          <pre><code class="language-html">&lt;label class="quanta-switch"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span&gt;&lt;/span&gt;
+          <pre><code class="language-html">&lt;div class="quanta-form-group quanta-form-search max-w-xs"&gt;
+  &lt;input type="text"
+         class="quanta-form-input w-full"
+         placeholder="Search…" /&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="quanta-form-group quanta-form-search max-w-xs mb-8">
+          <input type="text" class="quanta-form-input w-full" placeholder="Search…">
+        </div>
+      </div>
+
+      <!-- Checkbox -->
+      <div id="checkbox" class="mb-10">
+        <h3 class="font-weight-medium text-black dark-text-white">Checkbox Variants</h3>
+        <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">
+          Use <code>.quanta-custom-checkbox-&lt;variant&gt;</code> plus size and rounding utilities.
+        </p>
+
+        <!-- Filled variants -->
+        <div class="d-grid grid-cols-4 gap-4 mb-6">
+          <label class="quanta-custom-checkbox quanta-custom-checkbox-primary checkbox-md">
+            <input type="checkbox" class="quanta-custom-checkbox-input">
+            <span class="quanta-custom-checkbox-box"></span>
+            <span class="quanta-custom-checkbox-label">Primary</span>
+          </label>
+          <label class="quanta-custom-checkbox quanta-custom-checkbox-success checkbox-md">
+            <input type="checkbox" class="quanta-custom-checkbox-input">
+            <span class="quanta-custom-checkbox-box"></span>
+            <span class="quanta-custom-checkbox-label">Success</span>
+          </label>
+          <label class="quanta-custom-checkbox quanta-custom-checkbox-warning checkbox-md">
+            <input type="checkbox" class="quanta-custom-checkbox-input">
+            <span class="quanta-custom-checkbox-box"></span>
+            <span class="quanta-custom-checkbox-label">Warning</span>
+          </label>
+          <label class="quanta-custom-checkbox quanta-custom-checkbox-danger checkbox-md">
+            <input type="checkbox" class="quanta-custom-checkbox-input">
+            <span class="quanta-custom-checkbox-box"></span>
+            <span class="quanta-custom-checkbox-label">Danger</span>
+          </label>
+          <label class="quanta-custom-checkbox quanta-custom-checkbox-accent checkbox-md">
+            <input type="checkbox" class="quanta-custom-checkbox-input">
+            <span class="quanta-custom-checkbox-box"></span>
+            <span class="quanta-custom-checkbox-label">Accent</span>
+          </label>
+          <label class="quanta-custom-checkbox quanta-custom-checkbox-neutral checkbox-md">
+            <input type="checkbox" class="quanta-custom-checkbox-input">
+            <span class="quanta-custom-checkbox-box"></span>
+            <span class="quanta-custom-checkbox-label">Neutral</span>
+          </label>
+        </div>
+
+        <!-- Outline variants -->
+        <div class="d-grid grid-cols-4 gap-4 mb-6">
+          <label class="quanta-custom-checkbox quanta-custom-checkbox-outline-primary checkbox-md">
+            <input type="checkbox" class="quanta-custom-checkbox-input">
+            <span class="quanta-custom-checkbox-box"></span>
+            <span class="quanta-custom-checkbox-label">Outline Primary</span>
+          </label>
+          <label class="quanta-custom-checkbox quanta-custom-checkbox-outline-success checkbox-md">
+            <input type="checkbox" class="quanta-custom-checkbox-input">
+            <span class="quanta-custom-checkbox-box"></span>
+            <span class="quanta-custom-checkbox-label">Outline Success</span>
+          </label>
+          <label class="quanta-custom-checkbox quanta-custom-checkbox-outline-warning checkbox-md">
+            <input type="checkbox" class="quanta-custom-checkbox-input">
+            <span class="quanta-custom-checkbox-box"></span>
+            <span class="quanta-custom-checkbox-label">Outline Warning</span>
+          </label>
+          <label class="quanta-custom-checkbox quanta-custom-checkbox-outline-danger checkbox-md">
+            <input type="checkbox" class="quanta-custom-checkbox-input">
+            <span class="quanta-custom-checkbox-box"></span>
+            <span class="quanta-custom-checkbox-label">Outline Danger</span>
+          </label>
+        </div>
+
+        <!-- Rounding controls -->
+        <h4 class="font-weight-medium text-black dark-text-white mb-2">Rounding</h4>
+        <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">
+          Tweak corner radius with <code>.checkbox-rounded-none</code>, <code>.checkbox-rounded-sm</code>, …, <code>.checkbox-rounded-full</code>.
+        </p>
+        <div class="d-grid grid-cols-4 gap-4 mb-4">
+          <label class="quanta-custom-checkbox quanta-custom-checkbox-primary">
+            <input type="checkbox" class="quanta-custom-checkbox-input">
+            <span class="quanta-custom-checkbox-box checkbox-md checkbox-rounded-none"></span>
+            <span class="quanta-custom-checkbox-label">No Round</span>
+          </label>
+          <label class="quanta-custom-checkbox quanta-custom-checkbox-primary">
+            <input type="checkbox" class="quanta-custom-checkbox-input">
+            <span class="quanta-custom-checkbox-box checkbox-md checkbox-rounded-md"></span>
+            <span class="quanta-custom-checkbox-label">Default</span>
+          </label>
+          <label class="quanta-custom-checkbox quanta-custom-checkbox-primary">
+            <input type="checkbox" class="quanta-custom-checkbox-input">
+            <span class="quanta-custom-checkbox-box  checkbox-md checkbox-rounded-lg"></span>
+            <span class="quanta-custom-checkbox-label">Large Round</span>
+          </label>
+          <label class="quanta-custom-checkbox quanta-custom-checkbox-primary">
+            <input type="checkbox" class="quanta-custom-checkbox-input">
+            <span class="quanta-custom-checkbox-box checkbox-md checkbox-rounded-full"></span>
+            <span class="quanta-custom-checkbox-label">Pill</span>
+          </label>
+        </div>
+
+        <pre class="bg-gray-100 dark-bg-slate-800 p-4 rounded"><code class="language-html">&lt;label class="quanta-custom-checkbox 
+  quanta-custom-checkbox-primary checkbox-md checkbox-rounded-full"&gt;
+  &lt;input type="checkbox" class="quanta-custom-checkbox-input"&gt;
+  &lt;span class="quanta-custom-checkbox-box"&gt;&lt;/span&gt;
+  &lt;span class="quanta-custom-checkbox-label"&gt;Pill&lt;/span&gt;
 &lt;/label&gt;</code></pre>
-        </div>
-
-        <label class="quanta-switch">
-          <input type="checkbox" />
-          <span></span>
-        </label>
       </div>
 
-      <div id="switch-colors" class="mb-10">
-        <h3 class="font-weight-medium text-black dark-text-white">Semantic Colors</h3>
+      <!-- Radio -->
+      <div id="radio" class="mb-10">
+        <h3 class="font-weight-medium text-black dark-text-white">Radio Variants</h3>
         <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">
-          Apply classes like <code>.switch-primary</code>, <code>.switch-success</code>, etc., to reflect semantic intent.
+          Same pattern: <code>.quanta-custom-radio-&lt;variant&gt;</code> + <code>radio-md</code> + rounding.
         </p>
 
-        <div class="d-flex flex-wrap gap-4 mb-4">
-          <label class="quanta-switch switch-primary">
-            <input type="checkbox" checked />
-            <span></span>
+        <!-- Filled variants -->
+        <div class="d-grid grid-cols-4 gap-4 mb-6">
+          <label class="quanta-custom-radio quanta-custom-radio-info radio-md">
+            <input type="radio" name="r" class="quanta-custom-radio-input">
+            <span class="quanta-custom-radio-box"></span>
+            <span class="quanta-custom-radio-label">Info</span>
           </label>
-          <label class="quanta-switch switch-success">
-            <input type="checkbox" checked />
-            <span></span>
-          </label>
-          <label class="quanta-switch switch-warning">
-            <input type="checkbox" checked />
-            <span></span>
-          </label>
-          <label class="quanta-switch switch-danger">
-            <input type="checkbox" checked />
-            <span></span>
-          </label>
-          <label class="quanta-switch switch-neutral">
-            <input type="checkbox" checked />
-            <span></span>
-          </label>
-          <label class="quanta-switch switch-info">
-            <input type="checkbox" checked />
-            <span></span>
+          <label class="quanta-custom-radio quanta-custom-radio-accent radio-md">
+            <input type="radio" name="r" class="quanta-custom-radio-input">
+            <span class="quanta-custom-radio-box"></span>
+            <span class="quanta-custom-radio-label">Accent</span>
           </label>
         </div>
 
-        <div class="mb-4">
-<pre><code class="language-html">&lt;label class="quanta-switch switch-primary"&gt;
-  &lt;input type="checkbox" checked /&gt;
-  &lt;span&gt;&lt;/span&gt;
-&lt;/label&gt;
-
-&lt;label class="quanta-switch switch-success"&gt;
-  &lt;input type="checkbox" checked /&gt;
-  &lt;span&gt;&lt;/span&gt;
-&lt;/label&gt;
-
-&lt;label class="quanta-switch switch-warning"&gt;
-  &lt;input type="checkbox" checked /&gt;
-  &lt;span&gt;&lt;/span&gt;
-&lt;/label&gt;
-
-&lt;label class="quanta-switch switch-danger"&gt;
-  &lt;input type="checkbox" checked /&gt;
-  &lt;span&gt;&lt;/span&gt;
-&lt;/label&gt;
-
-&lt;label class="quanta-switch switch-neutral"&gt;
-  &lt;input type="checkbox" checked /&gt;
-  &lt;span&gt;&lt;/span&gt;
-&lt;/label&gt;
-
-&lt;label class="quanta-switch switch-info"&gt;
-  &lt;input type="checkbox" checked /&gt;
-  &lt;span&gt;&lt;/span&gt;
-&lt;/label&gt;
-</code></pre>
+        <!-- Outline variants -->
+        <div class="d-grid grid-cols-4 gap-4 mb-6">
+          <label class="quanta-custom-radio quanta-custom-radio-outline-neutral radio-md">
+            <input type="radio" name="r2" class="quanta-custom-radio-input">
+            <span class="quanta-custom-radio-box"></span>
+            <span class="quanta-custom-radio-label">Outline Neutral</span>
+          </label>
         </div>
+
+        <!-- Rounding controls -->
+        <h4 class="font-weight-medium text-black dark-text-white mb-2">Rounding</h4>
+        <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">
+          Control pill shape with <code>.radio-sm</code>…<code>.radio-3xl</code> and always fully round.
+        </p>
+        <div class="d-grid grid-cols-3 gap-4 mb-4">
+          <label class="quanta-custom-radio quanta-custom-radio-primary radio-sm">
+            <input type="radio" name="r3" class="quanta-custom-radio-input">
+            <span class="quanta-custom-radio-box rounded-sm"></span>
+            <span class="quanta-custom-radio-label">Small</span>
+          </label>
+          <label class="quanta-custom-radio quanta-custom-radio-primary radio-md">
+            <input type="radio" name="r3" class="quanta-custom-radio-input">
+            <span class="quanta-custom-radio-box"></span>
+            <span class="quanta-custom-radio-label">Default</span>
+          </label>
+          <label class="quanta-custom-radio quanta-custom-radio-primary radio-lg">
+            <input type="radio" name="r3" class="quanta-custom-radio-input">
+            <span class="quanta-custom-radio-box rounded-lg"></span>
+            <span class="quanta-custom-radio-label">Large</span>
+          </label>
+        </div>
+
+        <pre class="bg-gray-100 dark-bg-slate-800 p-4 rounded"><code class="language-html">&lt;label class="quanta-custom-radio 
+  quanta-custom-radio-primary radio-lg"&gt;
+  &lt;input type="radio" name="group" class="quanta-custom-radio-input"&gt;
+  &lt;span class="quanta-custom-radio-box"&gt;&lt;/span&gt;
+  &lt;span class="quanta-custom-radio-label"&gt;Large&lt;/span&gt;
+&lt;/label&gt;</code></pre>
       </div>
 
-      <div id="switch-sizes" class="mb-10">
-        <h3 class="font-weight-medium text-black dark-text-white">Size Variants</h3>
+      <!-- Switch -->
+      <div id="switch" class="mb-10">
+        <h3 class="font-weight-medium text-black dark-text-white">Switch Variants</h3>
         <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">
-          Use utility classes like <code>.switch-sm</code>, <code>.switch-lg</code>, etc., to scale the switch.
+          Two styles: filled (<code>.quanta-switch</code>) and outline (<code>.quanta-switch-outline</code>), each with semantic classes.
         </p>
 
-        <div class="d-flex flex-wrap gap-4 mb-4">
-          <label class="quanta-switch switch-sm switch-primary">
-            <input type="checkbox" checked />
-            <span></span>
+        <!-- Filled switches -->
+        <div class="d-grid grid-cols-4 gap-4 mb-6">
+          <label class="quanta-switch quanta-switch-primary">
+            <input type="checkbox" class="quanta-switch-input">
+            <span class="quanta-switch-slider"></span>
           </label>
-          <label class="quanta-switch switch-md switch-success">
-            <input type="checkbox" checked />
-            <span></span>
+          <label class="quanta-switch quanta-switch-success">
+            <input type="checkbox" class="quanta-switch-input">
+            <span class="quanta-switch-slider"></span>
           </label>
-          <label class="quanta-switch switch-lg switch-warning">
-            <input type="checkbox" checked />
-            <span></span>
+          <label class="quanta-switch quanta-switch-danger">
+            <input type="checkbox" class="quanta-switch-input">
+            <span class="quanta-switch-slider"></span>
           </label>
-          <label class="quanta-switch switch-xl switch-danger">
-            <input type="checkbox" checked />
-            <span></span>
+          <label class="quanta-switch quanta-switch-accent">
+            <input type="checkbox" class="quanta-switch-input">
+            <span class="quanta-switch-slider"></span>
           </label>
         </div>
 
-        <div class="mb-4">
-<pre><code class="language-html">&lt;label class="quanta-switch switch-sm switch-primary"&gt;
-  &lt;input type="checkbox" checked /&gt;
-  &lt;span&gt;&lt;/span&gt;
-&lt;/label&gt;
-
-&lt;label class="quanta-switch switch-md switch-success"&gt;
-  &lt;input type="checkbox" checked /&gt;
-  &lt;span&gt;&lt;/span&gt;
-&lt;/label&gt;
-
-&lt;label class="quanta-switch switch-lg switch-warning"&gt;
-  &lt;input type="checkbox" checked /&gt;
-  &lt;span&gt;&lt;/span&gt;
-&lt;/label&gt;
-
-&lt;label class="quanta-switch switch-xl switch-danger"&gt;
-  &lt;input type="checkbox" checked /&gt;
-  &lt;span&gt;&lt;/span&gt;
-&lt;/label&gt;
-</code></pre>
+        <!-- Outline switches -->
+        <div class="d-grid grid-cols-4 gap-4">
+          <label class="quanta-switch-outline quanta-switch-outline-warning">
+            <input type="checkbox" class="quanta-switch-outline-input">
+            <span class="quanta-switch-outline-slider"></span>
+          </label>
+          <label class="quanta-switch-outline quanta-switch-outline-info">
+            <input type="checkbox" class="quanta-switch-outline-input">
+            <span class="quanta-switch-outline-slider"></span>
+          </label>
         </div>
+
+        <pre class="bg-gray-100 dark-bg-slate-800 p-4 rounded mt-4"><code class="language-html">&lt;label class="quanta-switch-outline quanta-switch-outline-info"&gt;
+  &lt;input type="checkbox" class="quanta-switch-outline-input"&gt;
+  &lt;span class="quanta-switch-outline-slider"&gt;&lt;/span&gt;
+&lt;/label&gt;</code></pre>
       </div>
+
     </div>
   </section>
 </main>
+
     </div>
 
     <script>
