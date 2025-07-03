@@ -175,15 +175,16 @@
                         <li><a href="navbar.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Navbar</a></li>
                         <li><a href="notifications.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Toasts</a></li>
                         <li><a href="pagination.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Pagination</a></li>
-                        <li><a href="popovers.html" class="px-4 py-1 hover-text-primary side-link active hover-no-underline d-flex w-full">Popovers</a></li>
+                        <li><a href="popovers.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Popovers</a></li>
                         <li><a href="pricing.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Pricing</a></li>
                         <li><a href="progress-bars.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Progress Bars</a></li>
                         <li><a href="range-slider.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Range Slider</a></li>
-                        <li><a href="rating.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Rating</a></li>
-                        <li><a href="rating.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Scrollspy</a></li>
+                        <li><a href="rating.html" class="px-4 py-1 hover-text-primary side-link active hover-no-underline d-flex w-full">Rating</a></li>
+                        <li><a href="scrollspy.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Scrollspy</a></li>
                         <li><a href="sidebar.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Sidebar</a></li>
                         <li><a href="skeleton.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Skeleton</a></li>
                         <li><a href="spinners.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Spinners</a></li>
+                        <li><a href="stats.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Stats</a></li>
                         <li><a href="stepper.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Steppers</a></li>
                         <li><a href="sticky.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Sticky</a></li>
                         <li><a href="tables.html" class="px-4 py-1 hover-text-primary side-link hover-no-underline d-flex w-full">Tables</a></li>
@@ -295,143 +296,167 @@
 
 <main id="docs-main" class="flex-1 w-full md-w-80p pr-16 pt-24 overflow-visible">
   <section class="mb-12 d-flex flex-col md-flex-row-reverse overflow-visible">
+
     <!-- TOC -->
     <aside id="toc" class="toc-container d-none md-d-block md-w-30p self-start sticky inset-t-4">
       <h2 class="font-weight-medium text-black dark-text-white">On this page</h2>
       <ul class="d-flex flex-col pl-4 border-0 border-l-1 border-solid border-slate-300 dark-border-slate-800 gap-2">
-        <li><a href="#popover-overview" class="font-size-3 hover-text-primary toc-link active">Overview</a></li>
-        <li><a href="#popover-structure" class="font-size-3 hover-text-primary toc-link">Structure</a></li>
-        <li><a href="#popover-placements" class="font-size-3 hover-text-primary toc-link">Placements</a></li>
-        <li><a href="#popover-variants" class="font-size-3 hover-text-primary toc-link">Visual Variants</a></li>
-        <li><a href="#popover-usage" class="font-size-3 hover-text-primary toc-link">JS Integration</a></li>
+        <li><a href="#rating-overview" class="font-size-3 hover-text-primary toc-link active">Overview</a></li>
+        <li><a href="#rating-usage" class="font-size-3 hover-text-primary toc-link">Usage</a></li>
+        <li><a href="#rating-variants" class="font-size-3 hover-text-primary toc-link">Color Variants</a></li>
+        <li><a href="#rating-half" class="font-size-3 hover-text-primary toc-link">Half Stars</a></li>
+        <li><a href="#rating-sizes" class="font-size-3 hover-text-primary toc-link">Size Modifiers</a></li>
+        <li><a href="#rating-readonly" class="font-size-3 hover-text-primary toc-link">Read-Only</a></li>
       </ul>
     </aside>
 
     <!-- MAIN CONTENT -->
     <div class="w-full md-w-70p pr-0 md-pr-12 d-flex flex-col">
-      
+
       <!-- Overview -->
-      <div id="popover-overview" class="mb-10">
-        <p class="font-mono mb-2">Components</p>
-        <h1 class="font-size-7 font-weight-semibold text-black dark-text-white mb-2">Popover</h1>
-        <p class="mb-4 font-size-4 text-slate-600 dark-text-slate-400">
-          The <code>.quanta-popover</code> is a floating panel that appears on hover or click. You wrap your trigger in a <code>.quanta-popover-wrapper</code> and point it to the popover by <code>data-popover-target</code>. By default it is hidden (<code>data-show="false"</code>) until user interaction.
+      <div id="rating-overview" class="mb-10">
+        <p class="font-mono mb-2">Feedback</p>
+        <h1 class="font-size-7 font-weight-semibold text-black dark-text-white mb-2">Rating</h1>
+        <p class="mb-4 font-size-4 text-gray-600 dark-text-gray-400">
+          Use <code>.quanta-rating</code> to show star-based scores with optional interactivity.  
+          Supports half-stars, semantic colors, and size modifiers.
         </p>
       </div>
 
-      <!-- Structure -->
-      <div id="popover-structure" class="mb-10">
-        <h3 class="font-weight-medium text-black dark-text-white">HTML Structure</h3>
-        <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">
-          Basic markup for a popover:
-        </p>
+      <!-- Usage -->
+      <div id="rating-usage" class="mb-10">
+        <h3 class="font-weight-medium text-black dark-text-white mb-2">Usage</h3>
+        <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">Basic example with 5 filled stars:</p>
+        <pre><code class="language-html">
+&lt;div class="quanta-rating"&gt;
+  &lt;span class="quanta-rating-star filled"&gt;★&lt;/span&gt;
+  &lt;span class="quanta-rating-star filled"&gt;★&lt;/span&gt;
+  &lt;span class="quanta-rating-star filled"&gt;★&lt;/span&gt;
+  &lt;span class="quanta-rating-star filled"&gt;★&lt;/span&gt;
+  &lt;span class="quanta-rating-star filled"&gt;★&lt;/span&gt;
+&lt;/div&gt;
+        </code></pre>
         <div class="mb-4">
-          <pre><code class="language-html">&lt;div class="quanta-popover-wrapper"&gt;
-  &lt;button
-    class="quanta-btn quanta-btn-primary"
-    data-popover-target="myPopover"&gt;
-    Click or hover me
-  &lt;/button&gt;
-
-  &lt;div
-    id="myPopover"
-    class="quanta-popover quanta-popover-top"
-    data-show="false"&gt;
-    Your popover content goes here.
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-        </div>
-        <!-- Live preview (popover remains hidden until triggered) -->
-        <div class="bg-slate-50 dark-bg-slate-700 p-6 mb-4">
-          <div class="quanta-popover-wrapper">
-            <button
-              class="quanta-btn quanta-btn-primary"
-              data-popover-target="livePopover">
-              Click or hover me
-            </button>
-            <div
-              id="livePopover"
-              class="quanta-popover quanta-popover-top"
-              data-show="false">
-              This popover is hidden by default and will appear on hover/click.
-            </div>
+          <div class="quanta-rating">
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star filled">★</span>
           </div>
         </div>
       </div>
 
-      <!-- Placements -->
-      <div id="popover-placements" class="mb-10">
-        <h3 class="font-weight-medium text-black dark-text-white">Placements</h3>
+      <!-- Variants -->
+      <div id="rating-variants" class="mb-10">
+        <h3 class="font-weight-medium text-black dark-text-white mb-2">Color Variants</h3>
         <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">
-          Choose one of <code>.quanta-popover-top</code>, <code>-bottom</code>, <code>-left</code> or <code>-right</code> to position the panel.
+          Apply semantic styles with modifiers like <code>.primary</code>, <code>.success</code>, etc.
         </p>
-        <div class="d-flex flex-col md-d-grid grid-cols-2 gap-6 mb-4">
-          <!-- Top -->
-          <div class="quanta-popover-wrapper">
-            <button class="quanta-btn quanta-btn-success" data-popover-target="popTop2">Top</button>
-            <div id="popTop2" class="quanta-popover quanta-popover-top" data-show="false">
-              Popover on top
-            </div>
+        <pre><code class="language-html">
+&lt;div class="quanta-rating success"&gt;
+  &lt;span class="quanta-rating-star filled"&gt;★&lt;/span&gt;
+  ...
+&lt;/div&gt;
+        </code></pre>
+        <div class="d-flex flex-col gap-3 mb-4">
+          <div class="quanta-rating primary">
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star">★</span>
+            <span class="quanta-rating-star">★</span>
           </div>
-          <!-- Bottom -->
-          <div class="quanta-popover-wrapper">
-            <button class="quanta-btn quanta-btn-danger" data-popover-target="popBottom2">Bottom</button>
-            <div id="popBottom2" class="quanta-popover quanta-popover-bottom" data-show="false">
-              Popover below
-            </div>
+          <div class="quanta-rating success">
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star">★</span>
           </div>
-          <!-- Left -->
-          <div class="quanta-popover-wrapper">
-            <button class="quanta-btn quanta-btn-warning" data-popover-target="popLeft2">Left</button>
-            <div id="popLeft2" class="quanta-popover quanta-popover-left" data-show="false">
-              Popover to the left
-            </div>
-          </div>
-          <!-- Right -->
-          <div class="quanta-popover-wrapper">
-            <button class="quanta-btn quanta-btn-accent" data-popover-target="popRight2">Right</button>
-            <div id="popRight2" class="quanta-popover quanta-popover-right" data-show="false">
-              Popover to the right
-            </div>
+          <div class="quanta-rating danger">
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star">★</span>
+            <span class="quanta-rating-star">★</span>
+            <span class="quanta-rating-star">★</span>
           </div>
         </div>
       </div>
 
-      <!-- Visual Variants -->
-      <div id="popover-variants" class="mb-10">
-        <h3 class="font-weight-medium text-black dark-text-white">Visual Variants</h3>
+      <!-- Half Stars -->
+      <div id="rating-half" class="mb-10">
+        <h3 class="font-weight-medium text-black dark-text-white mb-2">Half Stars</h3>
         <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">
-          Add one of <code>.soft</code>, <code>.bold</code> or <code>.blur</code> on your <code>.quanta-popover</code> for different shadow or backdrop styles.
+          Add <code>.half</code> to display a half-filled star using pseudo-elements.
         </p>
-        <div class="d-flex gap-4 p-4 w-full bg-grey-300 dark-bg-slate-800">
-          <div class="quanta-popover-wrapper">
-            <button class="quanta-btn quanta-btn-accent" data-popover-target="popRight4">Right</button>
-            <div id="popRight4" class="quanta-popover quanta-popover-top soft" data-show="false">
-              Soft shadow
-            </div>
-          </div>
-          <div class="quanta-popover-wrapper">
-            <button class="quanta-btn quanta-btn-primary" data-popover-target="popRight6">Right</button>
-            <div id="popRight6" class="quanta-popover quanta-popover-bottom bold" data-show="false">
-              Bold shadow
-            </div>
-          </div>
-          <div class="quanta-popover-wrapper">
-            <button class="quanta-btn quanta-btn-primary" data-popover-target="popRight8">Right</button>
-            <div id="popRight8" class="quanta-popover quanta-popover-right backdrop-blur" data-show="false">
-              Blurred backdrop
-            </div>
+        <pre><code class="language-html">
+&lt;div class="quanta-rating"&gt;
+  &lt;span class="quanta-rating-star filled"&gt;★&lt;/span&gt;
+  &lt;span class="quanta-rating-star filled"&gt;★&lt;/span&gt;
+  &lt;span class="quanta-rating-star filled"&gt;★&lt;/span&gt;
+  &lt;span class="quanta-rating-star half"&gt;★&lt;/span&gt;
+  &lt;span class="quanta-rating-star"&gt;★&lt;/span&gt;
+&lt;/div&gt;
+        </code></pre>
+        <div class="mb-4">
+          <div class="quanta-rating">
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star half">★</span>
+            <span class="quanta-rating-star">★</span>
           </div>
         </div>
       </div>
 
-      <!-- JS Integration -->
-      <div id="popover-usage" class="mb-10">
-        <h3 class="font-weight-medium text-black dark-text-white">JavaScript</h3>
-        <p class="text-sm text-gray-600 dark-text-gray-400">
-          Include the provided <code>setupPopoverTriggers()</code> script on your page. It will auto‑bind all elements with <code>data-popover-target</code> and manage the <code>data-show</code> attribute on hover and click.
-        </p>
+      <!-- Sizes -->
+      <div id="rating-sizes" class="mb-10">
+        <h3 class="font-weight-medium text-black dark-text-white mb-2">Size Modifiers</h3>
+        <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">Customize star size using utility classes like <code>.text-sm</code>, <code>.text-lg</code> etc.</p>
+        <pre><code class="language-html">
+&lt;div class="quanta-rating text-lg"&gt;…&lt;/div&gt;
+        </code></pre>
+        <div class="d-flex flex-col gap-3 mb-4">
+          <div class="quanta-rating text-sm">
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star">★</span>
+            <span class="quanta-rating-star">★</span>
+            <span class="quanta-rating-star">★</span>
+          </div>
+          <div class="quanta-rating text-xl">
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star">★</span>
+            <span class="quanta-rating-star">★</span>
+          </div>
+        </div>
       </div>
+
+      <!-- Read-Only -->
+      <div id="rating-readonly" class="mb-10">
+        <h3 class="font-weight-medium text-black dark-text-white mb-2">Read-Only</h3>
+        <p class="text-sm text-gray-600 dark-text-gray-400 mb-2">
+          Disable interaction by adding <code>.readonly</code> to prevent hover or click.
+        </p>
+        <pre><code class="language-html">
+&lt;div class="quanta-rating readonly"&gt;
+  &lt;span class="quanta-rating-star filled"&gt;★&lt;/span&gt;...
+&lt;/div&gt;
+        </code></pre>
+        <div class="mb-4">
+          <div class="quanta-rating readonly">
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star filled">★</span>
+            <span class="quanta-rating-star">★</span>
+            <span class="quanta-rating-star">★</span>
+          </div>
+        </div>
+      </div>
+
     <!-- Nav Footer -->
       <div class="navigation py-8 w-full justify-between d-flex" style="font-size: 0.9rem;">
         <a href="utilities.html" class="py-2 px-4 bg-grey-300 dark-bg-slate-800 rounded-sm hover-no-underline hover-bg-primary dark-hover-bg-primary font-weight-medium hover-text-white d-flex gap-1 items-center">
