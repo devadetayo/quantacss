@@ -290,6 +290,14 @@ button.menu-toggle.open .ham-icon {
   transform: rotate(90deg);
 }
 
+#docs-sidebar{
+  z-index: 999;
+}
+
+nav{
+  z-index: 9999!important;
+}
+
 /* Slide the sidebar in/out and reset main width/padding at <768px */
 @media (max-width: 767px) {
   #docs-sidebar {
