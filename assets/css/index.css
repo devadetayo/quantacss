@@ -346,118 +346,21 @@ nav{
   }
 }
 
-.editor-pane, .preview-pane {
-  flex: 1;
-}
-
-/* Editor wrapper: parent scrollbars */
-.editor-pane {
+.resizer {
+  cursor: ew-resize;
+  flex-shrink: 0;
+  transition: background .2s;
   position: relative;
-  overflow: auto;
+  z-index: 10;
 }
-.editor-pane::-webkit-scrollbar { width: 8px; }
-.editor-pane::-webkit-scrollbar-thumb {
+
+.resizer.resizing {
   background: var(--quanta-primary);
-  border-radius: 4px;
-}
-.editor-pane {
-  scrollbar-width: thin;
-  scrollbar-color: var(--quanta-primary) transparent;
-}
-
-/* Ace Editor area */
-#ace-editor {
-  position: absolute;
-  top: 2.5rem;    /* height of toolbar */
-  bottom: 3rem;   /* room for buttons */
-  left: 0; right: 0;
-}
-/* make its background transparent */
-.ace_editor.ace-dracula {
-  background: transparent !important;
-}
-
-/* Reset/Copy button bar */
-.control-bar {
-  margin: .5rem;
-  display:flex; gap: .5rem;
-}
-
-/* active/inactive tabs */
-.tab-btn {
-  cursor: pointer;
-  border: none;
-  background: none;
 }
 
 .tab-btn.active{
-  border-bottom: 2px solid var(--quanta-primary);
-  background: var(--quanta-border-color);
-}
-
-#layout-menu { min-width: 8rem; }
-
-/* Container */
-/* Make sure your playground-inner/editor-container flex is “honest” */
-.playground .editor-container,
-.playground .editor-pane,
-.playground .preview-pane {
-  display: flex;
-  flex: 1 1 auto;
-  min-width: 0;  /* allow children to shrink below content width */
-  min-height: 0; /* allow vertical shrinking */
-}
-
-/* Stack‐mode: three‐column top row */
-.playground.stack .editor-container {
-  flex-direction: row;             /* top half */
-  overflow: hidden;
-}
-.playground.stack .ace-editor-pane {
-  flex: 0 0 33.3333%;
-  max-width: 33.3333%;
-  height: 100%;
-  overflow: auto;
-}
-
-/* Bottom preview in stack mode */
-.playground.stack .preview-pane {
-  height: 50%;               /* bottom half */
-}
-
-/* Always prevent overflow on your panes */
-.editor-pane,
-.preview-pane {
-  overflow: auto;
-}
-
-.editor-pane .code-wrapper{
-  border-radius: 0;
-}
-
-/* Editor and preview panes always flex children of .playground-inner */
-.editor-pane,
-.preview-pane {
-  position: relative;
-  /* will get width via Split.js or utility classes */
-}
-
-/* Hide layout menu by default */
-#layout-menu {
-  position: absolute;
-  right: 0;
-  margin-top: 4px;
-  z-index: 100;
-}
-
-/* Basic styling for menu items */
-#layout-menu button {
-  width: 100%;
-  padding: 4px 8px;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  background: var(--quanta-primary);
+  color: white;
 }
 
 pre{

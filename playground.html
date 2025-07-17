@@ -1,117 +1,219 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quanta CSS – Playground</title>
-    <link href="assets/quanta-css/dist/quanta.css" rel="stylesheet">
+    <title>Quanta CSS – Utility Meets Zen</title>
+    <link href="https://cdn.jsdelivr.net/npm/quanta-css@1.1.0/dist/quanta.css" rel="stylesheet">
     <link rel="icon" href="assets/favico/favico.png" type="image/png">
     <link href="assets/css/index.css" rel="stylesheet">
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/codemirror.min.css"
-    />
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/theme/dracula.min.css"
-    />
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/jquery.lazyload.min.js"></script>
     <script src="assets/js/theme.js"></script>
-    <script src="assets/js/navbar.js" defer></script>
+    <script src="assets/js/navbar.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- Prism.js for syntax highlighting -->
     <link href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-dracula.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js" defer></script>
-    <script src="assets/quanta-css/src/quanta.js"></script>
-</head>
-<body class="hero-bg text-slate-500 dark-text-slate-300 bg-grey-50 dark-bg-slate-900 min-h-100vh h-auto">
-    <nav class="bg-grey-50 dark-bg-slate-900 d-flex w-full px-4 py-2 md-px-8 lg-px-16 justify-between items-center fixed z-100 font-sans">
-        <a href="index.html" class="font-weight-bold m-0" style="color: var(--color-primary)">
-            <img src="assets/images/quantacss.png" class="d-block" style="height: 28px;">
+    <script src="https://cdn.jsdelivr.net/npm/quanta-css@1.1.0/src/quanta.min.js" defer></script>
+
+      <!-- Primary Meta Tags -->
+    <meta name="title" content="Quanta CSS – Utility Meets Zen">
+    <meta name="description" content="Quanta CSS is a hybrid utility-first + component-based framework. Fast, theme-aware, and production-ready for your next web project.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url"   content="https://devadetayo.github.io/quantacss/">
+    <meta property="og:title" content="Quanta CSS – Utility Meets Zen">
+    <meta property="og:description" content="Quanta CSS is a hybrid utility-first + component-based framework. Fast, theme-aware, and production-ready for your next web project.">
+    <meta property="og:image" content="https://devadetayo.github.io/quantacss/assets/images/og-image.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@devadetayo">
+    <meta name="twitter:title" content="Quanta CSS – Utility Meets Zen">
+    <meta name="twitter:description" content="Quanta CSS is a hybrid utility-first + component-based framework. Fast, theme-aware, and production-ready for your next web project.">
+    <meta name="twitter:image" content="https://devadetayo.github.io/quantacss/assets/images/og-image.png">
+    <meta name="twitter:image:alt" content="Logo and sample UI built with Quanta CSS">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://devadetayo.github.io/quanta-css/",
+      "name": "Quanta CSS",
+      "author": {
+        "@type": "Person",
+        "name": "Adeniyi Adetayo"
+      },
+      "description": "Quanta CSS is a hybrid utility-first + component-based framework. Fast, theme-aware, and production-ready for your next web project.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Adeniyi Adetayo",
+        "url": "https://github.com/devadetayo"
+      }
+    }
+    </script>
+
+  </head>
+  <body class="hero-bg text-grey-600 dark-text-grey-300 font-size-4 bg-grey-50 dark-bg-slate-900 min-h-100vh h-auto overflow-visible font-size-3"> 
+
+    <!-- Navbar -->
+    <header id="navbar" class="d-flex items-center justify-between px-4 py-3 bg-white dark-bg-slate-900 border-b-1 border-0 border-solid border-grey-100 dark-border-slate-700 relative z-10">
+      <div class="d-flex items-center justify-center gap-4">
+        <!-- Drawer Toggle -->
+        <button data-toggle="drawer" data-target="#components-drawer" class="quanta-drawer-toggle p-2 hover-bg-grey-100 hover-dark-bg-slate-800 rounded border-none">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+            <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+          </svg>
+        </button>
+
+        <!-- Logo -->
+        <a href="index.html" class="font-weight-medium m-0 d-flex items-center gap-2">
+          <img src="assets/images/quantacss.png" class="h-6">
+          <span class="font-size-3 d-flex items-center justify-center py-1 px-2 bg-grey-100 dark-bg-slate-800 rounded-pill">Play v1.0</span>
         </a>
-        
+      </div>
 
-        <div class="d-flex gap-2">
-            <ul class="layout-buttons d-flex gap-2">
-                <button data-layout="lr" title="Side by side L→R"  class="w-full px-2 py-1 hover-bg-slate-100 dark-hover-bg-slate-700 d-flex items-center gap-2 layout-btn">
-                    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M3,3h9v18H3V3Zm12,0h9v18h-9V3Z"/></svg>
-                </button>
-                <button data-layout="rl" title="Side by side R→L"  class="w-full px-2 py-1 hover-bg-slate-100 dark-hover-bg-slate-700 d-flex items-center gap-2 layout-btn">
-                    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M12,3h9v18h-9V3Zm-9,0h9v18H3V3Z"/></svg>
-                </button>
-                <button data-layout="stack" title="Stacked" class="w-full px-2 py-1 hover-bg-slate-100 dark-hover-bg-slate-700 d-flex items-center gap-2 layout-btn">
-                    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M3,3h18v8H3V3Zm0,10h18v8H3V13Z"/></svg>
-                </button>
-                <button data-layout="responsive" title="3-Way Stack"     class="w-full px-2 py-1 hover-bg-slate-100 dark-hover-bg-slate-700 d-flex items-center gap-2 layout-btn">
-                    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M3,3h18v6H3V3Zm0,8h18v6H3V11Zm0,8h18v6H3V19Z"/></svg>
-                </button>
-            </ul>
-            <button class="quanta-theme-toggle" id="themeToggle">
-                <span class="icon-sun">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                        <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
-                    </svg>
-                </span>
-                <span class="icon-moon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                        <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clip-rule="evenodd" />
-                    </svg>
-                </span>
-            </button>
+      <div class="d-flex align-items-center gap-2">
+
+        <!-- Layout View Options (icons only) -->
+        <div class="quanta-dropdown quanta-dropdown-click relative">
+          <button class="quanta-dropdown-toggle p-2 d-flex items-center justify-center hover-bg-grey-100 dark-bg-slate-800 hover-text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+              <path fill-rule="evenodd" d="M3 6a3 3 0 0 1 3-3h2.25a3 3 0 0 1 3 3v2.25a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6Zm9.75 0a3 3 0 0 1 3-3H18a3 3 0 0 1 3 3v2.25a3 3 0 0 1-3 3h-2.25a3 3 0 0 1-3-3V6ZM3 15.75a3 3 0 0 1 3-3h2.25a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3v-2.25Zm9.75 0a3 3 0 0 1 3-3H18a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-2.25a3 3 0 0 1-3-3v-2.25Z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <ul class="quanta-dropdown-menu" style="right:0;left:auto;">
+            <li>
+              <button type="button" data-layout="full" class="quanta-dropdown-item border-none w-full d-flex gap-2 items-center">
+                Full View
+              </button>
+            </li>
+            <li>
+              <button type="button" data-layout="split" class="quanta-dropdown-item border-none w-full d-flex gap-2 items-center">
+                Split View
+              </button>
+            </li>
+            <li>
+              <button type="button" data-layout="stack" class="quanta-dropdown-item border-none w-full d-flex gap-2 items-center">
+                Top/Bottom
+              </button>
+            </li>
+          </ul>
         </div>
-    </nav>
-    
-    <section class="playground d-flex flex-1 p-4 pt-20 md-p-6 flex-row gap-2 min-h-full">
-        <!-- Editor Column -->
-        <div class="editor-pane w-full md-w-50p d-flex flex-col">
-            <div class="flex-1 d-flex flex-col rounded-0">
-                <!-- Topbar -->
-                <div class="d-flex w-full overflow-hidden justify-between gap-0 items-center">
-                    <div class="win-dots d-flex gap-2">
-                        <span class="bg-grey-400 w-3 h-3 rounded-full"></span>
-                        <span class="bg-grey-400 w-3 h-3 rounded-full"></span>
-                        <span class="bg-grey-400 w-3 h-3 rounded-full"></span>
-                    </div>
 
-                    <!-- Tabs -->
-                    <div class="d-flex gap-2">
-                        <button id="tab-html" class="tab-btn active px-2 py-1 font-size-3">HTML</button>
-                        <button id="tab-css"  class="tab-btn px-2 py-1 font-size-3">CSS</button>
-                        <button id="tab-js"   class="tab-btn px-2 py-1 font-size-3">JS</button>
-                    </div>
+        <!-- Theme Toggle -->
+        <button class="quanta-theme-toggle" id="themeToggle">
+          <span class="icon-sun">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                  <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+              </svg>
+          </span>
+          <span class="icon-moon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                  <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clip-rule="evenodd" />
+              </svg>
+          </span>
+        </button>
 
-                    <!-- Reset/Copy -->
-                    <div class="d-flex items-center gap-2">
+        <!-- Copy Code -->
+        <button id="copy-code" class="p-2 d-flex items-center min-w-fit max-h-fit justify-center border-2 border-solid border-grey-200 dark-border-slate-700 dark-bg-slate-800 rounded">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+            <path fill-rule="evenodd" d="M17.663 3.118c.225.015.45.032.673.05C19.876 3.298 21 4.604 21 6.109v9.642a3 3 0 0 1-3 3V16.5c0-5.922-4.576-10.775-10.384-11.217.324-1.132 1.3-2.01 2.548-2.114.224-.019.448-.036.673-.051A3 3 0 0 1 13.5 1.5H15a3 3 0 0 1 2.663 1.618ZM12 4.5A1.5 1.5 0 0 1 13.5 3H15a1.5 1.5 0 0 1 1.5 1.5H12Z" clip-rule="evenodd" />
+            <path d="M3 8.625c0-1.036.84-1.875 1.875-1.875h.375A3.75 3.75 0 0 1 9 10.5v1.875c0 1.036.84 1.875 1.875 1.875h1.875A3.75 3.75 0 0 1 16.5 18v2.625c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625v-12Z" />
+            <path d="M10.5 10.5a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963 5.23 5.23 0 0 0-3.434-1.279h-1.875a.375.375 0 0 1-.375-.375V10.5Z" />
+          </svg>
+        </button>
 
-                        <!-- Copy & Reset buttons -->
-                        <button id="copy-btn"  class="p-2 rounded-sm bg-grey-800 text-white d-flex items-center justify-center border-none"><svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-copy"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></button>
+        <button id="reset-code" class="p-2 d-flex items-center min-w-fit max-h-fit justify-center border-2 border-solid border-grey-200 dark-border-slate-700 dark-bg-slate-800 rounded">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+            <path fill-rule="evenodd" d="M12 5.25c1.213 0 2.415.046 3.605.135a3.256 3.256 0 0 1 3.01 3.01c.044.583.077 1.17.1 1.759L17.03 8.47a.75.75 0 1 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.75.75 0 0 0-1.06-1.06l-1.752 1.751c-.023-.65-.06-1.296-.108-1.939a4.756 4.756 0 0 0-4.392-4.392 49.422 49.422 0 0 0-7.436 0A4.756 4.756 0 0 0 3.89 8.282c-.017.224-.033.447-.046.672a.75.75 0 1 0 1.497.092c.013-.217.028-.434.044-.651a3.256 3.256 0 0 1 3.01-3.01c1.19-.09 2.392-.135 3.605-.135Zm-6.97 6.22a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 1 0 1.06 1.06l1.752-1.751c.023.65.06 1.296.108 1.939a4.756 4.756 0 0 0 4.392 4.392 49.413 49.413 0 0 0 7.436 0 4.756 4.756 0 0 0 4.392-4.392c.017-.223.032-.447.046-.672a.75.75 0 0 0-1.497-.092c-.013.217-.028.434-.044.651a3.256 3.256 0 0 1-3.01 3.01 47.953 47.953 0 0 1-7.21 0 3.256 3.256 0 0 1-3.01-3.01 47.759 47.759 0 0 1-.1-1.759L6.97 15.53a.75.75 0 0 0 1.06-1.06l-3-3Z" clip-rule="evenodd" />
+          </svg>
+        </button>
 
-                        <button id="reset-btn" class="p-2 rounded-sm bg-grey-800 text-white d-flex items-center justify-center border-none"><svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-restore"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3.06 13a9 9 0 1 0 .49 -4.087" /><path d="M3 4.001v5h5" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg></button>
+        <button id="prettify-code" class="p-2 d-flex items-center min-w-fit max-h-fit justify-center border-2 border-solid border-grey-200 dark-border-slate-700 dark-bg-slate-800 rounded">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+            <path d="M5.625 3.75a2.625 2.625 0 1 0 0 5.25h12.75a2.625 2.625 0 0 0 0-5.25H5.625ZM3.75 11.25a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5H3.75ZM3 15.75a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75ZM3.75 18.75a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5H3.75Z" />
+          </svg>
+        </button>
+      </div>
+    </header>
 
-                    </div>
-                </div>
 
-                <!-- Editor Panes -->
-                <div class="d-flex flex-1 position-relative">
-                    <textarea id="editor-html"></textarea>
-                    <textarea id="editor-css" class="d-none"></textarea>
-                    <textarea id="editor-js"  class="d-none"></textarea>
-                </div>
+    <!-- Main Playground Layout -->
+    <div class="flex-1 d-flex overflow-hidden">
+
+      <!-- Drawer Sidebar -->
+      <aside id="components-drawer" class="quanta-drawer quanta-drawer-left">
+        <div class="quanta-drawer-header">
+          <h2>Component Drawer</h2>
+          <button class="quanta-drawer-close" data-toggle="drawer" data-target="#components-drawer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+              <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+        <div class="quanta-drawer-body">
+
+        </div>
+      </aside>
+
+      <section id="main-playground" class="flex-1 d-flex flex-col w-1/2 md-flex-row overflow-hidden">
+        <!-- Code Editor Area -->
+        <div id="editor-panel" class="flex-1 d-flex flex-col w-1/2 overflow-auto relative">
+          <!-- Generated CSS Panel -->
+          <div id="generated-css-wrapper" class="d-flex flex-col bg-white dark-bg-slate-900 border-t-2 border-0 border-solid border-grey-200 dark-border-slate-700 p-4 absolute bottom-0 w-full" style="max-height: 240px;">
+            <div class="d-flex justify-between items-center">
+              <h4 class="font-s-14 font-w-semibold">Generated CSS</h4>
+              <button id="toggle-generated-css" class="border-none p-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                  <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
+                </svg>
+              </button>
             </div>
+            <pre id="generated-css" class="bg-white dark-bg-slate-800 text-xs p-2 br-sm overflow-auto max-h-60"></pre>
+          </div>
+          <!-- Tabs -->
+          <div class="tabs d-flex py-2 px-4 w-full border-0 border-b-1 border-grey-200 dark-border-slate-700">
+            <button class="font-size-3 py-2 px-4 d-flex items-center justify-center tab-btn rounded border-none font-weight-medium active" data-tab="html">HTML</button>
+            <button class="font-size-3 py-2 px-4 d-flex items-center justify-center tab-btn rounded border-none font-weight-medium" data-tab="css">CSS</button>
+          </div>
+
+          <!-- Tab Content -->
+          <div class="tab-content flex-1 d-flex h-full">
+            <!-- HTML Tab -->
+            <div class="tab-panel d-flex flex-1" data-tab-panel="html">
+              <pre id="code-input" contenteditable="true" class="language-html flex-1 w-full" style="border-radius: 0px!important; margin: 0!important;" spellcheck="false"><code></code></pre>
+            </div>
+
+            <!-- CSS Tab -->
+            <div class="tab-panel d-none flex-1 h-full" data-tab-panel="css">
+              <pre id="code-input" contenteditable="true" class="language-css flex-1 w-full" style="border-radius: 0px!important; margin: 0!important;" spellcheck="false"><code></code></pre>
+            </div>
+          </div>
         </div>
 
-        <!-- Preview Column -->
-        <div class="preview-pane w-full md-w-50p bg-white dark-bg-slate-900">
-            <iframe id="preview-frame"></iframe>
-        </div>
-    </section>
+        <!-- Resizer Handle -->
+        <div id="resizer" class="w-1 bg-grey-200 dark-bg-slate-700 hover-bg-primary-500 transition duration-150 ease-in-out d-flex"></div>
 
-    <!-- CodeMirror core -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.23.1/ace.js"></script>
-    <script src="https://unpkg.com/split.js/dist/split.min.js"></script>
+        <!-- Preview Area -->
+        <div id="preview-panel" class="flex-1 overflow-auto bg-white dark-bg-slate-800">
+          <!--<div class="quanta-dropdown relative">
+            <button class="quanta-dropdown-toggle btn btn-sm">Device</button>
+            <ul class="quanta-dropdown-menu absolute z-50 bg-white dark-bg-slate-800 shadow br-md p-2 w-40">
+              <li><a class="quanta-dropdown-item" data-device="100%">Desktop</a></li>
+              <li><a class="quanta-dropdown-item" data-device="768px">Tablet</a></li>
+              <li><a class="quanta-dropdown-item" data-device="375px">Mobile</a></li>
+            </ul>
+          </div>--->
+          <iframe id="preview-frame" class="w-full h-full border bg-transparent"></iframe>
+        </div>
+      </section>
+    </div>
     <script src="assets/js/playground.js"></script>
-</body>
-</html>
+  </body>
+  </html>
