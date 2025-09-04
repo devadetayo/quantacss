@@ -1,1903 +1,371 @@
+/* quanta-tokens.css — palette with hex + rgb tokens (generated) */
 :root{
-    --quanta-red-50: #ffe0dd;
-    --quanta-red-100: #ffc5c0;
-    --quanta-red-200: #ff9d94;
-    --quanta-red-300: #ff6557;
-    --quanta-red-400: #ff3623;
-    --quanta-red-500: #ff0202;
-    --quanta-red-600: #ff2814;
-    --quanta-red-700: #d71200;
-    --quanta-red-800: #92160a;
-    --quanta-red-900: #500700;
-
-    --quanta-orange-50: #fff0d4;
-    --quanta-orange-100: #ffdea8;
-    --quanta-orange-200: #ffc570;
-    --quanta-orange-300: #ff834d;
-    --quanta-orange-400: #ffa037;
-    --quanta-orange-500: #ff8614;
-    --quanta-orange-600: #f06806;
-    --quanta-orange-700: #c74d07;
-    --quanta-orange-800: #9e3d0e;
-    --quanta-orange-900: #451805;
-
-    --quanta-teal-50: #cffce9;
-    --quanta-teal-100: #a3f7d7;
-    --quanta-teal-200: #67eec3;
-    --quanta-teal-300: #2bdca9;
-    --quanta-teal-400: #07c595;
-    --quanta-teal-500: #009e78;
-    --quanta-teal-600: #007e64;
-    --quanta-teal-700: #016450;
-    --quanta-teal-800: #025243;
-    --quanta-teal-900: #002e27;
-
-    --quanta-purple-50: #fee5ff;
-    --quanta-purple-100: #fdcaff;
-    --quanta-purple-200: #ffa1fe;
-    --quanta-purple-300: #ff69fd;
-    --quanta-purple-400: #fb32ff;
-    --quanta-purple-500: #d710da;
-    --quanta-purple-600: #c10ac0;
-    --quanta-purple-700: #9d0b9a;
-    --quanta-purple-800: #800f7b;
-    --quanta-purple-900: #570054;
-
-    --quanta-indigo-50: #f3e7ff;
-    --quanta-indigo-100: #ead3ff;
-    --quanta-indigo-200: #d9b1ff;
-    --quanta-indigo-300: #c27fff;
-    --quanta-indigo-400: #aa4efe;
-    --quanta-indigo-500: #962bf2;
-    --quanta-indigo-600: #891ce3;
-    --quanta-indigo-700: #6e1bae;
-    --quanta-indigo-800: #5b178c;
-    --quanta-indigo-900: #3c0368;
-
-    --quanta-yellow-50: #f2ffc2;
-    --quanta-yellow-100: #e9ff88;
-    --quanta-yellow-200: #e4ff43;
-    --quanta-yellow-300: #eaff10;
-    --quanta-yellow-400: #e4ef03;
-    --quanta-yellow-500: #d6cf00;
-    --quanta-yellow-600: #a49104;
-    --quanta-yellow-700: #87710c;
-    --quanta-yellow-800: #735c10;
-    --quanta-yellow-900: #433205;
-
-    --quanta-pink-50: #fde6e9;
-    --quanta-pink-100: #fbd0d9;
-    --quanta-pink-200: #f7aab9;
-    --quanta-pink-300: #f27a93;
-    --quanta-pink-400: #e63f66;
-    --quanta-pink-500: #d42a5b;
-    --quanta-pink-600: #b21e4b;
-    --quanta-pink-700: #951c45;
-    --quanta-pink-800: #801b40;
-    --quanta-pink-900: #470a1f;
-
-    --quanta-grey-50:  #f8f9fa;
-    --quanta-grey-100: #f1f3f5;
-    --quanta-grey-200: #e4e7ea;
-    --quanta-grey-300: #cfd4d9;
-    --quanta-grey-400: #9aa0a6;
-    --quanta-grey-500: #6b7280;
-    --quanta-grey-600: #4b5563;
-    --quanta-grey-700: #374151;
-    --quanta-grey-800: #23272f;
-    --quanta-grey-900: #12161d;
-
-    --quanta-zinc-50:  #fafafa;
-    --quanta-zinc-100: #f4f4f5;
-    --quanta-zinc-200: #e4e4e7;
-    --quanta-zinc-300: #d4d4d8;
-    --quanta-zinc-400: #a1a1aa;
-    --quanta-zinc-500: #71717a;
-    --quanta-zinc-600: #52525b;
-    --quanta-zinc-700: #3f3f46;
-    --quanta-zinc-800: #27272a;
-    --quanta-zinc-900: #18181b;
-
-    --quanta-neutral-50:  #fafafa;
-    --quanta-neutral-100: #f5f5f5;
-    --quanta-neutral-200: #e5e5e5;
-    --quanta-neutral-300: #d4d4d4;
-    --quanta-neutral-400: #a3a3a3;
-    --quanta-neutral-500: #737373;
-    --quanta-neutral-600: #525252;
-    --quanta-neutral-700: #404040;
-    --quanta-neutral-800: #262626;
-    --quanta-neutral-900: #171717;
-
-    --quanta-lime-50: #e7fec9;
-    --quanta-lime-100: #d0fc9a;
-    --quanta-lime-200: #aff75f;
-    --quanta-lime-300: #91ec2f;
-    --quanta-lime-400: #66be0e;
-    --quanta-lime-500: #55a808;
-    --quanta-lime-600: #42800b;
-    --quanta-lime-700: #36650f;
-    --quanta-lime-800: #2f5512;
-    --quanta-lime-900: #162f04;
-
-    --quanta-cyan-50: #cafdf8;
-    --quanta-cyan-100: #96f9f3;
-    --quanta-cyan-200: #59efeb;
-    --quanta-cyan-300: #27d9da;
-    --quanta-cyan-400: #0ebbbe;
-    --quanta-cyan-500: #089499;
-    --quanta-cyan-600: #0b757a;
-    --quanta-cyan-700: #0e5c61;
-    --quanta-cyan-800: #114c50;
-    --quanta-cyan-900: #022c31;
-
-    --quanta-sky-50: #dff0ff;
-    --quanta-sky-100: #b8e2ff;
-    --quanta-sky-200: #94d6ff;
-    --quanta-sky-300: #33b3fd;
-    --quanta-sky-400: #0999ee;
-    --quanta-sky-500: #0079cc;
-    --quanta-sky-600: #0060a5;
-    --quanta-sky-700: #045288;
-    --quanta-sky-800: #0a4570;
-    --quanta-sky-900: #062b4b;
-
-    --quanta-violet-50: #f4e8ff;
-    --quanta-violet-100: #ebd4ff;
-    --quanta-violet-200: #dbb3ff;
-    --quanta-violet-300: #c582fe;
-    --quanta-violet-400: #af52fa;
-    --quanta-violet-500: #992ced;
-    --quanta-violet-600: #851fd1;
-    --quanta-violet-700: #711faa;
-    --quanta-violet-800: #5c1a89;
-    --quanta-violet-900: #3f0566;
-
-    --quanta-rose-50: #ffe3f6;
-    --quanta-rose-100: #ffc6ec;
-    --quanta-rose-200: #ff98db;
-    --quanta-rose-300: #ff58c1;
-    --quanta-rose-400: #ff27a5;
-    --quanta-rose-500: #ff0a85;
-    --quanta-rose-600: #df0064;
-    --quanta-rose-700: #b80053;
-    --quanta-rose-800: #980348;
-    --quanta-rose-900: #5f0026;
-
-    /* Tailwind CSS Slate Palette */
-    --quanta-slate-50:  #f8fafc;
-    --quanta-slate-100: #f1f5f9;
-    --quanta-slate-200: #e2e8f0;
-    --quanta-slate-300: #cbd5e1;
-    --quanta-slate-400: #94a3b8;
-    --quanta-slate-500: #64748b;
-    --quanta-slate-600: #475569;
-    --quanta-slate-700: #334155;
-    --quanta-slate-800: #1e293b;
-    --quanta-slate-900: #0f172a;
-
-    --quanta-blue-50: #d7eaff;
-    --quanta-blue-100: #b9dcff;
-    --quanta-blue-200: #88c7ff;
-    --quanta-blue-300: #50a7ff;
-    --quanta-blue-400: #2882ff;
-    --quanta-blue-500: #1463ff;
-    --quanta-blue-600: #0a4aeb;
-    --quanta-blue-700: #0f3cbe;
-    --quanta-blue-800: #133895;
-    --quanta-blue-900: #133895;
-
-    --quanta-green-50: #d8ffdf;
-    --quanta-green-100: #b4fec2;
-    --quanta-green-200: #7afb93;
-    --quanta-green-300: #3aee5e;
-    --quanta-green-400: #10d737;
-    --quanta-green-500: #07c52d;
-    --quanta-green-600: #098c24;
-    --quanta-green-700: #0d6e22;
-    --quanta-green-800: #0d5a1f;
-    --quanta-green-900: #00330c;
-
-    --black: #000;
-    --white: #fff;
-}
-
-*, *::before, *::after { box-sizing: border-box; }
-
-/* Reset margins, paddings, outlines */
-:where(html, body,
-        h1, h2, h3, h4, h5, h6,
-        p, blockquote, pre,
-        ol, ul, li,
-        dl, dt, dd,
-        figure, figcaption,
-        hr,
-        fieldset, legend,
-        input, button, select, textarea,
-        table, th, td,
-        img, video, canvas, svg,
-        iframe, form, label, legend) {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  border: 0;
-  vertical-align: baseline;
-}
-
-/* Make HTML5 elements block */
-:where(article, aside, footer, header, main, nav, section) {
-  display: block;
-}
-
-/* Lists, quotes, tables, media */
-ol, ul { list-style: none; }
-blockquote, q   { quotes: none; }
-table           { border-collapse: collapse; border-spacing: 0; }
-img, video      { max-width: 100%; height: auto; display: block; }
-
-/* Form elements */
-button, input, select, textarea {
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  appearance: none;
-}
-button::-moz-focus-inner { border: 0; padding: 0; }
-textarea { resize: vertical; }
-
-/* Links */
-a {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: inherit;
-}
-a:hover {
-  text-decoration: underline;
-}
-a:not([href]):not([class]),
-a:not([href]):not([class]):hover {
-  color: inherit;
-  text-decoration: none;
-  cursor: default;
-}
-
-/* Scrollbars */
-::-webkit-scrollbar {
-  width: 6px; height: 6px;
-}
-
-/* Accessibility */
-:where(:focus-visible) {
-  outline: 2px solid var(--quanta-focus, #4f46e5);
-  outline-offset: 2px;
-}
-
-@import "../tokens/color-tokens.css";
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:ital,wght@0,400;0,700&family=Fira+Code:wght@400;500&display=swap');
-
-:root {
-  /* ─── Spacing Scale ───────────────────────────────────── */
-  --quanta-space-0: 0rem;
-  --quanta-space-1: 0.25rem;
-  --quanta-space-2: 0.5rem;
-  --quanta-space-3: 0.75rem;
-  --quanta-space-4: 1rem;
-  --quanta-space-5: 1.25rem;
-  --quanta-space-6: 1.5rem;
-  --quanta-space-8: 2rem;
-  --quanta-space-10: 2.5rem;
-
-  /* ─── Border Radius ───────────────────────────────────── */
-  --quanta-rounded-sm: 0.125rem;
-  --quanta-rounded: 0.25rem;
-  --quanta-rounded-md: 0.375rem;
-  --quanta-rounded-lg: 0.5rem;
-  --quanta-rounded-xl: 0.75rem;
-  --quanta-rounded-2xl: 1rem;
-  --quanta-rounded-full: 9999px;
-
-  /* ─── Fonts ───────────────────────────────────────────── */
-  --quanta-font-inter: 'Inter', sans-serif;
-  --quanta-font-primary: 'Inter', sans-serif;
-  --quanta-font-secondary: 'Roboto', sans-serif;
-  --quanta-font-roboto-serif: 'Roboto Serif', serif;
-  --quanta-font-roboto-mono: 'Roboto Mono', monospace;
-
-  /* ─── Breakpoints ─────────────────────────────────────── */
-  --quanta-screen-sm: 640px;
-  --quanta-screen-md: 768px;
-  --quanta-screen-lg: 1024px;
-  --quanta-screen-xl: 1280px;
-  --quanta-screen-2xl: 1536px;
-
-  /* ─── Transitions ─────────────────────────────────────── */
-  --quanta-duration-fast: 150ms;
-  --quanta-duration-normal: 300ms;
-  --quanta-duration-slow: 500ms;
-  --quanta-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* ─── Z-Index ─────────────────────────────────────────── */
-  --quanta-z-xs: 10;
-  --quanta-z-sm: 100;
-  --quanta-z: 1000;
-  --quanta-z-lg: 10000;
-  --quanta-z-xl: 100000;
-
-  /* ─── Shadows ─────────────────────────────────────────── */
-  --quanta-shadow-color: rgba(0, 0, 0, 0.1);
-  --quanta-shadow-sm: 0 1px 2px var(--quanta-shadow-color);
-  --quanta-shadow: 0 1px 3px var(--quanta-shadow-color), 0 1px 2px var(--quanta-shadow-color);
-  --quanta-shadow-md: 0 4px 6px -1px var(--quanta-shadow-color), 0 2px 4px -2px var(--quanta-shadow-color);
-  --quanta-shadow-lg: 0 10px 15px -3px var(--quanta-shadow-color), 0 4px 6px -4px var(--quanta-shadow-color);
-  --quanta-shadow-xl: 0 20px 25px -5px var(--quanta-shadow-color), 0 10px 10px -5px var(--quanta-shadow-color);
-  --quanta-shadow-2xl: 0 25px 50px -12px var(--quanta-shadow-color);
-
-  /* ─── Typography ──────────────────────────────────────── */
-  --quanta-text-xs: 0.75rem;
-  --quanta-text-sm: 0.875rem;
-  --quanta-text-base: 1rem;
-  --quanta-text-lg: 1.125rem;
-  --quanta-text-xl: 1.25rem;
-  --quanta-text-2xl: 1.5rem;
-  --quanta-text-3xl: 1.875rem;
-  --quanta-text-4xl: 2.25rem;
-  --quanta-text-5xl: 3rem;
-
-  --quanta-leading-none: 1;
-  --quanta-leading-tight: 1.25;
-  --quanta-leading-snug: 1.375;
-  --quanta-leading-normal: 1.5;
-  --quanta-leading-relaxed: 1.625;
-  --quanta-leading-loose: 2;
-
-  --quanta-heading-size: var(--quanta-text-xl);
-  --quanta-subheading-size: var(--quanta-text-xl);
-  --quanta-body-size: var(--quanta-text-base);
-  --quanta-caption-size: var(--quanta-text-sm);
-
-  /* ─── Component Defaults ──────────────────────────────── */
-  --quanta-border-width: 1px;
-  --quanta-ring-width: 2px;
-
-  /* ─── Semantic Colors - Light ─────────────────────────── */
-  --quanta-bg-default:        var(--quanta-grey-50);
-  --quanta-text-default:      var(--quanta-grey-600);
-  --quanta-border-color:      var(--quanta-slate-200);
-
-  --quanta-primary:         #25C0D6;
-  --quanta-primary-hover:   #1CA7B8;
-  --quanta-text-primary:    #ffffff;
-  --quanta-border-primary:  #1CA7B8;
-
-
-  --quanta-bg-secondary:      var(--quanta-slate-800);
-  --quanta-text-secondary:    var(--white);
-  --quanta-border-secondary:  var(--quanta-slate-800);
-  --quanta-secondary-hover:   var(--quanta-slate-700);
-
-  --quanta-bg-success:        var(--quanta-green-500);
-  --quanta-text-success:      var(--white);
-  --quanta-border-success:    var(--quanta-green-500);
-  --quanta-success-hover:     var(--quanta-green-600);
-
-  --quanta-bg-warning:        var(--quanta-orange-500);
-  --quanta-text-warning:      var(--white);
-  --quanta-border-warning:    var(--quanta-orange-500);
-  --quanta-warning-hover:     var(--quanta-orange-600);
-
-  --quanta-bg-danger:         var(--quanta-red-500);
-  --quanta-text-danger:       var(--white);
-  --quanta-border-danger:     var(--quanta-red-500);
-  --quanta-danger-hover:      var(--quanta-red-600);
-
-  --quanta-bg-info:           var(--quanta-cyan-500);
-  --quanta-text-info:         var(--white);
-  --quanta-border-info:       var(--quanta-cyan-500);
-  --quanta-info-hover:        var(--quanta-cyan-600);
-
-  --quanta-bg-neutral:        var(--quanta-grey-100);
-  --quanta-text-neutral:      var(--quanta-grey-700);
-  --quanta-border-neutral:    var(--quanta-grey-300);
-  --quanta-neutral-hover:     var(--quanta-grey-200);
-
-  --quanta-bg-accent:         var(--quanta-indigo-500);
-  --quanta-text-accent:       var(--white);
-  --quanta-border-accent:     var(--quanta-indigo-500);
-  --quanta-accent-hover:      var(--quanta-indigo-600);
-
-  --quanta-bg-ghost:          transparent;
-  --quanta-text-ghost:        var(--quanta-grey-600);
-  --quanta-border-ghost:      transparent;
-  --quanta-ghost-hover:       var(--quanta-grey-100);
-
-  --quanta-text-link:         var(--quanta-blue-600);
-  --quanta-link-hover:        var(--quanta-blue-700);
-}
-
-html[data-theme="dark"] {
-  /* ─── Semantic Colors - Dark ───────────────────────────── */
-  --quanta-bg-default:        var(--quanta-slate-900);
-  --quanta-text-default:      var(--quanta-grey-100);
-  --quanta-border-color:      var(--quanta-slate-700);
-
-  --quanta-primary:         #25C0D6;
-  --quanta-primary-hover:   #34D0E5;
-  --quanta-text-primary:    #ffffff;
-  --quanta-border-primary:  #34D0E5;
-
-  --quanta-bg-secondary:      var(--quanta-slate-500);
-  --quanta-text-secondary:    var(--quanta-slate-100);
-  --quanta-border-secondary:  var(--quanta-slate-500);
-  --quanta-secondary-hover:   var(--quanta-slate-400);
-
-  --quanta-bg-success:        var(--quanta-green-400);
-  --quanta-text-success:      var(--quanta-grey-100);
-  --quanta-border-success:    var(--quanta-green-400);
-  --quanta-success-hover:     var(--quanta-green-300);
-
-  --quanta-bg-warning:        var(--quanta-orange-400);
-  --quanta-text-warning:      var(--white);
-  --quanta-border-warning:    var(--quanta-orange-400);
-  --quanta-warning-hover:     var(--quanta-orange-300);
-
-  --quanta-bg-danger:         var(--quanta-red-400);
-  --quanta-text-danger:       var(--white);
-  --quanta-border-danger:     var(--quanta-red-400);
-  --quanta-danger-hover:      var(--quanta-red-700);
-
-  --quanta-bg-info:           var(--quanta-cyan-300);
-  --quanta-text-info:         var(--quanta-grey-100);
-  --quanta-border-info:       var(--quanta-cyan-300);
-  --quanta-info-hover:        var(--quanta-cyan-200);
-
-  --quanta-bg-neutral:        var(--quanta-grey-400);
-  --quanta-text-neutral:      var(--quanta-grey-200);
-  --quanta-border-neutral:    var(--quanta-grey-400);
-  --quanta-neutral-hover:     var(--quanta-grey-200);
-
-  --quanta-bg-accent:         var(--quanta-indigo-400);
-  --quanta-text-accent:       var(--quanta-grey-100);
-  --quanta-border-accent:     var(--quanta-indigo-400);
-  --quanta-accent-hover:      var(--quanta-indigo-500);
-
-  --quanta-bg-ghost:          transparent;
-  --quanta-text-ghost:        var(--quanta-grey-300);
-  --quanta-border-ghost:      transparent;
-  --quanta-ghost-hover:       var(--quanta-grey-800);
-
-  --quanta-text-link:         var(--quanta-blue-400);
-  --quanta-link-hover:        var(--quanta-blue-300);
-}
-
-.font-sans {
-  font-family: var(--font-sans) !important;
-}
-
-.font-serif {
-  font-family: var(--font-serif) !important;
-}
-
-.font-mono {
-  font-family: var(--font-mono) !important;
-}
-
-html{
-  scroll-behavior: smooth;
-}
-
-html body{
-  background: var(--quanta-bg-default);
-}
-
-/* Default thin scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--quanta-slate-300);
-  border-radius: var(--quanta-rounded-md);
-}
-
-/* Hover effect */
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--quanta-slate-500);
-}
-
-/* Firefox support */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--quanta-slate-400) transparent;
-}
-
-html[data-theme="dark"] ::-webkit-scrollbar-thumb {
-  background-color: var(--quanta-slate-600);
-}
-
-html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--quanta-slate-500);
-}
-
-html[data-theme="dark"] * {
-  scrollbar-color: var(--quanta-slate-600) transparent;
-}
-
-/* -- Padding Utilities (p-) -- */
-.p-auto { padding: auto; }
-.p-0 { padding: 0; }
-.p-1 { padding: 0.25rem; }
-.p-2 { padding: 0.5rem; }
-.p-3 { padding: 0.75rem; }
-.p-4 { padding: 1rem; }
-.p-5 { padding: 1.25rem; }
-.p-6 { padding: 1.5rem; }
-.p-8 { padding: 2rem; }
-.p-10 { padding: 2.5rem; }
-.p-12 { padding: 3rem; }
-.p-16 { padding: 4rem; }
-.p-20 { padding: 5rem; }
-.p-24 { padding: 6rem; }
-.p-28 { padding: 7rem; }
-.p-32 { padding: 8rem; }
-
-/* -- Top Padding (pt-) -- */
-.pt-auto { padding-top: auto; }
-.pt-0 { padding-top: 0; }
-.pt-1 { padding-top: 0.25rem; }
-.pt-2 { padding-top: 0.5rem; }
-.pt-3 { padding-top: 0.75rem; }
-.pt-4 { padding-top: 1rem; }
-.pt-5 { padding-top: 1.25rem; }
-.pt-6 { padding-top: 1.5rem; }
-.pt-8 { padding-top: 2rem; }
-.pt-10 { padding-top: 2.5rem; }
-.pt-12 { padding-top: 3rem; }
-.pt-16 { padding-top: 4rem; }
-.pt-20 { padding-top: 5rem; }
-.pt-24 { padding-top: 6rem; }
-.pt-28 { padding-top: 7rem; }
-.pt-32 { padding-top: 8rem; }
-
-/* -- Bottom Padding (pb-) -- */
-.pb-auto { padding-bottom: auto; }
-.pb-0 { padding-bottom: 0; }
-.pb-1 { padding-bottom: 0.25rem; }
-.pb-2 { padding-bottom: 0.5rem; }
-.pb-3 { padding-bottom: 0.75rem; }
-.pb-4 { padding-bottom: 1rem; }
-.pb-5 { padding-bottom: 1.25rem; }
-.pb-6 { padding-bottom: 1.5rem; }
-.pb-8 { padding-bottom: 2rem; }
-.pb-10 { padding-bottom: 2.5rem; }
-.pb-12 { padding-bottom: 3rem; }
-.pb-16 { padding-bottom: 4rem; }
-.pb-20 { padding-bottom: 5rem; }
-.pb-24 { padding-bottom: 6rem; }
-.pb-28 { padding-bottom: 7rem; }
-.pb-32 { padding-bottom: 8rem; }
-
-/* -- Left Padding (pl-) -- */
-.pl-auto { padding-left: auto; }
-.pl-0 { padding-left: 0; }
-.pl-1 { padding-left: 0.25rem; }
-.pl-2 { padding-left: 0.5rem; }
-.pl-3 { padding-left: 0.75rem; }
-.pl-4 { padding-left: 1rem; }
-.pl-5 { padding-left: 1.25rem; }
-.pl-6 { padding-left: 1.5rem; }
-.pl-8 { padding-left: 2rem; }
-.pl-10 { padding-left: 2.5rem; }
-.pl-12 { padding-left: 3rem; }
-.pl-16 { padding-left: 4rem; }
-.pl-20 { padding-left: 5rem; }
-.pl-24 { padding-left: 6rem; }
-.pl-28 { padding-left: 7rem; }
-.pl-32 { padding-left: 8rem; }
-
-/* -- Right Padding (pr-) -- */
-.pr-auto { padding-right: auto; }
-.pr-0 { padding-right: 0; }
-.pr-1 { padding-right: 0.25rem; }
-.pr-2 { padding-right: 0.5rem; }
-.pr-3 { padding-right: 0.75rem; }
-.pr-4 { padding-right: 1rem; }
-.pr-5 { padding-right: 1.25rem; }
-.pr-6 { padding-right: 1.5rem; }
-.pr-8 { padding-right: 2rem; }
-.pr-10 { padding-right: 2.5rem; }
-.pr-12 { padding-right: 3rem; }
-.pr-16 { padding-right: 4rem; }
-.pr-20 { padding-right: 5rem; }
-.pr-24 { padding-right: 6rem; }
-.pr-28 { padding-right: 7rem; }
-.pr-32 { padding-right: 8rem; }
-
-/* -- Horizontal Padding (px-) -- */
-.px-auto { padding-left: auto; padding-right: auto; }
-.px-0 { padding-left: 0; padding-right: 0; }
-.px-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
-.px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
-.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
-.px-4 { padding-left: 1rem; padding-right: 1rem; }
-.px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
-.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
-.px-8 { padding-left: 2rem; padding-right: 2rem; }
-.px-10 { padding-left: 2.5rem; padding-right: 2.5rem; }
-.px-12 { padding-left: 3rem; padding-right: 3rem; }
-.px-16 { padding-left: 4rem; padding-right: 4rem; }
-.px-20 { padding-left: 5rem; padding-right: 5rem; }
-.px-24 { padding-left: 6rem; padding-right: 6rem; }
-.px-28 { padding-left: 7rem; padding-right: 7rem; }
-.px-32 { padding-left: 8rem; padding-right: 8rem; }
-
-/* -- Vertical Padding (py-) -- */
-.py-auto { padding-top: auto; padding-bottom: auto; }
-.py-0 { padding-top: 0; padding-bottom: 0; }
-.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
-.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
-.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
-.py-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
-.py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
-.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
-.py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
-.py-12 { padding-top: 3rem; padding-bottom: 3rem; }
-.py-16 { padding-top: 4rem; padding-bottom: 4rem; }
-.py-20 { padding-top: 5rem; padding-bottom: 5rem; }
-.py-24 { padding-top: 6rem; padding-bottom: 6rem; }
-.py-28 { padding-top: 7rem; padding-bottom: 7rem; }
-.py-32 { padding-top: 8rem; padding-bottom: 8rem; }
-
-/* -- Margin Utilities (m-) -- */
-.m-auto { margin: auto; }
-.m-0 { margin: 0; }
-.m-1 { margin: 0.25rem; }
-.m-2 { margin: 0.5rem; }
-.m-3 { margin: 0.75rem; }
-.m-4 { margin: 1rem; }
-.m-5 { margin: 1.25rem; }
-.m-6 { margin: 1.5rem; }
-.m-8 { margin: 2rem; }
-.m-10 { margin: 2.5rem; }
-.m-12 { margin: 3rem; }
-.m-16 { margin: 4rem; }
-.m-20 { margin: 5rem; }
-.m-24 { margin: 6rem; }
-.m-28 { margin: 7rem; }
-.m-32 { margin: 8rem; }
-
-/* -- Top Margin (mt-) -- */
-.mt-auto { margin-top: auto; }
-.mt-0 { margin-top: 0; }
-.mt-1 { margin-top: 0.25rem; }
-.mt-2 { margin-top: 0.5rem; }
-.mt-3 { margin-top: 0.75rem; }
-.mt-4 { margin-top: 1rem; }
-.mt-5 { margin-top: 1.25rem; }
-.mt-6 { margin-top: 1.5rem; }
-.mt-8 { margin-top: 2rem; }
-.mt-10 { margin-top: 2.5rem; }
-.mt-12 { margin-top: 3rem; }
-.mt-16 { margin-top: 4rem; }
-.mt-20 { margin-top: 5rem; }
-.mt-24 { margin-top: 6rem; }
-.mt-28 { margin-top: 7rem; }
-.mt-32 { margin-top: 8rem; }
-
-/* -- Bottom Margin (mb-) -- */
-.mb-auto { margin-bottom: auto; }
-.mb-0 { margin-bottom: 0; }
-.mb-1 { margin-bottom: 0.25rem; }
-.mb-2 { margin-bottom: 0.5rem; }
-.mb-3 { margin-bottom: 0.75rem; }
-.mb-4 { margin-bottom: 1rem; }
-.mb-5 { margin-bottom: 1.25rem; }
-.mb-6 { margin-bottom: 1.5rem; }
-.mb-8 { margin-bottom: 2rem; }
-.mb-10 { margin-bottom: 2.5rem; }
-.mb-12 { margin-bottom: 3rem; }
-.mb-16 { margin-bottom: 4rem; }
-.mb-20 { margin-bottom: 5rem; }
-.mb-24 { margin-bottom: 6rem; }
-.mb-28 { margin-bottom: 7rem; }
-.mb-32 { margin-bottom: 8rem; }
-
-/* -- Left Margin (ml-) -- */
-.ml-auto { margin-left: auto; }
-.ml-0 { margin-left: 0; }
-.ml-1 { margin-left: 0.25rem; }
-.ml-2 { margin-left: 0.5rem; }
-.ml-3 { margin-left: 0.75rem; }
-.ml-4 { margin-left: 1rem; }
-.ml-5 { margin-left: 1.25rem; }
-.ml-6 { margin-left: 1.5rem; }
-.ml-8 { margin-left: 2rem; }
-.ml-10 { margin-left: 2.5rem; }
-.ml-12 { margin-left: 3rem; }
-.ml-16 { margin-left: 4rem; }
-.ml-20 { margin-left: 5rem; }
-.ml-24 { margin-left: 6rem; }
-.ml-28 { margin-left: 7rem; }
-.ml-32 { margin-left: 8rem; }
-
-/* -- Right Margin (mr-) -- */
-.mr-auto { margin-right: auto; }
-.mr-0 { margin-right: 0; }
-.mr-1 { margin-right: 0.25rem; }
-.mr-2 { margin-right: 0.5rem; }
-.mr-3 { margin-right: 0.75rem; }
-.mr-4 { margin-right: 1rem; }
-.mr-5 { margin-right: 1.25rem; }
-.mr-6 { margin-right: 1.5rem; }
-.mr-8 { margin-right: 2rem; }
-.mr-10 { margin-right: 2.5rem; }
-.mr-12 { margin-right: 3rem; }
-.mr-16 { margin-right: 4rem; }
-.mr-20 { margin-right: 5rem; }
-.mr-24 { margin-right: 6rem; }
-.mr-28 { margin-right: 7rem; }
-.mr-32 { margin-right: 8rem; }
-
-/* -- Horizontal Space (space-x-) -- */
-.space-x-auto { --space-x: auto; }
-.space-x-0 { --space-x: 0; }
-.space-x-1 { --space-x: 0.25rem; }
-.space-x-2 { --space-x: 0.5rem; }
-.space-x-3 { --space-x: 0.75rem; }
-.space-x-4 { --space-x: 1rem; }
-.space-x-5 { --space-x: 1.25rem; }
-.space-x-6 { --space-x: 1.5rem; }
-.space-x-8 { --space-x: 2rem; }
-.space-x-10 { --space-x: 2.5rem; }
-.space-x-12 { --space-x: 3rem; }
-.space-x-16 { --space-x: 4rem; }
-.space-x-20 { --space-x: 5rem; }
-.space-x-24 { --space-x: 6rem; }
-.space-x-28 { --space-x: 7rem; }
-.space-x-32 { --space-x: 8rem; }
-
-/* -- Vertical Space (space-y-) -- */
-.space-y-auto { --space-y: auto; }
-.space-y-0 { --space-y: 0; }
-.space-y-1 { --space-y: 0.25rem; }
-.space-y-2 { --space-y: 0.5rem; }
-.space-y-3 { --space-y: 0.75rem; }
-.space-y-4 { --space-y: 1rem; }
-.space-y-5 { --space-y: 1.25rem; }
-.space-y-6 { --space-y: 1.5rem; }
-.space-y-8 { --space-y: 2rem; }
-.space-y-10 { --space-y: 2.5rem; }
-.space-y-12 { --space-y: 3rem; }
-.space-y-16 { --space-y: 4rem; }
-.space-y-20 { --space-y: 5rem; }
-.space-y-24 { --space-y: 6rem; }
-.space-y-28 { --space-y: 7rem; }
-.space-y-32 { --space-y: 8rem; }
-
-/* -- Display Utilities (d-) -- */
-.d-block { display: block; }
-.d-inline { display: inline; }
-.d-inline-block { display: inline-block; }
-.d-flex { display: flex; }
-.d-inline-flex { display: inline-flex; }
-.d-grid { display: grid; }
-.d-inline-grid { display: inline-grid; }
-.d-none { display: none; }
-
-/* -- Position Utilities (position-) -- */
-.position-static { position: static; }
-.position-relative { position: relative; }
-.position-absolute { position: absolute; }
-.position-fixed { position: fixed; }
-.position-sticky { position: sticky; }
-
-/* -- Flexbox Utilities (flex-) */
-.flex-row { flex-direction: row; }
-.flex-col { flex-direction: column; }
-.flex-row-reverse { flex-direction: row-reverse; }
-.flex-col-reverse { flex-direction: column-reverse; }
-
-.flex-wrap { flex-wrap: wrap; }
-.flex-nowrap { flex-wrap: nowrap; }
-.flex-wrap-reverse { flex-wrap: wrap-reverse; }
-
-.flex-1 { flex: 1; }
-.flex-auto { flex: auto; }
-.flex-initial { flex: initial; }
-.flex-none { flex: none; }
-
-.flex-grow-0 { flex-grow: 0; }
-.flex-grow-1 { flex-grow: 1; }
-.flex-shrink-0 { flex-shrink: 0; }
-.flex-shrink-1 { flex-shrink: 1; }
-
-.flex-basis-0    { flex-basis: 0; }
-.flex-basis-auto { flex-basis: auto; }
-.flex-basis-full { flex-basis: 100%; }
-.flex-basis-half { flex-basis: 50%; }
-.flex-basis-one-third { flex-basis: 33.3333%; }
-.flex-basis-two-third { flex-basis: 66.6667%; }
-.flex-basis-one-quarter { flex-basis: 25%; }
-.flex-basis-three-quarter { flex-basis: 75%; }
-.flex-basis-one-fifth { flex-basis: 20%; }
-.flex-basis-two-fifth { flex-basis: 40%; }
-.flex-basis-three-fifth { flex-basis: 60%; }
-.flex-basis-four-fifth { flex-basis: 80%; }
-
-.whitespace-normal    { white-space: normal; }
-.whitespace-nowrap    { white-space: nowrap; }
-.whitespace-pre       { white-space: pre; }
-.whitespace-pre-line  { white-space: pre-line; }
-.whitespace-pre-wrap  { white-space: pre-wrap; }
-
-/* -- Overflow Utilities -- */
-.overflow-auto { overflow: auto; }
-.overflow-hidden { overflow: hidden; }
-.overflow-visible { overflow: visible; }
-.overflow-scroll { overflow: scroll; }
-
-/* Overflow X & Y */
-.overflow-x-auto { overflow-x: auto; }
-.overflow-x-hidden { overflow-x: hidden; }
-.overflow-x-visible { overflow-x: visible; }
-.overflow-x-scroll { overflow-x: scroll; }
-
-.overflow-y-auto { overflow-y: auto; }
-.overflow-y-hidden { overflow-y: hidden; }
-.overflow-y-visible { overflow-y: visible; }
-.overflow-y-scroll { overflow-y: scroll; }
-
-/* -- Visibility Utilities -- */
-.visible { visibility: visible; }
-.hidden { visibility: hidden; }
-.collapse { visibility: collapse; }
-
-/* ─── Justify Content ──────────────────────────────────── */
-.justify-start     { justify-content: flex-start; }
-.justify-center    { justify-content: center; }
-.justify-end       { justify-content: flex-end; }
-.justify-between   { justify-content: space-between; }
-.justify-around    { justify-content: space-around; }
-.justify-evenly    { justify-content: space-evenly; }
-
-/* ─── Align Items ─────────────────────────────────────── */
-.items-start       { align-items: flex-start; }
-.items-center      { align-items: center; }
-.items-end         { align-items: flex-end; }
-.items-baseline    { align-items: baseline; }
-.items-stretch     { align-items: stretch; }
-
-/* ─── Align Content (Grid) ───────────────────────────── */
-.content-start     { align-content: flex-start; }
-.content-center    { align-content: center; }
-.content-end       { align-content: flex-end; }
-.content-between   { align-content: space-between; }
-.content-around    { align-content: space-around; }
-.content-evenly    { align-content: space-evenly; }
-
-/* ─── Align Self ──────────────────────────────────────── */
-.self-auto         { align-self: auto; }
-.self-start        { align-self: flex-start; }
-.self-center       { align-self: center; }
-.self-end          { align-self: flex-end; }
-.self-stretch      { align-self: stretch; }
-
-/* ─── Place Items (Grid shorthand) ───────────────────── */
-.place-items-start   { place-items: start; }
-.place-items-center  { place-items: center; }
-.place-items-end     { place-items: end; }
-.place-items-stretch { place-items: stretch; }
-
-/* ─── Place Content (Grid shorthand) ─────────────────── */
-.place-content-start     { place-content: start; }
-.place-content-center    { place-content: center; }
-.place-content-end       { place-content: end; }
-.place-content-between   { place-content: space-between; }
-.place-content-around    { place-content: space-around; }
-
-/* ─── Place Self (Grid shorthand) ────────────────────── */
-.place-self-auto      { place-self: auto; }
-.place-self-start     { place-self: start; }
-.place-self-center    { place-self: center; }
-.place-self-end       { place-self: end; }
-
-/* ------------------------------
-   Fixed rem scale (0 → 24rem by 0.25rem)
-   ------------------------------ */
-.w-0   { width: 0; }
-/* 1 unit = 0.25rem */
-.w-1   { width: 0.25rem; }
-.w-2   { width: 0.5rem; }
-.w-3   { width: 0.75rem; }
-.w-4   { width: 1rem; }
-.w-5   { width: 1.25rem; }
-.w-6   { width: 1.5rem; }
-.w-7   { width: 1.75rem; }
-.w-8   { width: 2rem; }
-.w-9   { width: 2.25rem; }
-.w-10  { width: 2.5rem; }
-.w-11  { width: 2.75rem; }
-.w-12  { width: 3rem; }
-.w-14  { width: 3.5rem; }
-.w-16  { width: 4rem; }
-.w-20  { width: 5rem; }
-.w-24  { width: 6rem; }
-.w-28  { width: 7rem; }
-.w-32  { width: 8rem; }
-.w-36  { width: 9rem; }
-.w-40  { width: 10rem; }
-.w-44  { width: 11rem; }
-.w-48  { width: 12rem; }
-.w-52  { width: 13rem; }
-.w-56  { width: 14rem; }
-.w-60  { width: 15rem; }
-.w-64  { width: 16rem; }
-.w-72  { width: 18rem; }
-.w-80  { width: 20rem; }
-.w-96  { width: 24rem; }
-
-/* Auto & Full */
-.w-auto    { width: auto; }
-.w-full    { width: 100%; }
-.w-fit     { width: fit-content; }
-.w-max     { width: max-content; }
-.w-min     { width: min-content; }
-.w-stretch { width: stretch; }
-
-/* ------------------------------
-   Fractional widths
-   ------------------------------ */
-.w-1\/2   { width: 50%; }
-.w-1\/3   { width: 33.3333%; }
-.w-2\/3   { width: 66.6667%; }
-.w-1\/4   { width: 25%; }
-.w-2\/4   { width: 50%; }
-.w-3\/4   { width: 75%; }
-.w-1\/5   { width: 20%; }
-.w-2\/5   { width: 40%; }
-.w-3\/5   { width: 60%; }
-.w-4\/5   { width: 80%; }
-.w-1\/6   { width: 16.6667%; }
-.w-5\/6   { width: 83.3333%; }
-.w-1\/12  { width: 8.3333%; }
-.w-2\/12  { width: 16.6667%; }
-.w-3\/12  { width: 25%; }
-.w-4\/12  { width: 33.3333%; }
-.w-5\/12  { width: 41.6667%; }
-.w-6\/12  { width: 50%; }
-.w-7\/12  { width: 58.3333%; }
-.w-8\/12  { width: 66.6667%; }
-.w-9\/12  { width: 75%; }
-.w-10\/12 { width: 83.3333%; }
-.w-11\/12 { width: 91.6667%; }
-
-/* ------------------------------
-   Percentage widths (every 5%)
-   ------------------------------ */
-.w-5p   { width: 5%; }
-.w-10p  { width: 10%; }
-.w-15p  { width: 15%; }
-.w-20p  { width: 20%; }
-.w-25p  { width: 25%; }
-.w-30p  { width: 30%; }
-.w-35p  { width: 35%; }
-.w-40p  { width: 40%; }
-.w-45p  { width: 45%; }
-.w-50p  { width: 50%; }
-.w-55p  { width: 55%; }
-.w-60p  { width: 60%; }
-.w-65p  { width: 65%; }
-.w-70p  { width: 70%; }
-.w-75p  { width: 75%; }
-.w-80p  { width: 80%; }
-.w-85p  { width: 85%; }
-.w-90p  { width: 90%; }
-.w-95p  { width: 95%; }
-.w-100p { width: 100%; }
-
-/* ------------------------------
-   Viewport widths (every 10vw)
-   ------------------------------ */
-.w-10vw  { width: 10vw; }
-.w-20vw  { width: 20vw; }
-.w-30vw  { width: 30vw; }
-.w-40vw  { width: 40vw; }
-.w-50vw  { width: 50vw; }
-.w-60vw  { width: 60vw; }
-.w-70vw  { width: 70vw; }
-.w-80vw  { width: 80vw; }
-.w-90vw  { width: 90vw; }
-.w-100vw { width: 100vw; }
-
-/* ------------------------------
-   Logical & extended viewport units
-   ------------------------------ */
-.w-lvw   { width: 100lvw; }
-.w-svw   { width: 100svw; }
-.w-mvw   { width: 100mvw; }
-.w-vmin  { width: 100vmin; }
-.w-vmax  { width: 100vmax; }
-
-/* ==============================
-   Height Utilities (mirror width)
-   ============================== */
-
-/* Fixed rem scale */
-.h-0   { height: 0; }
-.h-1   { height: 0.25rem; }
-.h-2   { height: 0.5rem; }
-.h-3   { height: 0.75rem; }
-.h-4   { height: 1rem; }
-.h-5   { height: 1.25rem; }
-.h-6   { height: 1.5rem; }
-.h-7   { height: 1.75rem; }
-.h-8   { height: 2rem; }
-.h-9   { height: 2.25rem; }
-.h-10  { height: 2.5rem; }
-.h-11  { height: 2.75rem; }
-.h-12  { height: 3rem; }
-.h-14  { height: 3.5rem; }
-.h-16  { height: 4rem; }
-.h-20  { height: 5rem; }
-.h-24  { height: 6rem; }
-.h-28  { height: 7rem; }
-.h-32  { height: 8rem; }
-.h-36  { height: 9rem; }
-.h-40  { height: 10rem; }
-.h-44  { height: 11rem; }
-.h-48  { height: 12rem; }
-.h-52  { height: 13rem; }
-.h-56  { height: 14rem; }
-.h-60  { height: 15rem; }
-.h-64  { height: 16rem; }
-.h-72  { height: 18rem; }
-.h-80  { height: 20rem; }
-.h-96  { height: 24rem; }
-
-/* Auto & Full */
-.h-auto    { height: auto; }
-.h-full    { height: 100%; }
-.h-fit     { height: fit-content; }
-.h-max     { height: max-content; }
-.h-min     { height: min-content; }
-.h-stretch { height: stretch; }
-
-/* Fractional heights */
-.h-1\/2   { height: 50%; }
-.h-1\/3   { height: 33.3333%; }
-.h-2\/3   { height: 66.6667%; }
-.h-1\/4   { height: 25%; }
-.h-2\/4   { height: 50%; }
-.h-3\/4   { height: 75%; }
-.h-1\/5   { height: 20%; }
-.h-2\/5   { height: 40%; }
-.h-3\/5   { height: 60%; }
-.h-4\/5   { height: 80%; }
-.h-1\/6   { height: 16.6667%; }
-.h-5\/6   { height: 83.3333%; }
-.h-1\/12  { height: 8.3333%; }
-.h-2\/12  { height: 16.6667%; }
-.h-3\/12  { height: 25%; }
-.h-4\/12  { height: 33.3333%; }
-.h-5\/12  { height: 41.6667%; }
-.h-6\/12  { height: 50%; }
-.h-7\/12  { height: 58.3333%; }
-.h-8\/12  { height: 66.6667%; }
-.h-9\/12  { height: 75%; }
-.h-10\/12 { height: 83.3333%; }
-.h-11\/12 { height: 91.6667%; }
-
-/* Percentage heights (every 5%) */
-.h-5p   { height: 5%; }
-.h-10p  { height: 10%; }
-.h-15p  { height: 15%; }
-.h-20p  { height: 20%; }
-.h-25p  { height: 25%; }
-.h-30p  { height: 30%; }
-.h-35p  { height: 35%; }
-.h-40p  { height: 40%; }
-.h-45p  { height: 45%; }
-.h-50p  { height: 50%; }
-.h-55p  { height: 55%; }
-.h-60p  { height: 60%; }
-.h-65p  { height: 65%; }
-.h-70p  { height: 70%; }
-.h-75p  { height: 75%; }
-.h-80p  { height: 80%; }
-.h-85p  { height: 85%; }
-.h-90p  { height: 90%; }
-.h-95p  { height: 95%; }
-.h-100p { height: 100%; }
-
-/* Viewport heights (every 10vh) */
-.h-10vh  { height: 10vh; }
-.h-20vh  { height: 20vh; }
-.h-30vh  { height: 30vh; }
-.h-40vh  { height: 40vh; }
-.h-50vh  { height: 50vh; }
-.h-60vh  { height: 60vh; }
-.h-70vh  { height: 70vh; }
-.h-80vh  { height: 80vh; }
-.h-90vh  { height: 90vh; }
-.h-100vh { height: 100vh; }
-
-/* Logical & extended viewport units (height) */
-.h-lvh   { height: 100lvh; }
-.h-svh   { height: 100svh; }
-.h-mvh   { height: 100mvh; }
-.h-vmin  { height: 100vmin; }
-.h-vmax  { height: 100vmax; }
-
-.size-0   { width: 0; height: 0; }
-/* 1 unit = 0.25rem */
-.size-1   { width: 0.25rem; height: 0.25rem; }
-.size-2   { width: 0.5rem; height: 0.5rem;  }
-.size-3   { width: 0.75rem; height: 0.75rem; }
-.size-4   { width: 1rem; height: 1rem; }
-.size-5   { width: 1.25rem; height: 1.25rem; }
-.size-6   { width: 1.5rem; height: 1.5rem; }
-.size-7   { width: 1.75rem; height: 1.75rem; }
-.size-8   { width: 2rem; height: 2rem; }
-.size-9   { width: 2.25rem; height: 2.25rem; }
-.size-10  { width: 2.5rem; height: 2.5rem; }
-.size-11  { width: 2.75rem; height: 2.75rem; }
-.size-12  { width: 3rem; height: 3rem; }
-.size-14  { width: 3.5rem; height: 3.5rem; }
-.size-16  { width: 4rem; height: 4rem; }
-.size-20  { width: 5rem; height: 5rem; }
-.size-24  { width: 6rem; height: 6rem; }
-.size-28  { width: 7rem; height: 7rem; }
-.size-32  { width: 8rem; height: 8rem; }
-.size-36  { width: 9rem; height: 9rem; }
-.size-40  { width: 10rem; height: 10rem; }
-.size-44  { width: 11rem; height: 11rem; }
-.size-48  { width: 12rem; height: 12rem; }
-.size-52  { width: 13rem; height: 13rem; }
-.size-56  { width: 14rem; height: 14rem; }
-.size-60  { width: 15rem; height: 15rem; }
-.size-64  { width: 16rem; height: 16rem; }
-.size-72  { width: 18rem; height: 18rem; }
-.size-80  { width: 20rem; height: 20rem; }
-.size-96  { width: 24rem; height: 24rem; }
-
-.box-border        { box-sizing: border-box; }
-.box-content       { box-sizing: content-box; }
-
-/* General gap */
-.gap-0   { gap: 0; }
-.gap-1   { gap: 0.25rem; }
-.gap-2   { gap: 0.5rem; }
-.gap-3   { gap: 0.75rem; }
-.gap-4   { gap: 1rem; }
-.gap-5   { gap: 1.25rem; }
-.gap-6   { gap: 1.5rem; }
-.gap-7   { gap: 1.75rem; }
-.gap-8   { gap: 2rem; }
-.gap-9   { gap: 2.25rem; }
-.gap-10  { gap: 2.5rem; }
-.gap-12  { gap: 3rem; }
-.gap-14  { gap: 3.5rem; }
-.gap-16  { gap: 4rem; }
-.gap-20  { gap: 5rem; }
-.gap-24  { gap: 6rem; }
-.gap-28  { gap: 7rem; }
-.gap-32  { gap: 8rem; }
-
-/* Row gap */
-.row-gap-0   { row-gap: 0; }
-.row-gap-1   { row-gap: 0.25rem; }
-.row-gap-2   { row-gap: 0.5rem; }
-.row-gap-3   { row-gap: 0.75rem; }
-.row-gap-4   { row-gap: 1rem; }
-.row-gap-5   { row-gap: 1.25rem; }
-.row-gap-6   { row-gap: 1.5rem; }
-.row-gap-7   { row-gap: 1.75rem; }
-.row-gap-8   { row-gap: 2rem; }
-.row-gap-9   { row-gap: 2.25rem; }
-.row-gap-10  { row-gap: 2.5rem; }
-.row-gap-12  { row-gap: 3rem; }
-.row-gap-14  { row-gap: 3.5rem; }
-.row-gap-16  { row-gap: 4rem; }
-.row-gap-20  { row-gap: 5rem; }
-.row-gap-24  { row-gap: 6rem; }
-.row-gap-28  { row-gap: 7rem; }
-.row-gap-32  { row-gap: 8rem; }
-
-/* Column gap */
-.column-gap-0   { column-gap: 0; }
-.column-gap-1   { column-gap: 0.25rem; }
-.column-gap-2   { column-gap: 0.5rem; }
-.column-gap-3   { column-gap: 0.75rem; }
-.column-gap-4   { column-gap: 1rem; }
-.column-gap-5   { column-gap: 1.25rem; }
-.column-gap-6   { column-gap: 1.5rem; }
-.column-gap-7   { column-gap: 1.75rem; }
-.column-gap-8   { column-gap: 2rem; }
-.column-gap-9   { column-gap: 2.25rem; }
-.column-gap-10  { column-gap: 2.5rem; }
-.column-gap-12  { column-gap: 3rem; }
-.column-gap-14  { column-gap: 3.5rem; }
-.column-gap-16  { column-gap: 4rem; }
-.column-gap-20  { column-gap: 5rem; }
-.column-gap-24  { column-gap: 6rem; }
-.column-gap-28  { column-gap: 7rem; }
-.column-gap-32  { column-gap: 8rem; }
-
-/* ─── Z-Index Utilities ──────────────────────────────────── */
-.z-0 { z-index: 0; }
-.z-10 { z-index: 10; }
-.z-20 { z-index: 20; }
-.z-30 { z-index: 30; }
-.z-40 { z-index: 40; }
-.z-50 { z-index: 50; }
-
-.border-solid  { border-style: solid; }
-.border-dashed { border-style: dashed; }
-.border-dotted { border-style: dotted; }
-.border-double { border-style: double; }
-.border-none   { border-style: none; }
-
-.z-auto { z-index: auto; }
-.z-0 { z-index: 0; }
-.z-10 { z-index: 10; }
-.z-20 { z-index: 20; }
-.z-30 { z-index: 30; }
-.z-40 { z-index: 40; }
-.z-50 { z-index: 50; }
-.z-100 { z-index: 100; }
-.z-9999 { z-index: 9999; }
-.-z-10 { z-index: -10; }
-.-z-20 { z-index: -20; }
-.-z-40 { z-index: -40; }
-.-z-50 { z-index: -50; }
-.-z-100 { z-index: -100; }
-
-/* ----------------------------------------
-   Opacity Utilities
----------------------------------------- */
-.opacity-0   { opacity: 0; }
-.opacity-10  { opacity: 0.1; }
-.opacity-20  { opacity: 0.2; }
-.opacity-25  { opacity: 0.25; }
-.opacity-30  { opacity: 0.3; }
-.opacity-40  { opacity: 0.4; }
-.opacity-50  { opacity: 0.5; }
-.opacity-60  { opacity: 0.6; }
-.opacity-70  { opacity: 0.7; }
-.opacity-75  { opacity: 0.75; }
-.opacity-80  { opacity: 0.8; }
-.opacity-90  { opacity: 0.9; }
-.opacity-100 { opacity: 1; }
-
-.transition-all { transition-property: all; }
-.transition-bg { transition-property: background-color; }
-.transition-color { transition-property: color; }
-.transition-opacity { transition-property: opacity; }
-.transition-transform { transition-property: transform; }
-.transition-shadow { transition-property: shadow; }
-.transition-border { transition-property: border; }
-.duration-75 { transition-duration: 75ms; }
-.duration-100 { transition-duration: 100ms; }
-.duration-150 { transition-duration: 150ms; }
-.duration-200 { transition-duration: 200ms; }
-.duration-300 { transition-duration: 300ms; }
-.duration-500 { transition-duration: 500ms; }
-.duration-700 { transition-duration: 700ms; }
-.duration-1000 { transition-duration: 1000ms; }
-.ease-linear { transition-timing-function: ease-linear; }
-.ease-in { transition-timing-function: ease-in; }
-.ease-out { transition-timing-function: ease-out; }
-.ease-in-out { transition-timing-function: ease-in-out; }
-.translate-x-0 { transform: translateX(0rem); }
-.translate-y-0 { transform: translateY(0rem); }
-.translate-x-0_25 { transform: translateX(0.25rem); }
-.translate-y-0_25 { transform: translateY(0.25rem); }
-.translate-x-0_5 { transform: translateX(0.5rem); }
-.translate-y-0_5 { transform: translateY(0.5rem); }
-.translate-x-1 { transform: translateX(1rem); }
-.translate-y-1 { transform: translateY(1rem); }
-.translate-x-1_5 { transform: translateX(1.5rem); }
-.translate-y-1_5 { transform: translateY(1.5rem); }
-.translate-x-2 { transform: translateX(2rem); }
-.translate-y-2 { transform: translateY(2rem); }
-.translate-x-3 { transform: translateX(3rem); }
-.translate-y-3 { transform: translateY(3rem); }
-.translate-x-4 { transform: translateX(4rem); }
-.translate-y-4 { transform: translateY(4rem); }
-.translate-x-5 { transform: translateX(5rem); }
-.translate-y-5 { transform: translateY(5rem); }
-.translate-x-6 { transform: translateX(6rem); }
-.translate-y-6 { transform: translateY(6rem); }
-.translate-x-8 { transform: translateX(8rem); }
-.translate-y-8 { transform: translateY(8rem); }
-.translate-x-10 { transform: translateX(10rem); }
-.translate-y-10 { transform: translateY(10rem); }
-.translate-x-12 { transform: translateX(12rem); }
-.translate-y-12 { transform: translateY(12rem); }
-.translate-x-16 { transform: translateX(16rem); }
-.translate-y-16 { transform: translateY(16rem); }
-.translate-x-20 { transform: translateX(20rem); }
-.translate-y-20 { transform: translateY(20rem); }
-.translate-x-24 { transform: translateX(24rem); }
-.translate-y-24 { transform: translateY(24rem); }
-.translate-x-32 { transform: translateX(32rem); }
-.translate-y-32 { transform: translateY(32rem); }
-.scale-0 { transform: scale(0.0); }
-.scale-50 { transform: scale(0.5); }
-.scale-75 { transform: scale(0.75); }
-.scale-90 { transform: scale(0.9); }
-.scale-95 { transform: scale(0.95); }
-.scale-100 { transform: scale(1.0); }
-.scale-105 { transform: scale(1.05); }
-.scale-110 { transform: scale(1.1); }
-.scale-125 { transform: scale(1.25); }
-.scale-150 { transform: scale(1.5); }
-.rotate--180 { transform: rotate(-180deg); }
-.rotate--90 { transform: rotate(-90deg); }
-.rotate--45 { transform: rotate(-45deg); }
-.rotate-0 { transform: rotate(0deg); }
-.rotate-45 { transform: rotate(45deg); }
-.rotate-90 { transform: rotate(90deg); }
-.rotate-180 { transform: rotate(180deg); }
-.skew-x--45 { transform: skewX(-45deg); }
-.skew-y--45 { transform: skewY(-45deg); }
-.skew-x--30 { transform: skewX(-30deg); }
-.skew-y--30 { transform: skewY(-30deg); }
-.skew-x--15 { transform: skewX(-15deg); }
-.skew-y--15 { transform: skewY(-15deg); }
-.skew-x-0 { transform: skewX(0deg); }
-.skew-y-0 { transform: skewY(0deg); }
-.skew-x-15 { transform: skewX(15deg); }
-.skew-y-15 { transform: skewY(15deg); }
-.skew-x-30 { transform: skewX(30deg); }
-.skew-y-30 { transform: skewY(30deg); }
-.skew-x-45 { transform: skewX(45deg); }
-.skew-y-45 { transform: skewY(45deg); }
-
-@keyframes quanta-fade {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-.animate-fade {
-    animation: quanta-fade 0.5s ease-in-out both;
-}
-
-@keyframes quanta-slide-up {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-.animate-slide-up {
-    animation: quanta-slide-up 0.5s ease-out both;
-}
-
-@keyframes quanta-slide-down {
-    from { transform: translateY(-20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-.animate-slide-down {
-    animation: quanta-slide-down 0.5s ease-out both;
-}
-
-@keyframes quanta-slide-left {
-    from { transform: translateX(20px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-.animate-slide-left {
-    animation: quanta-slide-left 0.5s ease-out both;
-}
-
-@keyframes quanta-slide-right {
-    from { transform: translateX(-20px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-.animate-slide-right {
-    animation: quanta-slide-right 0.5s ease-out both;
-}
-
-@keyframes quanta-bounce {
-    0%, 100% {
-        transform: translateY(0);
-        animation-timing-function: ease-in;
-    }
-    50% {
-        transform: translateY(-25%);
-        animation-timing-function: ease-out;
-    }
-}
-.animate-bounce {
-    animation: quanta-bounce 1s infinite;
-}
-
-/* New Quanta Animations */
-
-@keyframes quanta-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-.animate-spin {
-    animation: quanta-spin 1s linear infinite;
-}
-
-@keyframes quanta-pulse {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.05); opacity: 0.7; }
-    100% { transform: scale(1); opacity: 1; }
-}
-.animate-pulse {
-    animation: quanta-pulse 1.5s ease-in-out infinite;
-}
-
-@keyframes quanta-shake {
-    0%, 100% { transform: translateX(0); }
-    20%, 60% { transform: translateX(-10px); }
-    40%, 80% { transform: translateX(10px); }
-}
-.animate-shake {
-    animation: quanta-shake 0.8s ease-in-out both;
-}
-
-@keyframes quanta-wiggle {
-    0%, 100% { transform: rotate(0deg); }
-    15% { transform: rotate(5deg); }
-    30% { transform: rotate(-5deg); }
-    45% { transform: rotate(3deg); }
-    60% { transform: rotate(-3deg); }
-    75% { transform: rotate(2deg); }
-}
-.animate-wiggle {
-    animation: quanta-wiggle 1s ease-in-out both;
-}
-
-@keyframes quanta-zoom-in {
-    from { transform: scale(0.5); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-.animate-zoom-in {
-    animation: quanta-zoom-in 0.5s ease-out both;
-}
-
-@keyframes quanta-zoom-out {
-    from { transform: scale(1.2); opacity: 1; }
-    to { transform: scale(1); opacity: 0; }
-}
-.animate-zoom-out {
-    animation: quanta-zoom-out 0.5s ease-in both;
-}
-
-@keyframes quanta-heartbeat {
-    0%, 40%, 80%, 100% { transform: scale(1); }
-    20%, 60% { transform: scale(1.2); }
-}
-.animate-heartbeat {
-    animation: quanta-heartbeat 1.2s ease-in-out infinite;
-}
-
-@keyframes quanta-ping {
-    0% { transform: scale(1); opacity: 1; }
-    75% { transform: scale(2); opacity: 0; }
-    100% { transform: scale(2); opacity: 0; }
-}
-.animate-ping {
-    animation: quanta-ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-}
-
-/* Animation Duration Utilities (Quanta CSS) */
-.duration-75   { animation-duration: 0.075s !important; }
-.duration-100  { animation-duration: 0.1s   !important; }
-.duration-150  { animation-duration: 0.15s  !important; }
-.duration-200  { animation-duration: 0.2s   !important; }
-.duration-300  { animation-duration: 0.3s   !important; }
-.duration-500  { animation-duration: 0.5s   !important; }
-.duration-700  { animation-duration: 0.7s   !important; }
-.duration-1000 { animation-duration: 1s     !important; }
-.duration-1500 { animation-duration: 1.5s   !important; }
-.duration-2000 { animation-duration: 2s     !important; }
-
-.line-clamp-1 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; }
-.line-clamp-2 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
-.line-clamp-3 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
-.line-clamp-4 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }
-.line-clamp-5 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5; }
-.line-clamp-6 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 6; }
-
-.list-style-image-none { list-style-image: none; }
-.list-style-position-inside { list-style-position: inside; }
-.list-style-position-outside { list-style-position: outside; }
-.list-style-type-none { list-style-type: none; }
-.list-style-type-disc { list-style-type: disc; }
-.list-style-type-circle { list-style-type: circle; }
-.list-style-type-square { list-style-type: square; }
-.list-style-type-decimal { list-style-type: decimal; }
-.list-style-type-lower_roman { list-style-type: lower-roman; }
-.list-style-type-upper_roman { list-style-type: upper-roman; }
-.list-style-type-lower_alpha { list-style-type: lower-alpha; }
-.list-style-type-upper_alpha { list-style-type: upper-alpha; }
-.text-align-left { text-align: left; }
-.text-align-center { text-align: center; }
-.text-align-right { text-align: right; }
-.text-align-justify { text-align: justify; }
-
-/* Color Scheme */
-.color-scheme-light   { color-scheme: light; }
-.color-scheme-dark    { color-scheme: dark; }
-.color-scheme-normal  { color-scheme: normal; }
-
-/* Cursors */
-.cursor-auto          { cursor: auto; }
-.cursor-default       { cursor: default; }
-.cursor-pointer       { cursor: pointer; }
-.cursor-wait          { cursor: wait; }
-.cursor-text          { cursor: text; }
-.cursor-move          { cursor: move; }
-.cursor-not-allowed   { cursor: not-allowed; }
-.cursor-none          { cursor: none; }
-
-.shadow-none    { box-shadow: none; }
-.shadow-sm      { box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
-.shadow         { box-shadow: 0 1px 3px rgba(0,0,0,0.1),0 1px 2px rgba(0,0,0,0.06); }
-.shadow-md      { box-shadow: 0 4px 6px rgba(0,0,0,0.1),0 2px 4px rgba(0,0,0,0.06); }
-.shadow-lg      { box-shadow: 0 10px 15px rgba(0,0,0,0.1),0 4px 6px rgba(0,0,0,0.05); }
-.shadow-xl      { box-shadow: 0 20px 25px rgba(0,0,0,0.1),0 10px 10px rgba(0,0,0,0.04); }
-.shadow-2xl     { box-shadow: 0 25px 50px rgba(0,0,0,0.25); }
-
-/* ─── Dark Mode Support ──────────────────────────────────── */
-html[data-theme="dark"] {
-  background-color: var(--quanta-bg-default);
-  color: var(--quanta-text-default);
-}
-
-/* ─── Responsive Variants ─────────────────────────────────── */
-
-@media (max-width: 640px) {
-  /* Small Devices */
-  .p-4 { padding: 1rem; }
-  .m-2 { margin: 0.5rem; }
-  .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (min-width: 641px) and (max-width: 768px) {
-  /* Medium Devices */
-  .d-flex { display: flex; }
-  .m-4 { margin: 1rem; }
-  .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  /* Large Devices */
-  .p-5 { padding: 1.25rem; }
-  .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
-}
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-  /* Extra Large Devices */
-  .p-6 { padding: 1.5rem; }
-  .grid-cols-5 { grid-template-columns: repeat(5, 1fr); }
-}
-
-@media (min-width: 1281px) {
-  /* Fullscreen (Large) Devices */
-  .p-6 { padding: 1.5rem; }
-  .grid-cols-6 { grid-template-columns: repeat(6, 1fr); }
-}
-
-/* Text Sizes */
-.text-xs { font-size: 0.5rem; }
-.text-sm { font-size: 0.875rem; }
-.text-base { font-size: 1rem; }
-.text-lg { font-size: 1.125rem; }
-.text-xl { font-size: 2rem; }
-.text-2xl { font-size: 2.5rem; }
-.text-3xl { font-size: 3rem; }
-
-.font-weight-thin { font-weight: 100; }
-.font-weight-extralight { font-weight: 200; }
-.font-weight-light { font-weight: 300; }
-.font-weight-regular { font-weight: 400; }
-.font-weight-medium { font-weight: 500; }
-.font-weight-semibold { font-weight: 600; }
-.font-weight-bold { font-weight: 700; }
-.font-weight-extrabold { font-weight: 800; }
-.font-weight-ultrabold { font-weight: 900; }
-
-
-/* ─── Text Color Utilities ───────────────────────────────── */
-.text-default { color: var(--quanta-text-default); }
-.text-muted { color: var(--quanta-text-muted); }
-.text-primary { color: var(--quanta-primary); }
-
-/* Dark mode text colors */
-html[data-theme="dark"] {
-  .text-default { color: var(--quanta-text-default-dark); }
-  .text-muted { color: var(--quanta-text-muted-dark); }
-  .text-primary { color: var(--quanta-primary-dark); }
-}
-
-/* ─── Border Utilities ───────────────────────────────────── */
-.border-0 { border: none; }
-.border { border: 1px solid var(--quanta-border-color); }
-.border-sm { border: 2px solid var(--quanta-border-color); }
-.border-lg { border: 4px solid var(--quanta-border-color); }
-
-/* Border Radius */
-.rounded-sm { border-radius: 4px; }
-.rounded-md { border-radius: 8px; }
-.rounded-lg { border-radius: 16px; }
-.rounded-sl { border-radius: 24px; }
-.rounded-full { border-radius: 9999px; }
-
-/* ─── Opacity Utilities ──────────────────────────────────── */
-.opacity-0 { opacity: 0; }
-.opacity-25 { opacity: 0.25; }
-.opacity-50 { opacity: 0.5; }
-.opacity-75 { opacity: 0.75; }
-.opacity-100 { opacity: 1; }
-
-/* ─── Visibility Utilities ───────────────────────────────── */
-.visible { visibility: visible; }
-.invisible { visibility: hidden; }
-
-/* ─── Positioning Utilities ──────────────────────────────── */
-.relative { position: relative; }
-.absolute { position: absolute; }
-.fixed { position: fixed; }
-.sticky { position: sticky; top: 0; }
-
-/* ─── Overflow Utilities ─────────────────────────────────── */
-.overflow-auto { overflow: auto; }
-.overflow-hidden { overflow: hidden; }
-.overflow-visible { overflow: visible; }
-.overflow-scroll { overflow: scroll; }
-
-/* ─── Flexbox Utilities ───────────────────────────────────── */
-.flex-grow { flex-grow: 1; }
-.flex-shrink { flex-shrink: 1; }
-.flex-no-grow { flex-grow: 0; }
-.flex-no-shrink { flex-shrink: 0; }
-
-/* ─── Text Alignment ─────────────────────────────────────── */
-.text-left { text-align: left; }
-.text-center { text-align: center; }
-.text-right { text-align: right; }
-.text-justify { text-align: justify; }
-
-
-/* ─── Cursor Utilities ───────────────────────────────────── */
-.cursor-pointer { cursor: pointer; }
-.cursor-not-allowed { cursor: not-allowed; }
-.cursor-default { cursor: default; }
-
-
-/* ─── Filter Utilities ───────────────────────────────────── */
-.filter-grayscale { filter: grayscale(100%); }
-.filter-blur { filter: blur(4px); }
-.filter-sepia { filter: sepia(100%); }
-.filter-brightness { filter: brightness(1.2); }
-
-/* ─── Semantic Backgrounds ─────────────────────────── */
-.bg-primary      { background-color: var(--quanta-primary); }
-.bg-secondary    { background-color: var(--quanta-bg-secondary); }
-.bg-success      { background-color: var(--quanta-bg-success); }
-.bg-warning      { background-color: var(--quanta-bg-warning); }
-.bg-danger       { background-color: var(--quanta-bg-danger); }
-.bg-info         { background-color: var(--quanta-bg-info); }
-
-/* ─── Semantic Text Colors ─────────────────────────── */
-.text-primary    { color: var(--quanta-primary); }
-.text-secondary  { color: var(--quanta-text-secondary); }
-.text-success    { color: var(--quanta-text-success); }
-.text-warning    { color: var(--quanta-text-warning); }
-.text-danger     { color: var(--quanta-text-danger); }
-.text-info       { color: var(--quanta-text-info); }
-
-.text-white{
-  color: var(--white);
-}
-.text-black{
-  color: var(--black);
-}
-
-/* ─── Semantic Border Colors ───────────────────────── */
-.border-primary      { border-color: var(--quanta-primary); }
-.border-secondary    { border-color: var(--quanta-border-secondary); }
-.border-success      { border-color: var(--quanta-border-success); }
-.border-warning      { border-color: var(--quanta-border-warning); }
-.border-danger       { border-color: var(--quanta-border-danger); }
-.border-info         { border-color: var(--quanta-border-info); }
-
-/* ─── Responsive Font Sizes ──────────────────────────────── */
-
-@media (max-width: 640px) {
-  .text-base { font-size: 1rem; }
-  .text-lg { font-size: 1.25rem; }
-}
-
-@media (min-width: 641px) and (max-width: 768px) {
-  .text-base { font-size: 1.125rem; }
-  .text-lg { font-size: 1.5rem; }
-}
-
-@media (min-width: 769px) {
-  .text-base { font-size: 1.25rem; }
-  .text-lg { font-size: 1.75rem; }
-}
-
-
-/* ─── Fade In ─────────────────────────────────────────── */
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.fade-in { animation: fadeIn 0.5s ease-out; }
-
-
-/* ─── Slide In From Left ──────────────────────────────── */
-
-@keyframes slideInLeft {
-  0% { transform: translateX(-100%); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
-}
-
-.slide-in-left { animation: slideInLeft 0.6s ease-out; }
-
-
-/* ─── Slide In From Right ─────────────────────────────── */
-
-@keyframes slideInRight {
-  0% { transform: translateX(100%); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
-}
-
-.slide-in-right { animation: slideInRight 0.6s ease-out; }
-
-
-/* ─── Bounce ───────────────────────────────────────────── */
-
-@keyframes bounce {
-  0% { transform: translateY(0); }
-  25% { transform: translateY(-10px); }
-  50% { transform: translateY(0); }
-  75% { transform: translateY(-5px); }
-  100% { transform: translateY(0); }
-}
-
-.bounce { animation: bounce 1s ease infinite; }
-
-
-/* ─── Pulse ────────────────────────────────────────────── */
-
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.05); opacity: 0.8; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-.pulse { animation: pulse 1.5s ease-in-out infinite; }
-
-
-/* ─── Shake ────────────────────────────────────────────── */
-
-@keyframes shake {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-4px); }
-  50% { transform: translateX(4px); }
-  75% { transform: translateX(-4px); }
-  100% { transform: translateX(4px); }
-}
-
-.shake { animation: shake 0.5s ease-in-out; }
-
-
-/* ─── Zoom In ──────────────────────────────────────────── */
-
-@keyframes zoomIn {
-  0% { transform: scale(0.8); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-.zoom-in { animation: zoomIn 0.5s ease-out; }
-
-
-/* ─── Zoom Out ─────────────────────────────────────────── */
-
-@keyframes zoomOut {
-  0% { transform: scale(1); opacity: 1; }
-  100% { transform: scale(0.8); opacity: 0; }
-}
-
-.zoom-out { animation: zoomOut 0.5s ease-in; }
-
-
-/* ─── Flip ─────────────────────────────────────────────── */
-
-@keyframes flip {
-  0% { transform: rotateY(0); }
-  100% { transform: rotateY(360deg); }
-}
-
-.flip { animation: flip 1s ease-in-out; }
-
-
-/* ─── Slide Up ─────────────────────────────────────────── */
-
-@keyframes slideUp {
-  0% { transform: translateY(100%); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-.slide-up { animation: slideUp 0.6s ease-out; }
-
-
-/* ─── Fade In and Scale ────────────────────────────────── */
-
-@keyframes fadeInScale {
-  0% { opacity: 0; transform: scale(0.8); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
-.fade-in-scale { animation: fadeInScale 0.5s ease-out; }
-
-
-/* ─── Rotate ───────────────────────────────────────────── */
-
-@keyframes rotate {
-  0% { transform: rotate(0); }
-  100% { transform: rotate(360deg); }
-}
-
-.rotate { animation: rotate 1s linear infinite; }
-
-
-/* ─── Expand ───────────────────────────────────────────── */
-
-@keyframes expand {
-  0% { transform: scale(0); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-.expand { animation: expand 0.6s ease-out; }
-
-
-/* ─── Slide Down ───────────────────────────────────────── */
-
-@keyframes slideDown {
-  0% { transform: translateY(-100%); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-.slide-down { animation: slideDown 0.6s ease-out; }
-
-
-/* ─── Jello ────────────────────────────────────────────── */
-
-@keyframes jello {
-  0% { transform: skewX(0); }
-  30% { transform: skewX(-12.5deg); }
-  50% { transform: skewX(6.25deg); }
-  70% { transform: skewX(-3.125deg); }
-  100% { transform: skewX(0); }
-}
-
-.jello { animation: jello 1s ease infinite; }
-
-.font-inter {
-  font-family: var(--quanta-font-inter) !important;
-}
-
-.font-roboto-serif {
-  font-family: var(--quanta-font-roboto-serif) !important;
-}
-
-.font-roboto-mono {
-  font-family: var(--quanta-font-roboto-mono) !important;
+  --quanta-red-50: #ffe0dd;
+  --quanta-red-50-rgb: 255 224 221;
+  --quanta-red-100: #ffc5c0;
+  --quanta-red-100-rgb: 255 197 192;
+  --quanta-red-200: #ff9d94;
+  --quanta-red-200-rgb: 255 157 148;
+  --quanta-red-300: #ff6557;
+  --quanta-red-300-rgb: 255 101 87;
+  --quanta-red-400: #ff3623;
+  --quanta-red-400-rgb: 255 54 35;
+  --quanta-red-500: #ff0202;
+  --quanta-red-500-rgb: 255 2 2;
+  --quanta-red-600: #ff2814;
+  --quanta-red-600-rgb: 255 40 20;
+  --quanta-red-700: #d71200;
+  --quanta-red-700-rgb: 215 18 0;
+  --quanta-red-800: #92160a;
+  --quanta-red-800-rgb: 146 22 10;
+  --quanta-red-900: #500700;
+  --quanta-red-900-rgb: 80 7 0;
+  --quanta-orange-50: #fff0d4;
+  --quanta-orange-50-rgb: 255 240 212;
+  --quanta-orange-100: #ffdea8;
+  --quanta-orange-100-rgb: 255 222 168;
+  --quanta-orange-200: #ffc570;
+  --quanta-orange-200-rgb: 255 197 112;
+  --quanta-orange-300: #ff834d;
+  --quanta-orange-300-rgb: 255 131 77;
+  --quanta-orange-400: #ffa037;
+  --quanta-orange-400-rgb: 255 160 55;
+  --quanta-orange-500: #ff8614;
+  --quanta-orange-500-rgb: 255 134 20;
+  --quanta-orange-600: #f06806;
+  --quanta-orange-600-rgb: 240 104 6;
+  --quanta-orange-700: #c74d07;
+  --quanta-orange-700-rgb: 199 77 7;
+  --quanta-orange-800: #9e3d0e;
+  --quanta-orange-800-rgb: 158 61 14;
+  --quanta-orange-900: #451805;
+  --quanta-orange-900-rgb: 69 24 5;
+  --quanta-teal-50: #cffce9;
+  --quanta-teal-50-rgb: 207 252 233;
+  --quanta-teal-100: #a3f7d7;
+  --quanta-teal-100-rgb: 163 247 215;
+  --quanta-teal-200: #67eec3;
+  --quanta-teal-200-rgb: 103 238 195;
+  --quanta-teal-300: #2bdca9;
+  --quanta-teal-300-rgb: 43 220 169;
+  --quanta-teal-400: #07c595;
+  --quanta-teal-400-rgb: 7 197 149;
+  --quanta-teal-500: #009e78;
+  --quanta-teal-500-rgb: 0 158 120;
+  --quanta-teal-600: #007e64;
+  --quanta-teal-600-rgb: 0 126 100;
+  --quanta-teal-700: #016450;
+  --quanta-teal-700-rgb: 1 100 80;
+  --quanta-teal-800: #025243;
+  --quanta-teal-800-rgb: 2 82 67;
+  --quanta-teal-900: #002e27;
+  --quanta-teal-900-rgb: 0 46 39;
+  --quanta-purple-50: #fee5ff;
+  --quanta-purple-50-rgb: 254 229 255;
+  --quanta-purple-100: #fdcaff;
+  --quanta-purple-100-rgb: 253 202 255;
+  --quanta-purple-200: #ffa1fe;
+  --quanta-purple-200-rgb: 255 161 254;
+  --quanta-purple-300: #ff69fd;
+  --quanta-purple-300-rgb: 255 105 253;
+  --quanta-purple-400: #fb32ff;
+  --quanta-purple-400-rgb: 251 50 255;
+  --quanta-purple-500: #d710da;
+  --quanta-purple-500-rgb: 215 16 218;
+  --quanta-purple-600: #c10ac0;
+  --quanta-purple-600-rgb: 193 10 192;
+  --quanta-purple-700: #9d0b9a;
+  --quanta-purple-700-rgb: 157 11 154;
+  --quanta-purple-800: #800f7b;
+  --quanta-purple-800-rgb: 128 15 123;
+  --quanta-purple-900: #570054;
+  --quanta-purple-900-rgb: 87 0 84;
+  --quanta-indigo-50: #f3e7ff;
+  --quanta-indigo-50-rgb: 243 231 255;
+  --quanta-indigo-100: #ead3ff;
+  --quanta-indigo-100-rgb: 234 211 255;
+  --quanta-indigo-200: #d9b1ff;
+  --quanta-indigo-200-rgb: 217 177 255;
+  --quanta-indigo-300: #c27fff;
+  --quanta-indigo-300-rgb: 194 127 255;
+  --quanta-indigo-400: #aa4efe;
+  --quanta-indigo-400-rgb: 170 78 254;
+  --quanta-indigo-500: #962bf2;
+  --quanta-indigo-500-rgb: 150 43 242;
+  --quanta-indigo-600: #891ce3;
+  --quanta-indigo-600-rgb: 137 28 227;
+  --quanta-indigo-700: #6e1bae;
+  --quanta-indigo-700-rgb: 110 27 174;
+  --quanta-indigo-800: #5b178c;
+  --quanta-indigo-800-rgb: 91 23 140;
+  --quanta-indigo-900: #3c0368;
+  --quanta-indigo-900-rgb: 60 3 104;
+  --quanta-yellow-50: #f2ffc2;
+  --quanta-yellow-50-rgb: 242 255 194;
+  --quanta-yellow-100: #e9ff88;
+  --quanta-yellow-100-rgb: 233 255 136;
+  --quanta-yellow-200: #e4ff43;
+  --quanta-yellow-200-rgb: 228 255 67;
+  --quanta-yellow-300: #eaff10;
+  --quanta-yellow-300-rgb: 234 255 16;
+  --quanta-yellow-400: #e4ef03;
+  --quanta-yellow-400-rgb: 228 239 3;
+  --quanta-yellow-500: #d6cf00;
+  --quanta-yellow-500-rgb: 214 207 0;
+  --quanta-yellow-600: #a49104;
+  --quanta-yellow-600-rgb: 164 145 4;
+  --quanta-yellow-700: #87710c;
+  --quanta-yellow-700-rgb: 135 113 12;
+  --quanta-yellow-800: #735c10;
+  --quanta-yellow-800-rgb: 115 92 16;
+  --quanta-yellow-900: #433205;
+  --quanta-yellow-900-rgb: 67 50 5;
+  --quanta-pink-50: #fde6e9;
+  --quanta-pink-50-rgb: 253 230 233;
+  --quanta-pink-100: #fbd0d9;
+  --quanta-pink-100-rgb: 251 208 217;
+  --quanta-pink-200: #f7aab9;
+  --quanta-pink-200-rgb: 247 170 185;
+  --quanta-pink-300: #f27a93;
+  --quanta-pink-300-rgb: 242 122 147;
+  --quanta-pink-400: #e63f66;
+  --quanta-pink-400-rgb: 230 63 102;
+  --quanta-pink-500: #d42a5b;
+  --quanta-pink-500-rgb: 212 42 91;
+  --quanta-pink-600: #b21e4b;
+  --quanta-pink-600-rgb: 178 30 75;
+  --quanta-pink-700: #951c45;
+  --quanta-pink-700-rgb: 149 28 69;
+  --quanta-pink-800: #801b40;
+  --quanta-pink-800-rgb: 128 27 64;
+  --quanta-pink-900: #470a1f;
+  --quanta-pink-900-rgb: 71 10 31;
+  --quanta-grey-50: #f8f9fa;
+  --quanta-grey-50-rgb: 248 249 250;
+  --quanta-grey-100: #f1f3f5;
+  --quanta-grey-100-rgb: 241 243 245;
+  --quanta-grey-200: #e4e7ea;
+  --quanta-grey-200-rgb: 228 231 234;
+  --quanta-grey-300: #cfd4d9;
+  --quanta-grey-300-rgb: 207 212 217;
+  --quanta-grey-400: #9aa0a6;
+  --quanta-grey-400-rgb: 154 160 166;
+  --quanta-grey-500: #6b7280;
+  --quanta-grey-500-rgb: 107 114 128;
+  --quanta-grey-600: #4b5563;
+  --quanta-grey-600-rgb: 75 85 99;
+  --quanta-grey-700: #374151;
+  --quanta-grey-700-rgb: 55 65 81;
+  --quanta-grey-800: #23272f;
+  --quanta-grey-800-rgb: 35 39 47;
+  --quanta-grey-900: #12161d;
+  --quanta-grey-900-rgb: 18 22 29;
+  --quanta-zinc-50: #fafafa;
+  --quanta-zinc-50-rgb: 250 250 250;
+  --quanta-zinc-100: #f4f4f5;
+  --quanta-zinc-100-rgb: 244 244 245;
+  --quanta-zinc-200: #e4e4e7;
+  --quanta-zinc-200-rgb: 228 228 231;
+  --quanta-zinc-300: #d4d4d8;
+  --quanta-zinc-300-rgb: 212 212 216;
+  --quanta-zinc-400: #a1a1aa;
+  --quanta-zinc-400-rgb: 161 161 170;
+  --quanta-zinc-500: #71717a;
+  --quanta-zinc-500-rgb: 113 113 122;
+  --quanta-zinc-600: #52525b;
+  --quanta-zinc-600-rgb: 82 82 91;
+  --quanta-zinc-700: #3f3f46;
+  --quanta-zinc-700-rgb: 63 63 70;
+  --quanta-zinc-800: #27272a;
+  --quanta-zinc-800-rgb: 39 39 42;
+  --quanta-zinc-900: #18181b;
+  --quanta-zinc-900-rgb: 24 24 27;
+  --quanta-neutral-50: #fafafa;
+  --quanta-neutral-50-rgb: 250 250 250;
+  --quanta-neutral-100: #f5f5f5;
+  --quanta-neutral-100-rgb: 245 245 245;
+  --quanta-neutral-200: #e5e5e5;
+  --quanta-neutral-200-rgb: 229 229 229;
+  --quanta-neutral-300: #d4d4d4;
+  --quanta-neutral-300-rgb: 212 212 212;
+  --quanta-neutral-400: #a3a3a3;
+  --quanta-neutral-400-rgb: 163 163 163;
+  --quanta-neutral-500: #737373;
+  --quanta-neutral-500-rgb: 115 115 115;
+  --quanta-neutral-600: #525252;
+  --quanta-neutral-600-rgb: 82 82 82;
+  --quanta-neutral-700: #404040;
+  --quanta-neutral-700-rgb: 64 64 64;
+  --quanta-neutral-800: #262626;
+  --quanta-neutral-800-rgb: 38 38 38;
+  --quanta-neutral-900: #171717;
+  --quanta-neutral-900-rgb: 23 23 23;
+  --quanta-lime-50: #e7fec9;
+  --quanta-lime-50-rgb: 231 254 201;
+  --quanta-lime-100: #d0fc9a;
+  --quanta-lime-100-rgb: 208 252 154;
+  --quanta-lime-200: #aff75f;
+  --quanta-lime-200-rgb: 175 247 95;
+  --quanta-lime-300: #91ec2f;
+  --quanta-lime-300-rgb: 145 236 47;
+  --quanta-lime-400: #66be0e;
+  --quanta-lime-400-rgb: 102 190 14;
+  --quanta-lime-500: #55a808;
+  --quanta-lime-500-rgb: 85 168 8;
+  --quanta-lime-600: #42800b;
+  --quanta-lime-600-rgb: 66 128 11;
+  --quanta-lime-700: #36650f;
+  --quanta-lime-700-rgb: 54 101 15;
+  --quanta-lime-800: #2f5512;
+  --quanta-lime-800-rgb: 47 85 18;
+  --quanta-lime-900: #162f04;
+  --quanta-lime-900-rgb: 22 47 4;
+  --quanta-cyan-50: #cafdf8;
+  --quanta-cyan-50-rgb: 202 253 248;
+  --quanta-cyan-100: #96f9f3;
+  --quanta-cyan-100-rgb: 150 249 243;
+  --quanta-cyan-200: #59efeb;
+  --quanta-cyan-200-rgb: 89 239 235;
+  --quanta-cyan-300: #27d9da;
+  --quanta-cyan-300-rgb: 39 217 218;
+  --quanta-cyan-400: #0ebbbe;
+  --quanta-cyan-400-rgb: 14 187 190;
+  --quanta-cyan-500: #089499;
+  --quanta-cyan-500-rgb: 8 148 153;
+  --quanta-cyan-600: #0b757a;
+  --quanta-cyan-600-rgb: 11 117 122;
+  --quanta-cyan-700: #0e5c61;
+  --quanta-cyan-700-rgb: 14 92 97;
+  --quanta-cyan-800: #114c50;
+  --quanta-cyan-800-rgb: 17 76 80;
+  --quanta-cyan-900: #022c31;
+  --quanta-cyan-900-rgb: 2 44 49;
+  --quanta-sky-50: #dff0ff;
+  --quanta-sky-50-rgb: 223 240 255;
+  --quanta-sky-100: #b8e2ff;
+  --quanta-sky-100-rgb: 184 226 255;
+  --quanta-sky-200: #94d6ff;
+  --quanta-sky-200-rgb: 148 214 255;
+  --quanta-sky-300: #33b3fd;
+  --quanta-sky-300-rgb: 51 179 253;
+  --quanta-sky-400: #0999ee;
+  --quanta-sky-400-rgb: 9 153 238;
+  --quanta-sky-500: #0079cc;
+  --quanta-sky-500-rgb: 0 121 204;
+  --quanta-sky-600: #0060a5;
+  --quanta-sky-600-rgb: 0 96 165;
+  --quanta-sky-700: #045288;
+  --quanta-sky-700-rgb: 4 82 136;
+  --quanta-sky-800: #0a4570;
+  --quanta-sky-800-rgb: 10 69 112;
+  --quanta-sky-900: #062b4b;
+  --quanta-sky-900-rgb: 6 43 75;
+  --quanta-violet-50: #f4e8ff;
+  --quanta-violet-50-rgb: 244 232 255;
+  --quanta-violet-100: #ebd4ff;
+  --quanta-violet-100-rgb: 235 212 255;
+  --quanta-violet-200: #dbb3ff;
+  --quanta-violet-200-rgb: 219 179 255;
+  --quanta-violet-300: #c582fe;
+  --quanta-violet-300-rgb: 197 130 254;
+  --quanta-violet-400: #af52fa;
+  --quanta-violet-400-rgb: 175 82 250;
+  --quanta-violet-500: #992ced;
+  --quanta-violet-500-rgb: 153 44 237;
+  --quanta-violet-600: #851fd1;
+  --quanta-violet-600-rgb: 133 31 209;
+  --quanta-violet-700: #711faa;
+  --quanta-violet-700-rgb: 113 31 170;
+  --quanta-violet-800: #5c1a89;
+  --quanta-violet-800-rgb: 92 26 137;
+  --quanta-violet-900: #3f0566;
+  --quanta-violet-900-rgb: 63 5 102;
+  --quanta-rose-50: #ffe3f6;
+  --quanta-rose-50-rgb: 255 227 246;
+  --quanta-rose-100: #ffc6ec;
+  --quanta-rose-100-rgb: 255 198 236;
+  --quanta-rose-200: #ff98db;
+  --quanta-rose-200-rgb: 255 152 219;
+  --quanta-rose-300: #ff58c1;
+  --quanta-rose-300-rgb: 255 88 193;
+  --quanta-rose-400: #ff27a5;
+  --quanta-rose-400-rgb: 255 39 165;
+  --quanta-rose-500: #ff0a85;
+  --quanta-rose-500-rgb: 255 10 133;
+  --quanta-rose-600: #df0064;
+  --quanta-rose-600-rgb: 223 0 100;
+  --quanta-rose-700: #b80053;
+  --quanta-rose-700-rgb: 184 0 83;
+  --quanta-rose-800: #980348;
+  --quanta-rose-800-rgb: 152 3 72;
+  --quanta-rose-900: #5f0026;
+  --quanta-rose-900-rgb: 95 0 38;
+  --quanta-slate-50: #f8fafc;
+  --quanta-slate-50-rgb: 248 250 252;
+  --quanta-slate-100: #f1f5f9;
+  --quanta-slate-100-rgb: 241 245 249;
+  --quanta-slate-200: #e2e8f0;
+  --quanta-slate-200-rgb: 226 232 240;
+  --quanta-slate-300: #cbd5e1;
+  --quanta-slate-300-rgb: 203 213 225;
+  --quanta-slate-400: #94a3b8;
+  --quanta-slate-400-rgb: 148 163 184;
+  --quanta-slate-500: #64748b;
+  --quanta-slate-500-rgb: 100 116 139;
+  --quanta-slate-600: #475569;
+  --quanta-slate-600-rgb: 71 85 105;
+  --quanta-slate-700: #334155;
+  --quanta-slate-700-rgb: 51 65 85;
+  --quanta-slate-800: #1e293b;
+  --quanta-slate-800-rgb: 30 41 59;
+  --quanta-slate-900: #0f172a;
+  --quanta-slate-900-rgb: 15 23 42;
+  --quanta-blue-50: #d7eaff;
+  --quanta-blue-50-rgb: 215 234 255;
+  --quanta-blue-100: #b9dcff;
+  --quanta-blue-100-rgb: 185 220 255;
+  --quanta-blue-200: #88c7ff;
+  --quanta-blue-200-rgb: 136 199 255;
+  --quanta-blue-300: #50a7ff;
+  --quanta-blue-300-rgb: 80 167 255;
+  --quanta-blue-400: #2882ff;
+  --quanta-blue-400-rgb: 40 130 255;
+  --quanta-blue-500: #1463ff;
+  --quanta-blue-500-rgb: 20 99 255;
+  --quanta-blue-600: #0a4aeb;
+  --quanta-blue-600-rgb: 10 74 235;
+  --quanta-blue-700: #0f3cbe;
+  --quanta-blue-700-rgb: 15 60 190;
+  --quanta-blue-800: #133895;
+  --quanta-blue-800-rgb: 19 56 149;
+  --quanta-blue-900: #133895;
+  --quanta-blue-900-rgb: 19 56 149;
+  --quanta-green-50: #d8ffdf;
+  --quanta-green-50-rgb: 216 255 223;
+  --quanta-green-100: #b4fec2;
+  --quanta-green-100-rgb: 180 254 194;
+  --quanta-green-200: #7afb93;
+  --quanta-green-200-rgb: 122 251 147;
+  --quanta-green-300: #3aee5e;
+  --quanta-green-300-rgb: 58 238 94;
+  --quanta-green-400: #10d737;
+  --quanta-green-400-rgb: 16 215 55;
+  --quanta-green-500: #07c52d;
+  --quanta-green-500-rgb: 7 197 45;
+  --quanta-green-600: #098c24;
+  --quanta-green-600-rgb: 9 140 36;
+  --quanta-green-700: #0d6e22;
+  --quanta-green-700-rgb: 13 110 34;
+  --quanta-green-800: #0d5a1f;
+  --quanta-green-800-rgb: 13 90 31;
+  --quanta-green-900: #00330c;
+  --quanta-green-900-rgb: 0 51 12;
+  --black: #000;
+  --black-rgb: 0 0 0;
+  --white: #fff;
+  --white-rgb: 255 255 255;
+  --bg: var(--white);
+  --text: var(--quanta-grey-800);
 }
 
 .quanta-accordion {
@@ -1943,8 +411,8 @@ html[data-theme="dark"] {
   max-height: 0;
   overflow: hidden;
   padding: 0 var(--quanta-space-6);
-  transition: max-height var(--quanta-duration-normal) var(--quanta-ease-default),
-              padding var(--quanta-duration-fast);
+  transition: max-height var(--quanta-duration-normal) var(--quanta-ease-default), padding var(--quanta-duration-fast);
+  background: var(--white);   
 }
 
 .quanta-accordion-content[aria-hidden="false"] {
@@ -1977,7 +445,6 @@ html[data-theme="dark"] {
 }
 
 .quanta-accordion.quanta-accordion-block .quanta-accordion-header {
-  background: transparent;
   padding-left: 0;
   padding-right: 0;
 }
@@ -1997,17 +464,18 @@ html[data-theme="dark"] {
 /* ─── Dark Mode ───────────────────────── */
 html[data-theme="dark"] {
   .quanta-accordion.quanta-accordion-card .quanta-accordion-item {
-    background-color: var(--quanta-slate-800);
+    background-color: var(--quanta-grey-800);
     color: var(--quanta-text-default);
   }
 
   .quanta-accordion-header, .quanta-accordion-content {
-    background-color: transparent;
+    background: var(--quanta-grey-800);
     color: var(--quanta-text-default);
   }
 
   .quanta-accordion.quanta-accordion-outline .quanta-accordion-item {
     border-color: var(--quanta-border-color);
+    background: transparent;
   }
 }
 
@@ -2151,7 +619,7 @@ html[data-theme="dark"] {
 .quanta-avatar-info     { background-color: var(--quanta-bg-info);    color: var(--white); }
 .quanta-avatar-secondary { background-color: var(--quanta-bg-secondary); color: var(--white); }
 .quanta-avatar-light    { background-color: var(--quanta-grey-100); color: var(--quanta-grey-800); }
-.quanta-avatar-dark     { background-color: var(--quanta-slate-800); color: var(--white); }
+.quanta-avatar-dark     { background-color: var(--quanta-grey-800); color: var(--white); }
 
 /* ─── Dark Mode Adaptations ─────────────────────────────── */
 html[data-theme="dark"] {
@@ -2185,7 +653,7 @@ html[data-theme="dark"] {
   height: 18px;
   border-radius: 50%;
   border: 2px solid var(--quanta-white);
-  background-color: var(--quanta-slate-50); /* default fallback */
+  background-color: var(--quanta-grey-50); /* default fallback */
   font-size: .7rem;
   display: flex;
   align-items: center;
@@ -2200,7 +668,7 @@ html[data-theme="dark"] {
   height: 12px;
   border-radius: 50%;
   border: 2px solid var(--quanta-white);
-  background-color: var(--quanta-slate-50); /* default fallback */
+  background-color: var(--quanta-grey-50); /* default fallback */
 }
 
 /* Badge Variants */
@@ -2244,7 +712,7 @@ html[data-theme="dark"] {
 
 /* Dark mode fix */
 html[data-theme="dark"] .quanta-avatar-badge {
-  border-color: var(--quanta-slate-800);
+  border-color: var(--quanta-grey-800);
 }
 
 /* ─── Badge Base ───────────────────────────────────────── */
@@ -2344,20 +812,20 @@ html[data-theme="dark"] .quanta-avatar-badge {
 
 /* ─── Dark Mode ────────────────────────────────────────── */
 html[data-theme="dark"] .quanta-badge {
-  background-color: var(--quanta-slate-800);
+  background-color: var(--quanta-grey-800);
 }
 html[data-theme="dark"] .quanta-badge-primary    { background-color: var(--quanta-primary); }
 html[data-theme="dark"] .quanta-badge-success    { background-color: var(--quanta-bg-success); }
 html[data-theme="dark"] .quanta-badge-warning    { background-color: var(--quanta-bg-warning); }
 html[data-theme="dark"] .quanta-badge-danger     { background-color: var(--quanta-bg-danger); }
 html[data-theme="dark"] .quanta-badge-info       { background-color: var(--quanta-bg-info); }
-html[data-theme="dark"] .quanta-badge-neutral    { background-color: var(--quanta-slate-600); color: var(--quanta-grey-100); }
+html[data-theme="dark"] .quanta-badge-neutral    { background-color: var(--quanta-grey-600); color: var(--quanta-grey-100); }
 html[data-theme="dark"] .quanta-badge-light      { background-color: var(--quanta-grey-200); color: var(--quanta-grey-900); }
 html[data-theme="dark"] .quanta-badge-dark       { background-color: var(--quanta-grey-900); color: var(--white); }
 
 html[data-theme="dark"] .quanta-badge-count,
 html[data-theme="dark"] .quanta-badge-dot {
-  border-color: var(--quanta-slate-900);
+  border-color: var(--quanta-grey-900);
 }
 
 /* ─── Accessibility ───────────────────────────────────── */
@@ -2369,6 +837,25 @@ html[data-theme="dark"] .quanta-badge-dot {
   outline: var(--quanta-ring-width) solid var(--quanta-primary);
   outline-offset: var(--quanta-space-1);
   box-shadow: var(--quanta-shadow-outline);
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--quanta-primary, #6c63ff);
+  background: transparent;
+  color: inherit;
+  font-style: italic;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+blockquote footer {
+  margin-top: 0.75rem;
+  font-size: 0.875em;
+  font-style: normal;
 }
 
 /* ─── Base Breadcrumb ─────────────────────────────────── */
@@ -2521,15 +1008,15 @@ html[data-theme="dark"] .quanta-breadcrumb [aria-current="page"] {
 .quanta-btn-outline-neutral     { background: transparent; color: var(--quanta-bg-neutral); border: 1px solid var(--quanta-border-neutral); }
 .quanta-btn-outline-ghost       { background: transparent; color: var(--quanta-text-ghost); border: 1px solid var(--quanta-border-ghost); }
 
-.quanta-btn-outline-primary:hover   { background: var(--quanta-primary-hover); color: var(--white); }
-.quanta-btn-outline-secondary:hover { background: var(--quanta-secondary-hover); color: var(--white); }
-.quanta-btn-outline-success:hover   { background: var(--quanta-success-hover); color: var(--white); }
-.quanta-btn-outline-warning:hover   { background: var(--quanta-warning-hover); color: var(--quanta-text-warning); }
-.quanta-btn-outline-danger:hover    { background: var(--quanta-danger-hover); color: var(--white); }
-.quanta-btn-outline-info:hover      { background: var(--quanta-info-hover); color: var(--white); }
-.quanta-btn-outline-accent:hover    { background: var(--quanta-accent-hover); color: var(--white); }
-.quanta-btn-outline-neutral:hover   { background: var(--quanta-neutral-hover); color: var(--quanta-text-neutral); }
-.quanta-btn-outline-ghost:hover     { background: var(--quanta-ghost-hover); color: var(--quanta-text-default); }
+.quanta-btn-outline-primary:hover   { background: var(--quanta-primary); color: var(--white); }
+.quanta-btn-outline-secondary:hover { background: var(--quanta-bg-secondary); color: var(--white); }
+.quanta-btn-outline-success:hover   { background: var(--quanta-bg-success); color: var(--white); }
+.quanta-btn-outline-warning:hover   { background: var(--quanta-bg-warning); color: var(--quanta-text-warning); }
+.quanta-btn-outline-danger:hover    { background: var(--quanta-bg-danger); color: var(--white); }
+.quanta-btn-outline-info:hover      { background: var(--quanta-bg-info); color: var(--white); }
+.quanta-btn-outline-accent:hover    { background: var(--quanta-bg-accent); color: var(--white); }
+.quanta-btn-outline-neutral:hover   { background: var(--quanta-bg-neutral); color: var(--quanta-text-neutral); }
+.quanta-btn-outline-ghost:hover     { background: var(--quanta-ghost); color: var(--quanta-text-default); }
 
 /* ─── Sizes ──────────────────────────────────────────────── */
 .quanta-btn-sm { padding: var(--quanta-space-1) var(--quanta-space-3); font-size: var(--quanta-text-sm); }
@@ -2597,7 +1084,6 @@ html[data-theme="dark"] .quanta-breadcrumb [aria-current="page"] {
 .quanta-card-outline {
   border: 2px solid var(--quanta-border-color);
   box-shadow: none;
-  background-image: linear-gradient(to top, var(--quanta-blue-50), var(--quanta-bg-default));
   background-color: transparent;
 }
 
@@ -2674,7 +1160,7 @@ html[data-theme="dark"] .quanta-breadcrumb [aria-current="page"] {
 /* ─── Dark Mode ─────────────────────────── */
 html[data-theme="dark"] {
   .quanta-card {
-    background-color: var(--quanta-slate-800);
+    background-color: var(--quanta-grey-800);
     color: var(--quanta-text-default);
   }
 
@@ -2686,7 +1172,7 @@ html[data-theme="dark"] {
   }
 
   .quanta-card-solid {
-    background-color: var(--quanta-slate-800);
+    background-color: var(--quanta-grey-800);
     color: var(--quanta-text-secondary);
   }
 
@@ -2771,9 +1257,9 @@ html[data-theme="dark"] {
 .indicator-img.active { border:2px solid var(--quanta-primary); }
 
 @media(max-width:var(--quanta-screen-sm)) { .quanta-carousel-item { padding:var(--quanta-space-4); } }
-html[data-theme="dark"] .quanta-carousel-item { background:var(--quanta-slate-800); }
-html[data-theme="dark"] .quanta-carousel-prev, html[data-theme="dark"] .quanta-carousel-next { background:var(--quanta-slate-700); color:var(--white); }
-html[data-theme="dark"] .indicator-circle, html[data-theme="dark"] .indicator-square, html[data-theme="dark"] .indicator-rect { background:var(--quanta-slate-800); }
+html[data-theme="dark"] .quanta-carousel-item { background:var(--quanta-grey-800); }
+html[data-theme="dark"] .quanta-carousel-prev, html[data-theme="dark"] .quanta-carousel-next { background:var(--quanta-grey-700); color:var(--white); }
+html[data-theme="dark"] .indicator-circle, html[data-theme="dark"] .indicator-square, html[data-theme="dark"] .indicator-rect { background:var(--quanta-grey-800); }
 html[data-theme="dark"] .indicator-circle.active, html[data-theme="dark"] .indicator-square.active, html[data-theme="dark"] .indicator-rect.active { background:var(--quanta-primary); }
 
 .quanta-chip {
@@ -2884,7 +1370,7 @@ html[data-theme="dark"] .indicator-circle.active, html[data-theme="dark"] .indic
 
 /* ─── Dark Mode Support ───────────────────────────────────── */
 html[data-theme="dark"] .quanta-chip {
-  background-color: var(--quanta-slate-700);
+  background-color: var(--quanta-grey-700);
   color: var(--white);
 }
 
@@ -2894,6 +1380,14 @@ html[data-theme="dark"] .quanta-chip-close:focus {
 }
 
 html[data-theme="dark"] {
+  .quanta-chip-primary     { background-color: var(--quanta-primary);   color: var(--quanta-text-primary);   border-color: var(--quanta-border-primary); }
+  .quanta-chip-secondary   { background-color: var(--quanta-bg-secondary); color: var(--quanta-text-secondary); border-color: var(--quanta-border-secondary); }
+  .quanta-chip-success     { background-color: var(--quanta-bg-success);   color: var(--quanta-text-success);   border-color: var(--quanta-border-success); }
+  .quanta-chip-warning     { background-color: var(--quanta-bg-warning);   color: var(--quanta-text-warning);   border-color: var(--quanta-border-warning); }
+  .quanta-chip-danger      { background-color: var(--quanta-bg-danger);    color: var(--quanta-text-danger);    border-color: var(--quanta-border-danger); }
+  .quanta-chip-info        { background-color: var(--quanta-bg-info);      color: var(--quanta-text-info);      border-color: var(--quanta-border-info); }
+  .quanta-chip-accent      { background-color: var(--quanta-bg-accent);    color: var(--quanta-text-accent);    border-color: var(--quanta-border-accent); }
+  .quanta-chip-ghost       { background-color: var(--quanta-bg-ghost);     color: var(--quanta-text-ghost);     border-color: var(--quanta-border-ghost); }
   .quanta-chip-outline-primary   { background: transparent; color: var(--quanta-primary); border-color: var(--quanta-border-primary); }
   .quanta-chip-outline-secondary { background: transparent; color: var(--quanta-bg-secondary); border-color: var(--quanta-border-secondary); }
   .quanta-chip-outline-success   { background: transparent; color: var(--quanta-bg-success); border-color: var(--quanta-border-success); }
@@ -2959,6 +1453,88 @@ html[data-theme="dark"] {
 .quanta-columns-auto > .col {
   flex: 1 1 0;
 }
+
+.code-block{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 0.65rem; /* rounded-lg */
+  border: 1px solid var(--quanta-grey-200);
+  background: var(--quanta-grey-100);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Dark theme support */
+:root[data-theme="dark"] .code-block {
+  border-color: var(--quanta-grey-700);
+  background: var(--quanta-grey-800);
+}
+
+/* Code content */
+.code-block pre {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  padding: 1.4rem;
+  overflow: auto;
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.6;
+  font-family: monospace;
+  color: var(--grey-900);
+}
+
+:root[data-theme="dark"] .code-block pre {
+  color: var(--quanta-grey-100);
+}
+
+.code-block pre code{
+  background: transparent;
+}
+
+:root[data-theme="dark"] .code-block pre code{
+  background: transparent;
+}
+
+/* Inline <code> for text */
+code {
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.25rem;
+  background: var(--quanta-grey-200);
+  font-family: monospace;
+  color: var(--quanta-grey-900);
+}
+
+:root[data-theme="dark"] code {
+  background: var(--quanta-grey-700);
+  color: var(--quanta-grey-100);
+}
+
+/* Optional header bar (VS Code style) */
+.code-block-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.4rem;
+  background: var(--quanta-grey-100);
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--quanta-grey-200);
+}
+
+:root[data-theme="dark"] .code-block-header {
+  background: var(--grey-700);
+  border-bottom: 1px solid var(--quanta-grey-700);
+}
+
+.code-block-header .dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+}
+
+.dot.red { background: #ef4444; }
+.dot.yellow { background: #f59e0b; }
+.dot.green { background: #10b981; }
 
 .quanta-container {
   margin-inline: auto;
@@ -3138,7 +1714,7 @@ html[data-theme="dark"] .quanta-container-fluid {
 }
 
 .quanta-day:hover {
-  background-color: var(--quanta-slate-100);
+  background-color: var(--quanta-grey-100);
   color: var(--black);
   transform: translateY(-2px);
 }
@@ -3160,16 +1736,16 @@ html[data-theme="dark"] .quanta-container-fluid {
 }
 
 html[data-theme="dark"] .quanta-datepicker-popup {
-  background-color: var(--quanta-slate-800);
+  background-color: var(--quanta-grey-800);
   box-shadow: var(--quanta-shadow-xl);
 }
 
 html[data-theme="dark"] .quanta-datepicker input{
-  background: var(--quanta-slate-800);
+  background: var(--quanta-grey-800);
 }
 
 html[data-theme="dark"] .quanta-day:hover {
-  background-color: var(--quanta-slate-900);
+  background-color: var(--quanta-grey-900);
   color: var(--white);
 }
 
@@ -3224,9 +1800,12 @@ html[data-theme="dark"] .quanta-divider-vertical {
 }
 
 html[data-theme="dark"] .quanta-divider-text {
-  background-color: var(--quanta-slate-900);
+  background-color: var(--quanta-grey-900);
   color: var(--quanta-text-light);
 }
+
+html[data-theme="dark"] .divider-dashed { border-top: 2px dashed var(--quanta-border-color); background: none; height: auto; }
+html[data-theme="dark"] .divider-dotted { border-top: 2px dotted var(--quanta-border-color); background: none; height: auto; }
 
 .quanta-drawer-overlay {
   position: fixed;
@@ -3302,7 +1881,7 @@ html[data-theme="dark"] .quanta-divider-text {
 }
 
 html[data-theme="dark"] .quanta-drawer {
-  background-color: var(--quanta-slate-800);
+  background-color: var(--quanta-grey-800);
   color: var(--quanta-text-light);
 }
 
@@ -3313,8 +1892,6 @@ html[data-theme="dark"] .quanta-drawer-overlay {
 .quanta-dropdown {
   position: relative;
   display: inline-block;
-  /* Extend hover area to menu gap */
-  padding-bottom: var(--quanta-space-2);
 }
 
 /* Toggle button */
@@ -3333,7 +1910,7 @@ html[data-theme="dark"] .quanta-drawer-overlay {
 /* Menu panel */
 .quanta-dropdown-menu {
   position: absolute;
-  top: calc(100% - var(--quanta-space-2)); /* lift up to overlap padding */
+  top: calc(100% + var(--quanta-space-2)); /* lift up to overlap padding */
   left: 0;
   min-width: 160px;
   background-color: var(--quanta-bg-default);
@@ -3377,7 +1954,7 @@ html[data-theme="dark"] .quanta-drawer-overlay {
 
 .quanta-dropdown-item:hover,
 .quanta-dropdown-item:focus {
-  background-color: var(--quanta-slate-50);
+  background-color: var(--quanta-grey-50);
   color: var(--black);
 }
 
@@ -3388,17 +1965,17 @@ html[data-theme="dark"] .quanta-drawer-overlay {
 /* Dark mode */
 html[data-theme="dark"] .quanta-dropdown-toggle {
   color: var(--quanta-text-secondary);
-  background-color: var(--quanta-slate-800);
+  background-color: var(--quanta-grey-800);
 }
 
 html[data-theme="dark"] .quanta-dropdown-toggle:hover,
 html[data-theme="dark"] .quanta-dropdown-toggle:focus {
-  background-color: var(--quanta-slate-700);
+  background-color: var(--quanta-grey-700);
   color: var(--quanta-primary-hover);
 }
 
 html[data-theme="dark"] .quanta-dropdown-menu {
-  background-color: var(--quanta-slate-800);
+  background-color: var(--quanta-grey-800);
 }
 
 html[data-theme="dark"] .quanta-dropdown-item {
@@ -3407,7 +1984,7 @@ html[data-theme="dark"] .quanta-dropdown-item {
 
 html[data-theme="dark"] .quanta-dropdown-item:hover,
 html[data-theme="dark"] .quanta-dropdown-item:focus {
-  background-color: var(--quanta-slate-700);
+  background-color: var(--quanta-grey-700);
   color: var(--quanta-white);
 }
 
@@ -3467,7 +2044,7 @@ html[data-theme="dark"] .quanta-dropdown-item:active {
   align-items: center;
   padding: var(--quanta-space-2);
   border-radius: var(--quanta-rounded-lg);
-  background-color: var(--quanta-slate-100);
+  background-color: var(--quanta-grey-100);
 }
 
 /* ─── Classic Upload ───────────────────────────────────── */
@@ -3508,7 +2085,7 @@ html[data-theme="dark"] .quanta-dropdown-item:active {
   border-radius: var(--quanta-rounded-md);
   font-size: var(--quanta-text-sm);
   text-align: center;
-  border: 2px dashed var(--quanta-slate-200);
+  border: 2px dashed var(--quanta-grey-200);
   width: 100%;
 }
 
@@ -3534,7 +2111,7 @@ html[data-theme="dark"] .quanta-dropdown-item:active {
   justify-content: center;
   min-height: 180px;
   background-color: var(--white);
-  border: 3px dashed var(--quanta-slate-300);
+  border: 3px dashed var(--quanta-grey-300);
   border-radius: var(--quanta-rounded-lg);
   color: var(--upload-text-color);
   text-align: center;
@@ -3630,7 +2207,7 @@ html[data-theme="dark"] .quanta-dropdown-item:active {
   align-items: center;
   justify-content: space-between;
   padding: var(--quanta-space-2) var(--quanta-space-3);
-  background-color: var(--quanta-slate-200);
+  background-color: var(--quanta-grey-200);
   color: var(--black);
   border-radius: var(--quanta-rounded-md);
   gap: var(--quanta-space-2);
@@ -3669,7 +2246,7 @@ html[data-theme="dark"] .quanta-dropdown-item:active {
 .quanta-image-box-preview {
   width: 100%;
   aspect-ratio: 16/9;
-  border: 2px dashed var(--quanta-slate-200);
+  border: 2px dashed var(--quanta-grey-200);
   border-radius: var(--quanta-rounded-md);
   overflow: hidden;
   display: none;
@@ -3702,22 +2279,22 @@ html[data-theme="dark"] .quanta-dropdown-item:active {
 /* ─── Dark Mode ───────────────────────────────────────── */
 html[data-theme="dark"]{
   .quanta-single-file-upload-wrapper{
-    background-color: var(--quanta-slate-800);
+    background-color: var(--quanta-grey-800);
   }
 
   .quanta-file-upload-box {
-    border-color: var(--quanta-slate-700);
+    border-color: var(--quanta-grey-700);
   }
 
   .quanta-file-upload-modern {
-    border-color: var(--quanta-slate-700);
-    background: var(--quanta-slate-900);
+    border-color: var(--quanta-grey-700);
+    background: var(--quanta-grey-900);
     color: var(--upload-text-color);
   }
 
   .quanta-file-item,
   .quanta-file-thumbnail {
-    background-color: var(--quanta-slate-700);
+    background-color: var(--quanta-grey-700);
     color: var(--quanta-text-default);
   }
 }
@@ -3731,7 +2308,7 @@ html[data-theme="dark"]{
 }
 
 .quanta-footer {
-  background-color: var(--quanta-slate-100);
+  background-color: var(--quanta-grey-100);
   padding: var(--quanta-space-8) var(--quanta-space-6);
   display: flex;
   flex-wrap: wrap;
@@ -3783,7 +2360,7 @@ html[data-theme="dark"]{
 }
 
 html[data-theme="dark"] .quanta-footer {
-  background-color: var(--quanta-slate-800);
+  background-color: var(--quanta-grey-800);
 }
 
 html[data-theme="dark"] .quanta-footer a:hover {
@@ -4416,12 +2993,12 @@ html[data-theme="dark"] .quanta-form-search::before {
 
 html[data-theme="dark"] .quanta-custom-select,
 html[data-theme="dark"] .quanta-custom-options {
-  background: var(--quanta-slate-800);
+  background: var(--quanta-grey-800);
   color: var(--quanta-text-default);
 }
 
 html[data-theme="dark"] .quanta-switch-slider {
-  background: var(--quanta-slate-600);
+  background: var(--quanta-grey-600);
 }
 
 html[data-theme="dark"] .quanta-custom-selected::after {
@@ -4463,21 +3040,21 @@ html[data-theme="dark"] .quanta-switch-outline-neutral   .quanta-switch-slider {
 html[data-theme="dark"] .quanta-custom-form-textarea,
 html[data-theme="dark"] .quanta-custom-form-select,
 html[data-theme="dark"] .quanta-custom-form-search .quanta-custom-form-input {
-  background: var(--quanta-slate-800);
+  background: var(--quanta-grey-800);
   color: var(--quanta-text-default);
   border-color: var(--quanta-border-color);
 }
 html[data-theme="dark"] .quanta-custom-checkbox-box,
 html[data-theme="dark"] .quanta-custom-radio-box {
-  background: var(--quanta-slate-800);
+  background: var(--quanta-grey-800);
   border-color: var(--quanta-border-color);
 }
 
 html[data-theme="dark"] .quanta-switch-outline .quanta-switch-outline-slider {
-  border: 1px solid var(--quanta-slate-400);
+  border: 1px solid var(--quanta-grey-400);
 }
 html[data-theme="dark"] .quanta-switch-outline .quanta-switch-outline-slider::before {
-  background: var(--quanta-slate-400);
+  background: var(--quanta-grey-400);
 }
 
 .quanta-gallery {
@@ -4744,82 +3321,119 @@ html[data-theme="dark"] .quanta-hero.minimal {
   background-color: var(--quanta-bg-muted);
 }
 
+/* quanta input-group — palette-token only, accessible + theme-friendly */
+
 .quanta-input-group {
   display: flex;
   align-items: stretch;
   width: 100%;
   border-radius: var(--quanta-rounded-md);
   overflow: hidden;
-  border: var(--quanta-border-width) solid var(--quanta-border-color);
-  background-color: var(--white);
+  border: var(--quanta-border-width, 1px) solid var(--quanta-border-color, var(--quanta-grey-200));
+  background-color: var(--white, #fff);
 }
 
+/* show visible focus when any child has keyboard focus */
+.quanta-input-group:focus-within {
+  /* uses quanta-focus-rgb if you defined it (e.g. "20 99 255") */
+  box-shadow: 0 0 0 3px rgba(var(--quanta-focus-rgb, 20 99 255), 0.12);
+  border-color: color-mix(in srgb, var(--quanta-primary, #25C0D6) 36%, var(--quanta-border-color, var(--quanta-grey-200)));
+}
+
+/* left icon block */
 .quanta-input-icon-left {
   display: flex;
   align-items: center;
   padding: 0 var(--quanta-space-4);
-  background: var(--quanta-slate-100);
-  color: var(--quanta-text-muted);
+  background: var(--quanta-grey-100, #f1f5f9);
+  color: var(--quanta-text-muted, var(--quanta-grey-500));
   font-size: var(--quanta-text-sm);
+  min-width: 3rem;
+  justify-content: center;
 }
 
+/* input itself */
 .quanta-input {
   border: none;
   flex: 1;
   padding: var(--quanta-space-3) var(--quanta-space-3);
   font-size: var(--quanta-text-sm);
   background: transparent;
-  color: var(--quanta-text-default);
+  color: var(--quanta-text-default, var(--quanta-grey-800));
   font-family: inherit;
+  caret-color: var(--quanta-primary, #25C0D6);
+  outline: none; /* visual handled by :focus-visible / group focus-within */
 }
 
-.quanta-input:focus {
+/* keyboard focus for input (only keyboard users) */
+.quanta-input:focus-visible {
   outline: none;
-  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(var(--quanta-focus-rgb, 20 99 255), 0.16);
+  border-radius: 0; /* avoid double rounding inside the group */
+  background: transparent;
 }
 
+/* button on the right */
 .quanta-input-button {
-  background: var(--quanta-primary);
-  color: var(--white);
+  background: var(--quanta-primary, #25C0D6);
+  color: var(--white, #fff);
   border: none;
   padding: 0 var(--quanta-space-4);
   cursor: pointer;
   font-size: var(--quanta-text-sm);
   display: flex;
   align-items: center;
-  transition: background 0.3s ease;
+  transition: background var(--quanta-duration-fast, 150ms) var(--quanta-ease-default),
+              transform var(--quanta-duration-fast, 150ms) var(--quanta-ease-default),
+              box-shadow var(--quanta-duration-fast, 150ms);
+  border-left: 1px solid var(--quanta-border-color, var(--quanta-grey-200));
 }
 
-.quanta-input-button:hover {
-  background: var(--quanta-primary-hover);
+/* hover / active / focus-visible */
+.quanta-input-button:hover,
+.quanta-input-button:focus-visible {
+  background: var(--quanta-primary-hover, #1CA7B8);
+  transform: translateY(-1px);
+  box-shadow: var(--quanta-shadow-sm);
+  outline: none;
 }
 
-/* Dark mode */
+/* disabled */
+.quanta-input-button:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Dark mode (using your quanta tokens) */
 html[data-theme="dark"] .quanta-input-group {
   background-color: transparent;
-  border-color: var(--quanta-border-color);
+  border-color: var(--quanta-border-color, var(--quanta-grey-700));
 }
 
 html[data-theme="dark"] .quanta-input {
-  color: var(--quanta-text-light);
+  color: var(--quanta-text-light, var(--quanta-grey-100));
 }
 
-html[data-theme="dark"] .quanta-input:focus {
-  outline: none;
-  background: var(--bg-slate-800);
+html[data-theme="dark"] .quanta-input:focus-visible {
+  background: transparent;
+  box-shadow: 0 0 0 3px rgba(var(--quanta-focus-rgb, 20 99 255), 0.20);
 }
 
 html[data-theme="dark"] .quanta-input-icon-left {
-  background: var(--quanta-slate-700);
-  color: var(--quanta-text-light-muted);
+  background: var(--quanta-grey-700);
+  color: var(--quanta-text-light-muted, var(--quanta-grey-300));
 }
 
 html[data-theme="dark"] .quanta-input-button {
-  background: var(--quanta-primary);
+  background: var(--quanta-primary, #25C0D6);
+  color: var(--white, #fff);
 }
 
-html[data-theme="dark"] .quanta-input-button:hover {
-  background: var(--quanta-primary-hover);
+html[data-theme="dark"] .quanta-input-button:hover,
+html[data-theme="dark"] .quanta-input-button:focus-visible {
+  background: var(--quanta-primary-hover, #34D0E5);
 }
 
 .lazy-load {
@@ -5092,7 +3706,7 @@ html[data-theme="dark"] {
 
 /* Dark Mode */
 html[data-theme="dark"] .quanta-megamenu-content {
-  background-color: var(--quanta-slate-800);
+  background-color: var(--quanta-grey-800);
   color: var(--quanta-text-light);
   box-shadow: var(--quanta-shadow-md);
 }
@@ -5211,7 +3825,7 @@ html[data-theme="dark"] .quanta-megamenu-item:hover {
 /* ─── Dark Mode ──────────────────────────────── */
 html[data-theme="dark"] {
   .quanta-modal {
-    background-color: var(--quanta-slate-800);
+    background-color: var(--quanta-grey-800);
     color: var(--quanta-text-light);
     box-shadow: var(--quanta-shadow-2xl);
   }
@@ -5402,7 +4016,7 @@ html[data-theme="dark"] {
 
 /* ─── Dark Mode ─────────────────────────────────────── */
 html[data-theme="dark"] .quanta-navbar {
-  background: var(--quanta-slate-900);
+  background: var(--quanta-grey-900);
 }
 
 html[data-theme="dark"] .quanta-nav-link,
@@ -5531,7 +4145,7 @@ html[data-theme="dark"] .quanta-nav-link:hover {
 
 /* Dark Mode */
 html[data-theme='dark'] .quanta-toast {
-  background-color: var(--quanta-slate-800);
+  background-color: var(--quanta-grey-800);
   color: var(--quanta-text-default);
 }
 
@@ -5853,7 +4467,7 @@ html[data-theme="dark"] {
 
 /* Dark mode */
 html[data-theme="dark"] .quanta-popover {
-  background-color: var(--quanta-slate-800);
+  background-color: var(--quanta-grey-800);
   color: var(--quanta-text-light);
   box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
@@ -5939,6 +4553,9 @@ html[data-theme="dark"] .quanta-popover.blur {
 .quanta-plan-features li {
   margin-bottom: var(--quanta-space-2);
   position: relative;
+  display: flex;
+  align-items: start;
+  gap: 0.4rem;
 }
 
 .quanta-plan-features li .check-icon {
@@ -5995,11 +4612,11 @@ html[data-theme="dark"] .quanta-plan-glass {
 
 /* Dark mode tweaks */
 html[data-theme="dark"] .quanta-plan {
-  background: var(--quanta-slate-800);
+  background: var(--quanta-grey-800);
 }
 
 html[data-theme="dark"] .quanta-plan-outline {
-  border-color: var(--quanta-slate-600);
+  border-color: var(--quanta-grey-600);
 }
 
 @media (max-width: 640px) {
@@ -6012,7 +4629,7 @@ html[data-theme="dark"] .quanta-plan-outline {
   position: relative;
   width: 100%;
   height: 1rem;
-  background-color: var(--quanta-slate-100);
+  background-color: var(--quanta-grey-100);
   border-radius: var(--quanta-rounded-sm);
   overflow: hidden;
   box-shadow: var(--quanta-shadow-xs);
@@ -6105,7 +4722,7 @@ html[data-theme="dark"] .quanta-plan-outline {
 
 /* Dark Mode */
 html[data-theme="dark"] {
-  .quanta-progress-bar { background-color: var(--quanta-slate-700); }
+  .quanta-progress-bar { background-color: var(--quanta-grey-700); }
   .quanta-progress-bar-inner { background-color: var(--quanta-primary); }
 }
 html[data-theme="dark"] {
@@ -6167,7 +4784,7 @@ html[data-theme="dark"] {
   transform: translateY(-50%);
   height: 8px;
   width: 100%;
-  background-color: var(--quanta-slate-100);
+  background-color: var(--quanta-grey-100);
   border-radius: var(--quanta-rounded-full);
   z-index: 1;
   pointer-events: none;
@@ -6228,7 +4845,7 @@ html[data-theme="dark"] {
   position: absolute;
   top: -40px;
   transform: translateX(-50%);
-  background: var(--quanta-slate-100);
+  background: var(--quanta-grey-100);
   color: var(--black);
   font-size: var(--quanta-text-xs);
   padding: var(--quanta-space-1) var(--quanta-space-2);
@@ -6285,7 +4902,7 @@ html[data-theme="dark"] {
 /* Dark mode */
 html[data-theme="dark"] {
   .quanta-range-track {
-    background-color: var(--quanta-slate-700);
+    background-color: var(--quanta-grey-700);
   }
 
   .quanta-range-fill {
@@ -6293,7 +4910,7 @@ html[data-theme="dark"] {
   }
 
   .quanta-range::-webkit-slider-thumb {
-    background-color: var(--quanta-slate-900);
+    background-color: var(--quanta-grey-900);
   }
 
   .quanta-range:hover::-webkit-slider-thumb {
@@ -6305,7 +4922,7 @@ html[data-theme="dark"] {
   }
 
   .quanta-range-value {
-    background-color: var(--quanta-slate-800);
+    background-color: var(--quanta-grey-800);
     color: var(--white);
   }
 }
@@ -6333,7 +4950,7 @@ html[data-theme="dark"] {
 
 .quanta-rating-star {
   font-size: 1.5rem;
-  color: var(--quanta-slate-400);
+  color: var(--quanta-grey-400);
   transition: color 0.2s;
   position: relative;
 }
@@ -6398,7 +5015,7 @@ html[data-theme="dark"] {
 
 /* ─── Dark Mode ─────────────────────────────── */
 html[data-theme="dark"] .quanta-rating-star {
-  color: var(--quanta-slate-600);
+  color: var(--quanta-grey-600);
 }
 
 html[data-theme="dark"] .quanta-rating.primary .quanta-rating-star.filled,
@@ -6515,7 +5132,7 @@ html[data-theme="dark"] .quanta-rating.ghost .quanta-rating-star.half::before {
 /* ─── Dark Mode ────────────────────────────────── */
 html[data-theme="dark"] .quanta-searchbar-input,
 html[data-theme="dark"] .quanta-searchbar-select {
-  background-color: var(--quanta-slate-800);
+  background-color: var(--quanta-grey-800);
   border-color: var(--quanta-border-color);
   color: var(--quanta-text-light);
 }
@@ -6544,14 +5161,15 @@ html[data-theme="dark"] .quanta-searchbar-btn {
   position: fixed;
   inset-block: 0;
   left: 0;
-  width: 260px;
+  width: 320px;
+  height: 100vh;
   background-color: var(--quanta-bg-default);
   color: var(--quanta-text-default);
   display: flex;
   flex-direction: column;
-  box-shadow: var(--quanta-shadow-lg);
   transition: width 0.3s ease, transform 0.3s ease;
   z-index: 1000;
+  flex: 1 1 auto;
 }
 
 .quanta-sidebar.collapsed {
@@ -6595,7 +5213,7 @@ html[data-theme="dark"] .quanta-searchbar-btn {
 }
 
 .quanta-sidebar-link:hover {
-  background-color: var(--quanta-slate-100);
+  background-color: var(--quanta-grey-100);
 }
 
 .quanta-sidebar-link.active {
@@ -6612,23 +5230,14 @@ html[data-theme="dark"] .quanta-searchbar-btn {
 }
 
 .quanta-sidebar-toggle {
-  position: fixed;
-  top: var(--quanta-space-3);
-  left: var(--quanta-space-3);
-  z-index: 1100;
-  padding: var(--quanta-space-2) var(--quanta-space-3);
-  background-color: var(--quanta-primary);
-  color: var(--white);
   border: none;
-  border-radius: var(--quanta-rounded-sm);
   cursor: pointer;
-  box-shadow: var(--quanta-shadow-md);
   display: none;
 }
 
 /* ─── Dark Mode ───────────────────── */
 html[data-theme="dark"] .quanta-sidebar {
-  background-color: var(--quanta-slate-800);
+  background-color: var(--quanta-grey-800);
   color: var(--quanta-text-light);
 }
 
@@ -6637,7 +5246,7 @@ html[data-theme="dark"] .quanta-sidebar-link {
 }
 
 html[data-theme="dark"] .quanta-sidebar-link:hover {
-  background-color: var(--quanta-slate-700);
+  background-color: var(--quanta-grey-700);
 }
 
 html[data-theme="dark"] .quanta-sidebar-link.active {
@@ -6662,10 +5271,6 @@ html[data-theme="dark"] .quanta-sidebar-link.active {
     display: block;
   }
 
-  .quanta-with-sidebar {
-    flex-direction: column;
-  }
-
   .quanta-sidebar-content {
     margin-left: 0 !important;
   }
@@ -6679,8 +5284,8 @@ html[data-theme="dark"] .quanta-sidebar-link.active {
 
 /* ─── Content Area ─────────────────────────────── */
 .quanta-sidebar-content {
-  flex: 1;
-  margin-left: 260px;
+  flex: 1 1 auto;
+  margin-left: 320px;
   transition: margin-left 0.3s ease;
 }
 
@@ -6692,7 +5297,7 @@ html[data-theme="dark"] .quanta-sidebar-link.active {
 .quanta-skeleton {
   position: relative;
   display: inline-block;
-  background-color: var(--quanta-slate-200);
+  background-color: var(--quanta-grey-200);
   animation: quanta-opacity 1.5s infinite ease-in-out;
   border-radius: var(--quanta-rounded-md);
   overflow: hidden;
@@ -6774,7 +5379,7 @@ html[data-theme="dark"] .quanta-sidebar-link.active {
 
 /* ─── Dark Mode Support ───────────────── */
 html[data-theme="dark"] .quanta-skeleton {
-  background-color: var(--quanta-slate-700);
+  background-color: var(--quanta-grey-700);
 }
 
 html[data-theme="dark"] .quanta-skeleton::before {
@@ -6855,7 +5460,7 @@ html[data-theme="dark"] .quanta-skeleton::before {
 .quanta-spinner-bar {
   width: 100%;
   height: 8px;
-  background-color: var(--quanta-slate-100);
+  background-color: var(--quanta-grey-100);
   border-radius: var(--quanta-rounded-md);
   position: relative;
   overflow: hidden;
@@ -6963,7 +5568,7 @@ html[data-theme="dark"] {
   }
 
   .quanta-spinner-bar {
-    background-color: var(--quanta-slate-800);
+    background-color: var(--quanta-grey-800);
   }
 
   .quanta-spinner-bar .quanta-bar {
@@ -7062,7 +5667,7 @@ html[data-theme="dark"] .quanta-stat-label {
 }
 
 html[data-theme="dark"] .quanta-stat:hover {
-  background: var(--quanta-slate-800);
+  background: var(--quanta-grey-800);
 }
 
 /* ─── Responsive Fine-Tuning ────────────────────────────── */
@@ -7151,12 +5756,12 @@ html[data-theme="dark"] .quanta-stat:hover {
 }
 
 .quanta-step[data-status="upcoming"] .quanta-step-label {
-  color: var(--quanta-slate-400);
+  color: var(--quanta-grey-400);
 }
 
 html[data-theme="dark"] .quanta-stepper-line .quanta-step-icon {
-  background-color: var(--quanta-slate-700);
-  border-color: var(--quanta-slate-700);
+  background-color: var(--quanta-grey-700);
+  border-color: var(--quanta-grey-700);
 }
 
 html[data-theme="dark"] .quanta-step[data-status="completed"] .quanta-step-icon {
@@ -7174,7 +5779,7 @@ html[data-theme="dark"] .quanta-step[data-status="active"] .quanta-step-icon {
 }
 
 html[data-theme="dark"] .quanta-step[data-status="upcoming"] .quanta-step-label {
-  color: var(--quanta-slate-500);
+  color: var(--quanta-grey-500);
 }
 
 .sticky {
@@ -7303,11 +5908,11 @@ html[data-theme="dark"] .quanta-step[data-status="upcoming"] .quanta-step-label 
 
 /* ─── Visual Variants ───────────────────────────────── */
 .quanta-table-hover tbody tr:hover {
-  background-color: var(--quanta-slate-100);
+  background-color: var(--quanta-grey-100);
 }
 
 .quanta-table-zebra tbody tr:nth-child(odd) {
-  background-color: var(--quanta-slate-50);
+  background-color: var(--quanta-grey-50);
 }
 
 .quanta-table-bordered th,
@@ -7331,7 +5936,7 @@ html[data-theme="dark"] .quanta-step[data-status="upcoming"] .quanta-step-label 
 }
 
 .quanta-table-glass {
-  background-color: var(--quanta-slate-50);
+  background-color: var(--quanta-grey-50);
   backdrop-filter: blur(6px);
   border-radius: var(--quanta-rounded-lg);
   overflow: hidden;
@@ -7377,7 +5982,7 @@ html[data-theme="dark"] .quanta-step[data-status="upcoming"] .quanta-step-label 
 .quanta-pagination-button {
   padding: var(--quanta-space-2) var(--quanta-space-3);
   font-size: var(--quanta-text-sm);
-  background-color: var(--quanta-slate-100);
+  background-color: var(--quanta-grey-100);
   color: var(--quanta-text-default);
   border: none;
   border-radius: var(--quanta-rounded-md);
@@ -7386,7 +5991,7 @@ html[data-theme="dark"] .quanta-step[data-status="upcoming"] .quanta-step-label 
 }
 
 .quanta-pagination-button:hover {
-  background-color: var(--quanta-slate-200);
+  background-color: var(--quanta-grey-200);
   color: var(--quanta-text-dark);
 }
 
@@ -7396,7 +6001,7 @@ html[data-theme="dark"] .quanta-step[data-status="upcoming"] .quanta-step-label 
 }
 
 .quanta-pagination-button:disabled {
-  background-color: var(--quanta-slate-50);
+  background-color: var(--quanta-grey-50);
   color: var(--quanta-text-muted);
   cursor: not-allowed;
 }
@@ -7412,11 +6017,11 @@ html[data-theme="dark"] {
   }
 
   .quanta-table-hover tbody tr:hover {
-    background-color: var(--quanta-slate-800);
+    background-color: var(--quanta-grey-800);
   }
 
   .quanta-table-zebra tbody tr:nth-child(odd) {
-    background-color: var(--quanta-slate-900);
+    background-color: var(--quanta-grey-900);
   }
 
   .quanta-table-clean th,
@@ -7425,7 +6030,7 @@ html[data-theme="dark"] {
   }
 
   .quanta-table-glass {
-    background-color: var(--quanta-slate-700);
+    background-color: var(--quanta-grey-700);
   }
 
   .quanta-table-bordered th,
@@ -7434,12 +6039,12 @@ html[data-theme="dark"] {
   }
 
   .quanta-pagination-button {
-    background-color: var(--quanta-slate-800);
+    background-color: var(--quanta-grey-800);
     color: var(--quanta-text-light);
   }
 
   .quanta-pagination-button:hover {
-    background-color: var(--quanta-slate-700);
+    background-color: var(--quanta-grey-700);
     color: var(--quanta-text-light);
   }
 
@@ -7580,12 +6185,11 @@ html[data-theme="dark"] {
   align-items: center;
   justify-content: center;
   gap: var(--quanta-space-2);
-  padding: var(--quanta-space-2);
+  padding: var(--quanta-space-3);
   border: none;
   background: var(--white);
   color: var(--quanta-text-default);
-  border-radius: var(--quanta-rounded-lg);
-  border: 2px solid var(--quanta-border-color);
+  border-radius: var(--quanta-rounded-full);
   cursor: pointer;
   transition: background 0.3s;
   height: fit-content;
@@ -7604,7 +6208,7 @@ html[data-theme="dark"] {
 }
 
 html[data-theme="dark"] .quanta-theme-toggle {
-  background: var(--quanta-slate-800);
+  background: var(--quanta-grey-800);
   border-color: var(--quanta-border-color);
 }
 
@@ -7694,11 +6298,11 @@ html[data-theme="light"] .quanta-theme-toggle .icon-moon {
 /* Dark Mode Support */
 html[data-theme="dark"] {
   .quanta-timeline-item::before {
-    box-shadow: 0 0 0 4px var(--quanta-slate-900);
+    box-shadow: 0 0 0 4px var(--quanta-grey-900);
   }
 
   .quanta-timeline-item.quanta-beginning::before {
-    background: var(--quanta-slate-900);
+    background: var(--quanta-grey-900);
   }
 
   .quanta-timeline-item {
@@ -7721,7 +6325,7 @@ html[data-theme="dark"] {
 .quanta-tooltip {
   position: absolute;
   max-width: 200px;
-  background: var(--quanta-slate-800);
+  background: var(--quanta-grey-800);
   color: var(--white);
   padding: 0.5rem 0.75rem;
   font-size: var(--quanta-text-sm);
@@ -7748,7 +6352,7 @@ html[data-theme="dark"] {
   transform: translateX(-50%);
   border-width: 8px;
   border-style: solid;
-  border-color: var(--quanta-slate-800) transparent transparent transparent;
+  border-color: var(--quanta-grey-800) transparent transparent transparent;
 }
 
 /* Size variants */

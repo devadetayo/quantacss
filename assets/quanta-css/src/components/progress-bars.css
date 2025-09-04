@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: 1rem;
-  background-color: var(--quanta-slate-100);
+  background-color: var(--quanta-grey-100);
   border-radius: var(--quanta-rounded-sm);
   overflow: hidden;
   box-shadow: var(--quanta-shadow-xs);
@@ -95,7 +95,7 @@
 
 /* Dark Mode */
 html[data-theme="dark"] {
-  .quanta-progress-bar { background-color: var(--quanta-slate-700); }
+  .quanta-progress-bar { background-color: var(--quanta-grey-700); }
   .quanta-progress-bar-inner { background-color: var(--quanta-primary); }
 }
 html[data-theme="dark"] {

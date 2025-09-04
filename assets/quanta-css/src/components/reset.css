@@ -1,70 +1,148 @@
-*, *::before, *::after { box-sizing: border-box; }
+/* quanta-reset.css — partial Preflight-style reset (clean, production-ready) */
+:root{
+  --quanta-ring: 0 0 0 3px rgba(var(--quanta-primary), .18);
+  --quanta-border: rgba(0,0,0,.08);
+  --quanta-scroll-track: var(--quanta-slate-100, #f3f4f6);
+  --quanta-scroll-thumb: var(--quanta-slate-300, #d1d5db);
+  color-scheme: light dark;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --quanta-focus-radius: .25rem;
+}
 
-/* Reset margins, paddings, outlines */
-:where(html, body,
-        h1, h2, h3, h4, h5, h6,
-        p, blockquote, pre,
-        ol, ul, li,
-        dl, dt, dd,
-        figure, figcaption,
-        hr,
-        fieldset, legend,
-        input, button, select, textarea,
-        table, th, td,
-        img, video, canvas, svg,
-        iframe, form, label, legend) {
+@font-face {
+  font-family: 'bricolage';
+  src: url('../static/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf') format('truetype');
+}
+
+/* Box-sizing */
+*, *::before, *::after{ box-sizing: border-box; }
+
+/* Gentle base reset (low specificity) */
+:where(
+  html, body,
+  h1, h2, h3, h4, h5, h6,
+  p, blockquote, pre,
+  ol, ul, li,
+  dl, dt, dd,
+  figure, figcaption,
+  hr,
+  fieldset, legend,
+  input, button, select, textarea,
+  table, th, td,
+  img, picture, video, canvas, svg,
+  iframe, form, label
+){
   margin: 0;
   padding: 0;
-  outline: 0;
   border: 0;
   vertical-align: baseline;
+  background: transparent;
+  color: inherit;
+  font: inherit;
 }
 
-/* Make HTML5 elements block */
-:where(article, aside, footer, header, main, nav, section) {
-  display: block;
-}
+/* Semantic HTML elements */
+:where(article, aside, footer, header, main, nav, section){ display: block; }
 
-/* Lists, quotes, tables, media */
-ol, ul { list-style: none; }
-blockquote, q   { quotes: none; }
-table           { border-collapse: collapse; border-spacing: 0; }
-img, video      { max-width: 100%; height: auto; display: block; }
+/* Lists & tables */
+ol, ul{ list-style: none; }
+table{ border-collapse: collapse; border-spacing: 0; }
 
-/* Form elements */
-button, input, select, textarea {
+/* Media responsiveness */
+img, picture, video, canvas, svg{ max-width: 100%; height: auto; display: block; border-style: none; }
+
+/* Forms — conservative normalization */
+button, input, textarea, select{
   font: inherit;
   color: inherit;
   background: transparent;
-  appearance: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  resize: vertical;
+  line-height: inherit;
 }
-button::-moz-focus-inner { border: 0; padding: 0; }
-textarea { resize: vertical; }
+
+/* Keep native listbox behavior unless restyled */
+select{ -webkit-appearance: menulist; appearance: menulist; }
+
+/* Firefox button inner fix */
+button::-moz-focus-inner{ border: 0; padding: 0; }
+
+/* Buttons & disabled state */
+button{ cursor: pointer; }
+button:disabled, [disabled]{ cursor: not-allowed; opacity: .6; }
 
 /* Links */
-a {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: inherit;
-}
-a:hover {
-  text-decoration: underline;
-}
-a:not([href]):not([class]),
-a:not([href]):not([class]):hover {
-  color: inherit;
-  text-decoration: none;
-  cursor: default;
+a{ color: inherit; text-decoration: none; text-decoration-skip-ink: auto; }
+a:hover, a:focus-visible{ text-decoration: underline; }
+a:not([href]){ cursor: default; }
+
+/* Scrollbar (WebKit only) */
+::-webkit-scrollbar{ width: 8px; height: 8px; }
+::-webkit-scrollbar-track{ background: var(--quanta-scroll-track); border-radius: 4px; }
+::-webkit-scrollbar-thumb{ background: var(--quanta-scroll-thumb); border-radius: 4px; transition: background .18s; }
+[data-theme='dark'] ::-webkit-scrollbar-track{ background: #111827; }
+[data-theme='dark'] ::-webkit-scrollbar-thumb{ background: #4b5563; }
+::-webkit-scrollbar-thumb:hover{ background: rgba(var(--quanta-primary), .85); }
+
+/* Focus — keyboard-first, accessible */
+:where(:focus){ outline: none; } /* safe because we define focus-visible below */
+:where(:focus-visible){
+  outline: none;
+  box-shadow: var(--quanta-ring);
+  border-radius: var(--quanta-focus-radius);
 }
 
-/* Scrollbars */
-::-webkit-scrollbar {
-  width: 6px; height: 6px;
+/* Scoped focus-within for components only */
+.form-field:focus-within,
+.card:focus-within{
+  box-shadow: var(--quanta-ring);
+  border-radius: var(--quanta-focus-radius);
 }
 
-/* Accessibility */
-:where(:focus-visible) {
-  outline: 2px solid var(--quanta-focus, #4f46e5);
-  outline-offset: 2px;
+/* Small component examples (use if you want consistent default focus styles) */
+.btn:focus-visible,
+.button:focus-visible{
+  box-shadow: var(--quanta-ring);
+  border-radius: var(--quanta-focus-radius);
+  outline: none;
+}
+.input:focus-visible,
+.input-field:focus-visible{
+  box-shadow: var(--quanta-ring);
+  border-radius: .125rem;
+  outline: none;
+}
+
+/* Motion & accessibility preferences */
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}
+
+/* iOS text scaling and font smoothing */
+:where(html){
+  -webkit-text-size-adjust: 100%;
+}
+body{
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  font-size: 100%;
+}
+
+/* Tiny niceties */
+abbr[title]{ text-decoration: underline dotted; }
+
+/* Print fallback */
+@media print{
+  :where(nav, .no-print){ display: none !important; }
+  body{ background: #fff; color: #000; }
+}
+
+*{
+  font-family: bricolage;
 }

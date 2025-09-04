@@ -106,7 +106,7 @@
 
 /* ─── Dark Mode Support ───────────────────────────────────── */
 html[data-theme="dark"] .quanta-chip {
-  background-color: var(--quanta-slate-700);
+  background-color: var(--quanta-grey-700);
   color: var(--white);
 }
 

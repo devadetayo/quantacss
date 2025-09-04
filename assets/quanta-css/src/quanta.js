@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const initialTheme = stored || (prefersDark ? 'dark' : 'light');
   setTheme(initialTheme);
 
-  document.querySelectorAll('.quanta-theme-toggle').forEach(el => {
+  document.querySelectorAll('#themeToggle').forEach(el => {
     el.addEventListener('click', toggleTheme);
   });
 });

@@ -1,10 +1,24 @@
-/* 1. Box‐sizing for everything */
-*, *::before, *::after {
-  box-sizing: border-box;
+/* quanta-reset.css — partial Preflight-style reset (clean, production-ready) */
+:root{
+  --quanta-ring: 0 0 0 3px rgba(var(--quanta-primary), .18);
+  --quanta-border: rgba(0,0,0,.08);
+  --quanta-scroll-track: var(--quanta-slate-100, #f3f4f6);
+  --quanta-scroll-thumb: var(--quanta-slate-300, #d1d5db);
+  color-scheme: light dark;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --quanta-focus-radius: .25rem;
 }
 
-/* 2. Remove default margin/padding & borders on common elements */
-:is(
+@font-face {
+  font-family: 'bricolage';
+  src: url('../static/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf') format('truetype');
+}
+
+/* Box-sizing */
+*, *::before, *::after{ box-sizing: border-box; }
+
+/* Gentle base reset (low specificity) */
+:where(
   html, body,
   h1, h2, h3, h4, h5, h6,
   p, blockquote, pre,
@@ -15,9 +29,9 @@
   fieldset, legend,
   input, button, select, textarea,
   table, th, td,
-  img, video, canvas, svg,
+  img, picture, video, canvas, svg,
   iframe, form, label
-) {
+){
   margin: 0;
   padding: 0;
   border: 0;
@@ -27,104 +41,108 @@
   font: inherit;
 }
 
-/* 3. Make HTML5 elements behave like blocks */
-:is(article, aside, footer, header, main, nav, section) {
-  display: block;
-}
+/* Semantic HTML elements */
+:where(article, aside, footer, header, main, nav, section){ display: block; }
 
-/* 4. List and table fixes */
-ol, ul {
-  list-style: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
+/* Lists & tables */
+ol, ul{ list-style: none; }
+table{ border-collapse: collapse; border-spacing: 0; }
 
-/* 5. Media responsiveness */
-img, picture, video, canvas, svg {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+/* Media responsiveness */
+img, picture, video, canvas, svg{ max-width: 100%; height: auto; display: block; border-style: none; }
 
-/* 6. Form element cleanup */
-button, input, select, textarea {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: none;
-  border: none;
-  outline: none;
-  resize: vertical; /* for textareas */
-}
-button::-moz-focus-inner {
+/* Forms — conservative normalization */
+button, input, textarea, select{
+  font: inherit;
+  color: inherit;
+  background: transparent;
   border: 0;
   padding: 0;
+  margin: 0;
+  resize: vertical;
+  line-height: inherit;
 }
 
-/* 7. Link reset with hover */
-a {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-}
-a:hover,
-a:focus {
-  text-decoration: underline;
+/* Keep native listbox behavior unless restyled */
+select{ -webkit-appearance: menulist; appearance: menulist; }
+
+/* Firefox button inner fix */
+button::-moz-focus-inner{ border: 0; padding: 0; }
+
+/* Buttons & disabled state */
+button{ cursor: pointer; }
+button:disabled, [disabled]{ cursor: not-allowed; opacity: .6; }
+
+/* Links */
+a{ color: inherit; text-decoration: none; text-decoration-skip-ink: auto; }
+a:hover, a:focus-visible{ text-decoration: underline; }
+a:not([href]){ cursor: default; }
+
+/* Scrollbar (WebKit only) */
+::-webkit-scrollbar{ width: 8px; height: 8px; }
+::-webkit-scrollbar-track{ background: var(--quanta-scroll-track); border-radius: 4px; }
+::-webkit-scrollbar-thumb{ background: var(--quanta-scroll-thumb); border-radius: 4px; transition: background .18s; }
+[data-theme='dark'] ::-webkit-scrollbar-track{ background: #111827; }
+[data-theme='dark'] ::-webkit-scrollbar-thumb{ background: #4b5563; }
+::-webkit-scrollbar-thumb:hover{ background: rgba(var(--quanta-primary), .85); }
+
+/* Focus — keyboard-first, accessible */
+:where(:focus){ outline: none; } /* safe because we define focus-visible below */
+:where(:focus-visible){
+  outline: none;
+  box-shadow: var(--quanta-ring);
+  border-radius: var(--quanta-focus-radius);
 }
 
-/* 8. Disable link‑style on non‑links */
-a:not([href]):not([tabindex]) {
-  color: inherit;
-  text-decoration: none;
-  cursor: default;
+/* Scoped focus-within for components only */
+.form-field:focus-within,
+.card:focus-within{
+  box-shadow: var(--quanta-ring);
+  border-radius: var(--quanta-focus-radius);
 }
 
-/* 9. Custom scrollbar size */
-/* Custom styled scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+/* Small component examples (use if you want consistent default focus styles) */
+.btn:focus-visible,
+.button:focus-visible{
+  box-shadow: var(--quanta-ring);
+  border-radius: var(--quanta-focus-radius);
+  outline: none;
+}
+.input:focus-visible,
+.input-field:focus-visible{
+  box-shadow: var(--quanta-ring);
+  border-radius: .125rem;
+  outline: none;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--quanta-slate-100);
-  border-radius: 4px;
+/* Motion & accessibility preferences */
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--quanta-slate-300);
-  border-radius: 4px;
-  transition: background 0.2s ease-in-out;
+/* iOS text scaling and font smoothing */
+:where(html){
+  -webkit-text-size-adjust: 100%;
 }
-
-[data-theme='dark'] ::-webkit-scrollbar-track {
-  background: var(--quanta-slate-800);
-}
-
-[data-theme='dark'] ::-webkit-scrollbar-thumb {
-  background: var(--quanta-slate-600);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--quanta-primary);
-}
-
-/* 10. Focus outline for keyboard nav */
-:focus-visible {
-  outline: 2px solid var(--quanta-primary);
-  outline-offset: 2px;
-}
-
-/* 11. Base HTML settings */
-html {
-  line-height: 1.5;
-  font-size: 100%; /* you can adjust for rem scaling */
-  font-family: var(--font-sans);
-}
-body {
+body{
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  font-size: 100%;
+}
+
+/* Tiny niceties */
+abbr[title]{ text-decoration: underline dotted; }
+
+/* Print fallback */
+@media print{
+  :where(nav, .no-print){ display: none !important; }
+  body{ background: #fff; color: #000; }
+}
+
+*{
+  font-family: bricolage;
 }
